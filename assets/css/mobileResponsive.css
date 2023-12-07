@@ -7,7 +7,7 @@
     padding: 15px 0;
     background-color: #ffffff;
     display: none;
-    z-index: 1000;
+    z-index: 100;
     box-shadow: 1px 1px 5px #000;
     border-radius: 50px 50px 0 0;
     -webkit-border-radius: 50px 50px 0 0;
@@ -106,13 +106,13 @@
     width: 100%;
     text-align: center;
     position: relative;
-    top: 40%;
+    top: 30%;
     right: 50%;
-    transform: translate(50% , -40%);
-    -webkit-transform: translate(50% , -40%);
-    -moz-transform: translate(50% , -40%);
-    -ms-transform: translate(50% , -40%);
-    -o-transform: translate(50% , -40%);
+    transform: translate(50% , -30%);
+    -webkit-transform: translate(50% , -30%);
+    -moz-transform: translate(50% , -30%);
+    -ms-transform: translate(50% , -30%);
+    -o-transform: translate(50% , -30%);
     position: relative;
 }
 
@@ -184,6 +184,7 @@
     color: #fff;
     background-color: transparent;
     border: none;
+    outline: none;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -223,10 +224,10 @@
     color: #000;
 }
 
-#inputMobileVer .inputMobileVer .mobileInputBox input:focus{
+/* #inputMobileVer .inputMobileVer .mobileInputBox input:focus{
     background-color: #fff;
     color: #000;
-}
+} */
 
 #inputMobileVer .inputMobileVer button{
    position: absolute;
@@ -296,7 +297,7 @@
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
 
     header .header{
         display: none;
