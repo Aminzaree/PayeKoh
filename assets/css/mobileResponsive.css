@@ -1,0 +1,320 @@
+#responsiveMobileMenu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #ffffff;
+    display: none;
+    z-index: 1000;
+    box-shadow: 1px 1px 5px #000;
+    border-radius: 50px 50px 0 0;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    -ms-border-radius: 50px 50px 0 0;
+    -o-border-radius: 50px 50px 0 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#responsiveMobileMenu:hover{
+    padding-bottom: 50px;
+}
+
+#responsiveMobileMenu p{
+    text-align: center;
+    position: absolute;
+    right: 50%;
+    top: 70px;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    font-weight: 500;
+    font-family: "vazir";
+    color: #000;
+}
+
+#responsiveMobileMenu nav{
+    width: 100%;
+    display: flex;
+}
+
+#responsiveMobileMenu nav ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#responsiveMobileMenu nav ul li{
+    list-style: none;
+}
+
+#responsiveMobileMenu nav ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    background-color:  #35A29F;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+#responsiveMobileMenu nav ul li a:hover{
+    border: 2px solid #35A29F;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+#responsiveMobileMenu nav ul li a svg{
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#responsiveMobileMenu nav ul li a:hover svg{
+    color: #35A29F;
+}
+
+
+#inputMobileVer{
+    display: none;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    right: 50%;
+    transform: translate(50% , -40%);
+    -webkit-transform: translate(50% , -40%);
+    -moz-transform: translate(50% , -40%);
+    -ms-transform: translate(50% , -40%);
+    -o-transform: translate(50% , -40%);
+    position: relative;
+}
+
+#inputMobileVer .inputMobileVer{
+    width: 100%;
+}
+
+.mobileLogo img{
+    width: 200px;
+    padding-bottom: 10px;
+}
+
+#inputMobileVer .inputMobileVer .mobileSelect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba( 51, 112, 104, 0.8 );
+    margin-bottom: 8px;
+    padding: 10px 8px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#inputMobileVer .inputMobileVer .mobileSelect:hover{
+    background-color: #fff;
+}
+
+#inputMobileVer .inputMobileVer .mobileSelect svg{
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    color: #35A29F;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#inputMobileVer .inputMobileVer .mobileSelect:hover svg{
+    background-color: #35A29F;
+    color: #fff;
+}
+
+#inputMobileVer .inputMobileVer select{
+    width: 100%;
+    font-family: "vazir";
+    font-size: 15px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#inputMobileVer .inputMobileVer .mobileSelect:hover select{
+    color: #35A29F;
+}
+
+#inputMobileVer .inputMobileVer input{
+    width: 100%;
+    padding: 15px 8px;
+    padding-right: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+    background-color: rgba( 51, 112, 104, 0.8 );
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: "vazir";
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#inputMobileVer .inputMobileVer .mobileInputBox:hover input{
+    background-color: #fff;
+    color: #000;
+}
+
+#inputMobileVer .inputMobileVer .mobileInputBox input:focus{
+    background-color: #fff;
+    color: #000;
+}
+
+#inputMobileVer .inputMobileVer button{
+   position: absolute;
+   left: 30px;
+   top: 50%;
+   transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+   -moz-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   -o-transform: translateY(-50%);
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+   color: rgba( 51, 112, 104, 0.8 );
+   background-color: #fff;
+   border: none;
+   outline: none;
+   font-family: "vazir";
+   padding: 4px 12px;
+   cursor: pointer;
+   font-weight: 600;
+   transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+}
+
+
+#inputMobileVer .inputMobileVer .mobileInputBox svg{
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    color: #35A29F;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#inputMobileVer .inputMobileVer .mobileInputBox:hover svg{
+    background-color: #35A29F;
+    color: #fff;
+}
+
+
+#inputMobileVer .inputMobileVer .mobileInputBox:hover button{
+    background-color: rgba( 51, 112, 104, 0.8 );
+    color: #fff;
+}
+
+
+@media screen and (max-width: 600px){
+
+    header .header{
+        display: none;
+    }
+
+    #help-container{
+        display: none;
+    }
+
+    #about{
+        display: none;
+    }
+
+    #responsiveMobileMenu{
+        display: block;
+    }
+
+    #inputMobileVer{
+        display: block;
+    }
+}

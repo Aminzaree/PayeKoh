@@ -1,0 +1,269 @@
+#responsiveMenu{
+    width: 100%;
+    background-color: red;
+}
+
+#responsiveMenu #Subscription{
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+    left: 15px;
+    border: none;
+    font-family: "yekanBakh";
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #337068;
+    border: 1px solid #337068;
+    padding: 4px 8px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#responsiveMenu #Subscription:hover{
+    color: #337068;
+    background-color: #fff;
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+
+#responsiveMenu #Subscription svg{
+    margin-left: 5px;
+}
+
+.toggleMenu{
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.toggleMenu svg{
+    font-size: 30px;
+    color: #d8258b;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+
+.toggleMenu.active{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+
+.responsiveMenu{
+    position: fixed;
+    width: 0;
+    height: 100%;
+    z-index: 1000;
+    /* background-color: #1c1c1c; */
+    background-image: url(../../assets/img/responsiveNav-blur.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.responsiveMenu.active{
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.responsiveMenu .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.responsiveMenu .logo h2{
+    font-size: 20px;
+    color: #b6b6b6;
+    font-family: "yekanBakh";
+}
+
+.responsiveMenu .logo img{
+    width: 120px;
+    padding-top: 30px;
+}
+
+.responsiveMenu nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.responsiveMenu nav ul{
+    text-align: center;
+    width: 100%;
+}
+
+.responsiveMenu nav ul li{
+    list-style: none;
+    padding: 10px 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    /* background-color: #d8258b; */
+}
+
+.responsiveMenu nav ul li:hover{
+    background-color: rgba(225, 225, 225, 0.6);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.responsiveMenu nav ul li a{
+    font-family: "yekan";
+    font-size: 25px;
+    line-height: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+}
+
+.responsiveMenu nav ul li:hover a{
+    color: #0A2647;
+}
+
+.responsiveMenu .header-btn{
+    text-align: center;
+    height: 10%;
+}
+
+.responsiveMenu .header-btn button{
+    font-family: "yekanBakh";
+    font-weight: 600;
+    font-size: 18px;
+    width: 80px;
+    padding: 5px 8px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.responsiveMenu .header-btn button:nth-child(1){
+    border-radius: 5px;
+    color: #f1834e;
+    background-color: transparent;
+    border: 1px solid #f1834e;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.responsiveMenu .header-btn button:hover:nth-child(1){
+    color: #f1834e;
+    background-color: #fff;
+    /* border: 1px solid #adc6c3; */
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+}
+
+.responsiveMenu .header-btn button:nth-child(2){
+    color: #fff;
+    background-color: #d8258b;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.responsiveMenu .header-btn button:hover:nth-child(2){
+    color: #d8258b;
+    background-color: #fff;
+    border: 1px solid #d8258b;
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+}
+
+@media screen and (min-width: 992px){
+    .responsiveMenu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px){
+    header #header{
+        display: none;
+    }
+
+    .toggleMenu{
+        display: block;
+    }
+
+    #responsiveMenu #Subscription{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .responsiveMenu nav ul li{
+        width: 80%;
+    }
+}

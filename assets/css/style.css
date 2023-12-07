@@ -1,0 +1,742 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot') format('eot');
+    src : url('../fonts/vazir.ttf') format('truetype'),
+    url('../fonts/vazir.woff') format('woff'),
+    url('../fonts/vazir.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../fonts/YekanBakh-Heavy.eot') format('eot');
+    src : url('../fonts/YekanBakh-Heavy.ttf') format('truetype'),
+    url('../fonts/YekanBakh-Heavy.woff') format('woff'),
+    url('../fonts/YekanBakh-Heavy.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Yekan';
+	src:	url('../fonts/Yekan.eot'); /* IE9 Compat Modes */
+    src:	url('../fonts/Yekan.woff2') format('woff2'), /* Modern Browsers */
+			url('../fonts/Yekan.woff') format('woff'), /* Modern Browsers */
+			url('../fonts/Yekan.otf') format('opentype'), /* Open Type Font */	
+			url('../fonts/Yekan.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-weight: normal;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	font-display: auto;
+}
+
+@font-face {
+    font-family: "Kalameh";
+    src: url(../../assets/fonts/Kalameh_Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    direction: rtl;
+    font-family: "vazir";
+    background-color: rgba(225, 225, 225, 1);
+}
+
+
+/*----------------------------------------------------------------*/
+/*--------------------------TO Top Button-------------------------*/
+/*----------------------------------------------------------------*/
+
+
+#toTopBtn{
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    z-index: 99;
+    animation: shake 0.5s infinite;
+    -webkit-animation: shake 0.5s infinite;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#toTopBtn.active{
+    opacity: 1;
+    visibility: visible;
+    bottom: 20px;
+}
+
+#toTopBtn img{
+    width: 80px;
+}
+
+@keyframes shake {
+    0% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+    10% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    100% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+  }
+  
+
+
+/*----------------------------------------------------------------*/
+/*--------------------------Help Button---------------------------*/
+/*----------------------------------------------------------------*/
+
+
+#help-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    user-select: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.helpBtn{
+    /* width: 60px;
+    height: 60px;
+    background-color: #004bb7; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 20px 5px;
+    -webkit-border-radius: 20px 20px 20px 5px;
+    -moz-border-radius: 20px 20px 20px 5px;
+    -ms-border-radius: 20px 20px 20px 5px;
+    -o-border-radius: 20px 20px 20px 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.helpBtn img{
+    width: 90px;
+}
+
+/* 
+.helpBtn svg{
+    color: #fff;
+    font-size: 35px;
+} */
+
+.helpBtn-icon{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.helpBtn-icon a{
+    width: 40px;
+    height: 40px;
+    background-color: #004bb7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.helpBtn-icon a svg{
+    color: #fff;
+}
+
+
+#help-container:hover .helpBtn-iconA{
+    bottom: 90px;
+    opacity: 1;
+    visibility: visible;
+}
+
+#help-container:hover .helpBtn-iconB{
+    bottom: 138px;
+    opacity: 1;
+    visibility: visible;
+}
+
+#help-container:hover .helpBtn-iconC{
+    bottom: 185px;
+    opacity: 1;
+    visibility: visible;
+}
+
+#help-container:hover .helpBtn-iconD{
+    bottom: 232px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+#messageBox{
+    width: 800px;
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#messageBox .messageboxCard{
+    background-color: #fff;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#messageBox.active{
+    opacity: 1;
+    visibility: visible;
+    bottom: 50px;
+}
+
+#messageBox h2{
+    font-family: "kalameh";
+    font-size: 30px;
+    color: #004ebf;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#messageBox img{
+    width: 100%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#messageBox .messageBox{
+    width: 100%;
+    padding: 20px 20px;
+}
+
+#messageBox .messageBox .messageItem{
+    padding-bottom: 15px;
+}
+
+#messageBox .messageBox label{
+    width: 100%;
+}
+
+#messageBox .messageBox input{
+    width: 100%;
+    font-family: "vazir";
+    outline: none;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 6px 8px;
+    margin-top: 5px;
+    font-size: 12px;
+    background-color: rgba(234, 234, 234, 1);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#messageBox .messageBox input:hover{
+    background-color: #fff;
+}
+
+
+#messageBox .messageBox input:focus{
+    background-color: rgb(240, 240, 240);
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    border: 1px solid #e1e1e1;
+    background-color: #fff;
+    font-size: 13px;
+}
+
+
+#messageBox .messageBox textarea{
+    width: 100%;
+    resize: none;
+    overflow: auto;
+    font-family: "vazir";
+    outline: none;
+    border: 1px solid #e1e1e1;
+    background-color: rgba(234, 234, 234, 1);
+    margin-top: 5px;
+    padding: 6px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#messageBox .messageBox textarea:hover{
+    background-color: #fff;
+}
+
+#messageBox .messageBox textarea:focus{
+    background-color: rgb(240, 240, 240);
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    border: 1px solid #e1e1e1;
+    background-color: #fff;
+    font-size: 13px;
+}
+
+.messageItemBtn{
+    text-align: center;
+}
+
+.messageItemBtn button{
+    width: 95px;
+    padding: 8px 5px;
+    border: none;
+    border: 5px;
+    font-family: "vazir";
+    font-weight: 400;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.messageItemBtn button:nth-child(1){
+    background-color: #1F6E8C;
+    color: #fff;
+}
+
+.messageItemBtn button:nth-child(1):hover{
+    background-color: #1a5c76;
+}
+
+.messageItemBtn button:nth-child(2){
+    background-color: #EC53B0;
+    color: #fff;
+}
+
+.messageItemBtn button:nth-child(2):hover{
+    background-color: #d14398;
+}
+
+
+.closeBtn{
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    background-color: #004ebf;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    z-index: 99;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.closeBtn:hover{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+
+
+/*----------------------------------------------------------------*/
+/*----------------------------Main Card---------------------------*/
+/*----------------------------------------------------------------*/
+
+#main-card{
+    width: 100%;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/*------------------------------Services--------------------------*/
+/*----------------------------------------------------------------*/
+
+footer{
+    width: 100%;
+    padding-top: 50px;
+    background-image: url(../../assets/img/bg-4.png), linear-gradient(160deg, rgba(53, 113, 104, 1), rgba(54, 72, 152, 1));
+    /* background-image: url(../../assets/img/bg-4.png), linear-gradient(160deg, #0172af, #74febd); */
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+footer .footer-about{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-about img{
+    width: 100px;
+}
+
+footer .footer-about h3{
+    font-size: 40px;
+    font-family: "yekan";
+    color: #fff;
+}
+
+footer .footer-about p{
+    font-size: 14px;
+    color: #e1e1e1;
+}
+
+footer .footer-aboutContent p{
+    padding-top: 15px;
+    padding-right: 15px;
+    text-align: justify;
+    color: #bbd0de;
+}
+
+
+footer .footer-menu h2{
+    color: #bbd0de;
+    font-family: "yekan";
+    padding-bottom: 10px;
+    border-bottom: 2px solid #45767c;
+}
+
+footer .footer-menu ul{
+    width: 100%;
+    padding-top: 10px;
+}
+
+footer .footer-menu ul li{
+    list-style: none;
+    margin: 15px 10px;
+}
+
+footer .footer-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+footer .footer-menu ul li a:hover{
+    color: #fff;
+}
+
+footer .footer-menu ul li a svg{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+footer .footer-lorem h2{
+    color: #bbd0de;
+    font-family: "yekan";
+    padding-bottom: 10px;
+    border-bottom: 2px solid #45767c;
+}
+
+footer .footer-lorem p{
+    color: #bbd0de;
+    padding-top: 15px;
+    text-align: justify;
+}
+
+
+footer .footer-buttom{
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #507394;
+    border-radius: 20px 20px 0 0;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
+}
+
+footer .footer-buttom p{
+    color: #fff;
+}
+
+footer .footer-buttom p span{
+    font-family: "kalameh";
+    font-size: 23px;
+    color: yellow;
+}
+
+footer .footer-buttom ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer-buttom ul li{
+    list-style: none;
+}
+
+footer .footer-buttom ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    margin: 0 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+footer .footer-buttom ul li a svg{
+    font-size: 22px;
+}
+
+footer .footer-buttom ul li:nth-child(1) a svg{
+    color: #006aff;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px !important;
+}
+
+footer .footer-buttom ul li:hover:nth-child(1) a{
+    background-color: #006aff;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+}
+
+footer .footer-buttom ul li:hover:nth-child(1) a svg{
+    color: #fff;
+}
+
+footer .footer-buttom ul li:nth-child(2) a svg{
+    color: #ff2f00;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .footer-buttom ul li:hover:nth-child(2) a{
+    background-color: #ff2f00;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+}
+
+footer .footer-buttom ul li:hover:nth-child(2) a svg{
+    color: #fff;
+}
+
+
+footer .footer-buttom ul li:nth-child(3) a svg{
+    color: #006aff;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px !important;
+}
+
+footer .footer-buttom ul li:hover:nth-child(3) a{
+    background-color: #006aff;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+}
+
+footer .footer-buttom ul li:hover:nth-child(3) a svg{
+    color: #fff;
+}
+
+
+footer .footer-buttom ul li:nth-child(4) a svg{
+    color: #ff0000;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px !important;
+}
+
+footer .footer-buttom ul li:hover:nth-child(4) a{
+    background-color: #ff0000;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+}
+
+footer .footer-buttom ul li:hover:nth-child(4) a svg{
+    color: #fff;
+}
+
+
+
+
+.containerflued {
+    perspective: 1000px;
+}
+
+.card {
+	position: relative;
+	width: 8rem;
+	height: 100%;
+	margin: 0.5rem;
+	text-align: center;
+	line-height: 8rem;
+	color: #ecf0f1;
+	border-radius: 0.8rem;
+	transform-style: preserve-3d;
+	-webkit-border-radius: 0.8rem;
+	-moz-border-radius: 0.8rem;
+	-ms-border-radius: 0.8rem;
+	-o-border-radius: 0.8rem;
+}
+
+.face {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.8rem;
+	background-size: cover;
+	background-position: center center;
+	backface-visibility: hidden;
+	transition: transform 0.5s ease-in-out;
+	-webkit-border-radius: 0.8rem;
+	-moz-border-radius: 0.8rem;
+	-ms-border-radius: 0.8rem;
+	-o-border-radius: 0.8rem;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: transform 0.5s ease-in-out;
+	-moz-transition: transform 0.5s ease-in-out;
+	-ms-transition: transform 0.5s ease-in-out;
+	-o-transition: transform 0.5s ease-in-out;
+}
+
+.face--front {
+	background: #2c3e50;
+    background-image: url(../../assets/img/JungleCover-Green.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+	font-size: 3rem;
+}
+
+.face--back {
+	background: #2c3e50;
+	font-size: 1.5rem;
+	transform: rotateY(180deg);
+}
+
+.card:hover .face--front {
+	transform: rotateY(-180deg);
+}
+
+.card:hover .face--back {
+	transform: rotateY(0deg);
+}
