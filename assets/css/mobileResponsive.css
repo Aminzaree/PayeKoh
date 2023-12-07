@@ -106,13 +106,13 @@
     width: 100%;
     text-align: center;
     position: relative;
-    top: 30%;
+    top: 27%;
     right: 50%;
-    transform: translate(50% , -30%);
-    -webkit-transform: translate(50% , -30%);
-    -moz-transform: translate(50% , -30%);
-    -ms-transform: translate(50% , -30%);
-    -o-transform: translate(50% , -30%);
+    transform: translate(50% , -27%);
+    -webkit-transform: translate(50% , -27%);
+    -moz-transform: translate(50% , -27%);
+    -ms-transform: translate(50% , -27%);
+    -o-transform: translate(50% , -27%);
     position: relative;
 }
 
