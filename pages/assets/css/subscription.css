@@ -1,0 +1,384 @@
+header #menu{
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0766AD;
+    padding: 20px 20px;
+    box-shadow: 1px 1px 5px #000;
+}
+
+header #menu nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header #menu nav ul li{
+    list-style: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+
+header #menu nav ul li a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header #menu nav ul li a svg{
+    margin-left: 7px;
+}
+
+header #menu nav ul a img{
+    width: 90px;
+    margin-left: 15px;
+}
+
+header .userBtn button{
+    font-family: "yekanBakh";
+    width: 80px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+header #menu nav ul li::after{
+    content: " ";
+    width: 0;
+    height: 3px;
+    display: block;
+    background-color: #fff;
+    margin-top: 5px;
+    transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+}
+
+header #menu nav ul li:hover::after{
+    width: 100%;
+}
+
+header .userBtn button:nth-child(1){
+    border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+}
+
+header .userBtn button:hover:nth-child(1){
+
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+}
+
+header .userBtn button:nth-child(2){
+    color: #164863;
+    margin-right: 2px;
+    background-color: #64CCC5;
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    -ms-border-radius: 10px 0 0 10px;
+    -o-border-radius: 10px 0 0 10px;
+}
+
+header .userBtn button:hover:nth-child(2){
+    color: #64CCC5;
+    background-color: #123c53;
+    border: 1px solid #64CCC5;
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+}
+
+header .page-bg{
+    width: 100%;
+    background: url(../../assets/img/background-2.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .page-bg .pageHeader-content{
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+header .page-bg .pageHeader-content h1{
+    font-family: "yekanBakh";
+    color: #F4CE14;
+}
+
+header .page-bg .pageHeader-nav{
+    padding: 5px 5px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    background-color: rgba(132, 132, 132, 0.6);
+}
+
+header .page-bg .pageHeader-nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .page-bg .pageHeader-nav ul li{
+    list-style: none;
+    margin: 5px 10px;
+}
+
+header .page-bg .pageHeader-nav ul li:last-child::before{
+    content: "/ ";
+    color: #fff;
+    margin-left: 10px;
+}
+
+header .page-bg .pageHeader-nav ul li a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+}
+
+header .page-bg .pageHeader-nav ul li a:hover{
+    color: #64CCC5;
+}
+
+header .page-bg .pageHeader-nav ul li a svg{
+    margin-left: 5px;
+}
+
+
+/*----------------------------------------------------------------*/
+/*--------------------------Subscribtion--------------------------*/
+/*----------------------------------------------------------------*/
+
+#premiumProperty{
+    width: 100%;
+    padding: 80px 0;
+}
+
+#premiumProperty .premiumTitle{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#premiumProperty .premiumTitle h2{
+    font-size: 30px;
+    line-height: 49px;
+    font-family: "yekanBakh";
+}
+
+#premiumProperty .premiumProperty{
+    width: 100%;
+}
+
+#premiumProperty .premiumProperty .premiumItem{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 50px 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+
+}
+
+/* 
+#premiumProperty .premiumProperty .premiumItem:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+} */
+
+#premiumProperty .premiumProperty .premiumItem img{
+    width: 300px;
+}
+
+#premiumProperty .premiumProperty .premiumItem h3{
+    color: red;
+    font-size: 20px;
+    line-height: 24px;
+    color: #252525;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+#premiumProperty .premiumProperty .premiumItem p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #555;
+    font-weight: 400;
+    padding-top: 18px;
+    font-style: normal;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/*----------------------------comparison--------------------------*/
+/*----------------------------------------------------------------*/
+
+#comparison{
+    width: 100%;
+    padding: 30px 0 80px 0;
+}
+
+#comparison .comparison{
+    width: 100%;
+}
+
+#comparison .comparison .comparisonTitle{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 40px 0;
+}
+
+#comparison .comparison .comparisonTitle h2{
+    font-size: 30px;
+    line-height: 49px;
+    font-family: "yekanBakh";
+}
+
+#comparison .comparison .responsiveTable{
+    width: 100%;
+    padding: 30px 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#comparison .comparison .responsiveTable table{
+    width: 100%;
+}
+
+#comparison .comparison .responsiveTable table tr th:nth-child(1){
+    text-align: start;
+}
+
+#comparison .comparison .responsiveTable table tr th{
+    border-bottom: 1px solid rgba(226, 232, 240, 1);
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-family: "yekanBakh";
+}
+
+#comparison .comparison .responsiveTable table tr th a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(113.37deg,#ffa300 -1.85%,#f7cf41 128.1%);
+    padding: 8px 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+#comparison .comparison .responsiveTable table tr td{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(226, 232, 240, 1);
+}
+
+#comparison .comparison .responsiveTable table tr td:nth-child(1){
+    text-align: start;
+}
+
+#comparison .comparison .responsiveTable table tr td:nth-child(2){
+    text-align: center;
+}
+
+#comparison .comparison .responsiveTable table tr td:nth-child(3){
+    text-align: center;
+}
+
+#comparison .comparison .responsiveTable table tr:nth-child(11) td{
+    border-bottom: none;
+}
+
+
+.activeProperty{
+    padding: 5px 20px;
+    font-size: 14px;
+    line-height: 19.6px;
+    font-weight: 700;
+    background-color: rgba(72, 187, 120, 1);
+    color: rgba(255, 255, 255, 1);
+    display: inline;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.activeProperty:hover{
+    background-color: rgb(59, 158, 101);
+}
+
+.deactiveProperty{
+    padding: 5px 9px;
+    font-size: 14px;
+    line-height: 19.6px;
+    font-weight: 700;
+    background-color: rgba(203, 213, 224, 1);
+    color: rgba(255, 255, 255, 1);
+    display: inline;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+
+header .progress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+    z-index: 100;
+}
+
+header .progress .progress-bar{
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgb(184, 2, 216), rgb(225, 0, 43));
+}
