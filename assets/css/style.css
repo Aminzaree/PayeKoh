@@ -45,7 +45,8 @@ html{
 body{
     direction: rtl;
     font-family: "vazir";
-    background-color: rgba(225, 225, 225, 1);
+    /* background: linear-gradient(180deg,#f7f7f7,hsla(0,0%,100%,0) 600px); */
+    background-color: rgba(248, 249, 250, 1);
 }
 
 
