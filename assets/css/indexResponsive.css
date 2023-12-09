@@ -28,7 +28,11 @@
         -moz-transform: translate(-50%, -30%);
         -ms-transform: translate(-50%, -30%);
         -o-transform: translate(-50%, -30%);
-}
+    }
+
+    #premiumProperty .premiumProperty .premiumItem img{
+        width: 100%;
+    }
 }
 
 
@@ -124,6 +128,10 @@
         text-align: center;
         padding-bottom: 10px;
     }
+
+    #premiumProperty .premiumProperty .premiumItem img{
+        width: 80%;
+    }
 }
 
 
@@ -138,22 +146,12 @@
         width: 210px;
     }
 
-    /* header .header #main-title  img{
-        width: 80px;
-    }
-    
-    header .header  .title-content #main-title h1{
-        font-size: 45px;
-        font-family: "yekan";
-        color: rgb(255, 0, 93);
-    }
-
-    header .header  .title-content #main-title p{
-        font-size: 18px;
-    } */
-
     header #header-input .inputSelect-header select{
         padding: 4px 8px;
         font-size: 13px;
+    }
+
+    #premiumProperty .premiumProperty .premiumItem img{
+        width: 100%;
     }
 }
