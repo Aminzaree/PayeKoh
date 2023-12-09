@@ -53,22 +53,22 @@ window.addEventListener("scroll", function () {
 /*--------------------------To Top Button-------------------------*/
 /*----------------------------------------------------------------*/
 
-window.addEventListener("scroll", function () {
-    const toTop = document.querySelector("#toTopBtn");
-    if (this.window.pageYOffset > 100) {
-        toTop.classList.add("active");
-    } else {
-        toTop.classList.remove("active");
-    }
-})
+// window.addEventListener("scroll", function () {
+//     const toTop = document.querySelector("#toTopBtn");
+//     if (this.window.pageYOffset > 100) {
+//         toTop.classList.add("active");
+//     } else {
+//         toTop.classList.remove("active");
+//     }
+// })
 
 
-function backToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
+// function backToTop() {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// }
 
 /*----------------------------------------------------------------*/
 /*----------------------------Counter Up--------------------------*/
@@ -115,6 +115,22 @@ function closeMessageBox() {
     let messageBox = document.querySelector("#messageBox");
     messageBox.classList.remove("active");
 }
+
+
+/*----------------------------------------------------------------*/
+/*----------------------------Progress Bar------------------------*/
+/*----------------------------------------------------------------*/
+
+
+const progressBar = document.querySelector(".progress-bar");
+
+window.addEventListener("scroll", function(){
+    const winScroll = this.window.pageYOffset;
+    const height = this.document.documentElement.scrollHeight - this.window.innerHeight;
+    const scrolled = (winScroll/height) * 100;
+    progressBar.style.width = `${scrolled}%`
+})
+
 
 
 /*----------------------------------------------------------------*/
