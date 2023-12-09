@@ -117,6 +117,10 @@ function closeMessageBox() {
 }
 
 
+/*----------------------------------------------------------------*/
+/*----------------------------Progress Bar------------------------*/
+/*----------------------------------------------------------------*/
+
 
 const progressBar = document.querySelector(".progress-bar");
 
@@ -126,7 +130,6 @@ window.addEventListener("scroll", function(){
     const scrolled = (winScroll/height) * 100;
     progressBar.style.width = `${scrolled}%`
 })
-
 
 
 
