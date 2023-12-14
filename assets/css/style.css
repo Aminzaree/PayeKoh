@@ -56,14 +56,32 @@ body{
 
 
 #toTopBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     bottom: 0;
     right: 20px;
     z-index: 99;
-    animation: shake 0.5s infinite;
-    -webkit-animation: shake 0.5s infinite;
     opacity: 0;
     visibility: hidden;
+    background-color: rgba(31, 111, 143, 0.5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#toTopBtn:hover{
+    background-color: rgba(31, 111, 143, 1);
 }
 
 #toTopBtn.active{
@@ -72,47 +90,10 @@ body{
     bottom: 20px;
 }
 
-#toTopBtn img{
-    width: 80px;
+#toTopBtn svg{
+    font-size: 30px;
+    color: #fff;
 }
-
-@keyframes shake {
-    0% {
-      transform: translate(1px, -2px) rotate(-1deg);
-    }
-    10% {
-      transform: translate(-1px, 2px) rotate(-1deg);
-    }
-    20% {
-      transform: translate(1px, 2px) rotate(0deg);
-    }
-    30% {
-      transform: translate(3px, 2px) rotate(0deg);
-    }
-    40% {
-      transform: translate(1px, -1px) rotate(1deg);
-    }
-    50% {
-      transform: translate(-1px, -2px) rotate(-1deg);
-    }
-    60% {
-      transform: translate(-3px, 1px) rotate(0deg);
-    }
-    70% {
-      transform: translate(3px, 1px) rotate(-1deg);
-    }
-    80% {
-      transform: translate(-1px, -1px) rotate(1deg);
-    }
-    90% {
-      transform: translate(-3px, 0px) rotate(1deg);
-    }
-    100% {
-      transform: translate(1px, 1px) rotate(0deg);
-    }
-  }
-  
-
 
 /*----------------------------------------------------------------*/
 /*--------------------------Help Button---------------------------*/
@@ -453,11 +434,20 @@ body{
 footer{
     width: 100%;
     padding-top: 50px;
-    background-image: url(../../assets/img/bg-4.png), linear-gradient(160deg, rgba(53, 113, 104, 1), rgba(54, 72, 152, 1));
+    background-color: #1c6aa3;
+    /* background-image: url(../../assets/img/bg-4.png), linear-gradient(160deg, rgba(53, 113, 104, 1), rgba(54, 72, 152, 1)); */
     /* background-image: url(../../assets/img/bg-4.png), linear-gradient(160deg, #0172af, #74febd); */
     background-repeat: no-repeat;
     background-position: right;
+    position: relative;
 }
+
+footer .waveAnimation{
+    position: absolute;
+    width: 100%;
+    top: -100px;
+}
+
 
 footer .footer-about{
     width: 100%;
@@ -492,7 +482,7 @@ footer .footer-menu h2{
     color: #bbd0de;
     font-family: "yekan";
     padding-bottom: 10px;
-    border-bottom: 2px solid #45767c;
+    border-bottom: 2px solid #fff;
 }
 
 footer .footer-menu ul{
@@ -531,7 +521,7 @@ footer .footer-lorem h2{
     color: #bbd0de;
     font-family: "yekan";
     padding-bottom: 10px;
-    border-bottom: 2px solid #45767c;
+    border-bottom: 2px solid #fff;
 }
 
 footer .footer-lorem p{
@@ -673,71 +663,3 @@ footer .footer-buttom ul li:hover:nth-child(4) a svg{
     color: #fff;
 }
 
-
-
-
-.containerflued {
-    perspective: 1000px;
-}
-
-.card {
-	position: relative;
-	width: 8rem;
-	height: 100%;
-	margin: 0.5rem;
-	text-align: center;
-	line-height: 8rem;
-	color: #ecf0f1;
-	border-radius: 0.8rem;
-	transform-style: preserve-3d;
-	-webkit-border-radius: 0.8rem;
-	-moz-border-radius: 0.8rem;
-	-ms-border-radius: 0.8rem;
-	-o-border-radius: 0.8rem;
-}
-
-.face {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 0.8rem;
-	background-size: cover;
-	background-position: center center;
-	backface-visibility: hidden;
-	transition: transform 0.5s ease-in-out;
-	-webkit-border-radius: 0.8rem;
-	-moz-border-radius: 0.8rem;
-	-ms-border-radius: 0.8rem;
-	-o-border-radius: 0.8rem;
-	-webkit-backface-visibility: hidden;
-	-webkit-transition: transform 0.5s ease-in-out;
-	-moz-transition: transform 0.5s ease-in-out;
-	-ms-transition: transform 0.5s ease-in-out;
-	-o-transition: transform 0.5s ease-in-out;
-}
-
-.face--front {
-	background: #2c3e50;
-    background-image: url(../../assets/img/JungleCover-Green.jpg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-	font-size: 3rem;
-}
-
-.face--back {
-	background: #2c3e50;
-	font-size: 1.5rem;
-	transform: rotateY(180deg);
-}
-
-.card:hover .face--front {
-	transform: rotateY(-180deg);
-}
-
-.card:hover .face--back {
-	transform: rotateY(0deg);
-}
