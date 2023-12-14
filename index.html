@@ -11,13 +11,50 @@
     <link rel="stylesheet" href="assets/css/gridSystem.css">
     <link rel="stylesheet" href="assets/css/indexResponsive.css">
     <link rel="stylesheet" href="assets/css/responsiveMenu.css">
+    <link rel="stylesheet" href="assets/css/WaveContainer.css">
     <title>پایه کوه | صفحه اصلی</title>
 </head>
 <body>
 
-    <header>
+    <!-- Loding -->
+    <div id="loading-container">
+        <svg id="my-svg" width="208px" height="174px" viewBox="0 0 208 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Mountain---CodePen" transform="translate(-46.000000, -14.000000)" stroke="#000000">
+                <g id="Mountain" transform="translate(49.000000, 14.500000)">
+                  <g id="Moon" transform="translate(18.155172, 0.000000)">
+                    <ellipse id="Oval-Copy-2" stroke-width="2.78888393" fill="#FFFFFF" cx="85.3366606" cy="85.1996149" rx="83.9422187" ry="83.8051729"></ellipse>
+                    <ellipse id="Oval-Copy" stroke-width="0.697499982" cx="85.1896552" cy="85.0528455" rx="77.8581466" ry="77.7325508"></ellipse>
+                  </g>
+                  <g id="Mountain-3" transform="translate(0.000000, 61.349593)">
+                    <polygon id="Line" stroke-width="2.78999993" fill="#FFFFFF" stroke-linecap="square" points="0 78.0813008 49.5775862 0 99.1551724 78.0813008"></polygon>
+                    <polyline id="Line-2" stroke-width="2.09249994" points="27.9310345 33.4634146 38.4051724 26.4918699 48.8793103 33.4634146 59.3534483 26.4918699 69.8275862 33.4634146"></polyline>
+                  </g>
+                  <g id="Mountain-2" transform="translate(103.344828, 66.926829)" stroke-linecap="square">
+                    <polygon id="Line" stroke-width="2.78999993" fill="#FFFFFF" points="0 78.0813008 49.5775862 0 99.1551724 78.0813008"></polygon>
+                    <polyline id="Line-2" stroke-width="2.09249994" transform="translate(49.577586, 25.794715) scale(1, -1) translate(-49.577586, -25.794715) " points="34.9137931 27.8861789 42.2456897 23.703252 49.5775862 27.8861789 56.9094828 23.703252 64.2413793 27.8861789"></polyline>
+                  </g>
+                  <g id="Mountain-1" transform="translate(11.172414, 55.772358)" stroke-linecap="square">
+                    <polygon id="Line" stroke-width="2.78999993" fill="#FFFFFF" points="0 115.391648 91.3641105 0 182.728221 115.391648"></polygon>
+                    <polyline id="Line-2" stroke-width="2.09249994" points="52.3706897 49.4979675 71.6893846 35.554878 91.0080795 49.4979675 110.326774 35.554878 129.645469 49.4979675"></polyline>
+                  </g>
+                  <g id="Highlight" transform="translate(6.982759, 65.532520)" stroke-linecap="square" stroke-width="0.697499982">
+                    <path d="M13.9655172,101.087398 L73.3189655,101.087398" id="Line-3"></path>
+                    <path d="M16.7586207,98.2987805 L34.2155172,98.2987805" id="Line-3-Copy-2"></path>
+                    <path d="M0,70.4126016 L17.4568966,70.4126016" id="Line-3-Copy-5"></path>
+                    <path d="M167.586207,74.5955285 L185.043103,74.5955285" id="Line-3-Copy-4"></path>
+                    <path d="M96.362069,0 L105.439655,11.851626" id="Line-3-Copy-3"></path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <img src="assets/img/paye koh text.png" alt="">
+    </div>
+
+    <header>        
         <div id="menu">
-            <a href="pages/subscription.html"><button type="button" id="Subscription" title="خرید اشتراک"><i class="fa-solid fa-coins"></i>خرید اشتراک</button></a>
+            <a href="subscription.html"><button type="button" id="Subscription" title="خرید اشتراک"><i class="fa-solid fa-coins"></i>خرید اشتراک</button></a>
             <div id="mainNavbar">
                 <nav>
                     <ul>
@@ -81,6 +118,38 @@
                                     </div>
                                 </div>
                                </div>
+                            </div>
+                            <div class="counter-section">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-lg-3" title="تعداد کاربران" >
+                                        <div class="counterBox CounBoxA">
+                                            <i class="fa-solid fa-users"></i>
+                                            <p>کاربران</p>
+                                            <p class="counter" data-target="7056"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-lg-3" title="تعداد قله‌ها" >
+                                        <div class="counterBox CounBoxB">
+                                            <i class="fa-solid fa-mountain"></i>
+                                            <p>تعداد قله‌ها</p>
+                                            <p class="counter" data-target="113">150</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="counterBox CounBoxC" title="تعداد نقشه‌ها" >
+                                            <i class="fa-solid fa-map-location-dot"></i>
+                                            <p>تعداد نقشه‌ها</p>
+                                            <p class="counter" data-target="22">150</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="counterBox CounBoxD" title="برنامه‌های  فعال" >
+                                            <i class="fa-solid fa-person-hiking"></i>
+                                            <p>برنامه‌های فعال</p>
+                                            <p class="counter" data-target="26">150</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -183,85 +252,11 @@
         <p>هوشمندانه صعود کنید :)</p>
     </div>
 
-    
-
     <!-- To Top Button -->
 
-    <!-- <a href="avascript:void(0)" id="toTopBtn" onclick="backToTop()">
-        <img src="assets/img/final-png2.png" alt="برو بالا">
-    </a> -->
-
-    <!-- Help Btn -->
-
-    <div id="help-container">
-        <div class="helpBtn">
-            <!-- <a href="avascript:void(0)" title="ارتباط با ما"><i class="fa-solid fa-headset"></i></a> -->
-            <img src="assets/img/Support.png" alt="پشتیبانی پایه کوه">
-        </div>
-        <div class="helpBtn-icon helpBtn-iconA">
-            <a href="tel:+989215392189" title="تلفن"><i class="fa-solid fa-phone"></i></a>
-        </div>
-        <div class="helpBtn-icon  helpBtn-iconB" onclick="openMessageBox()">
-            <a href="javascript:void(0)" title="ایمیل"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-        <div class="helpBtn-icon  helpBtn-iconC">
-            <a href="javascript:void(0)" title="وب سایت"><i class="fa-solid fa-globe"></i></a>
-        </div>
-        <div class="helpBtn-icon  helpBtn-iconD">
-            <a href="javascript:void(0)" title="راهنما"><i class="fa-regular fa-circle-question"></i></a>
-        </div>
-    </div>
-
-    <div id="messageBox">
-        <div class="container">
-            <div class="messageboxCard">
-                <i class="fas fa-xmark closeBtn" onclick="closeMessageBox()"></i>
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-md-4">
-                        <h2>نظرتو برام بنویس :</h2>
-                        <img src="assets/img/cartoon-business-man-sending-messages-vector.jpg" alt="ارسال پیام">
-                    </div>
-                    <div class="col-12 col-md-8">
-                        <div class="messageBox">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-sm-6">
-                                   <div class="messageItem">
-                                        <label for="fnameMessage">نام:</label>
-                                        <input type="text" name="fname" id="fnameMessage" placeholder="نام">
-                                   </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="messageItem">
-                                        <label for="lnameMessage">نام خانوادگی:</label>
-                                        <input type="text" name="lname" id="lnameMessage" placeholder="نام خانوادگی">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="messageItem">
-                                        <label for="email">اییل شما:</label>
-                                        <input type="email" name="email" id="email" placeholder="ایمیل">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="messageItem">
-                                        <label for="description">پیام شما:</label>
-                                        <textarea name="description" id="description" rows="8" placeholder="پیام خود را وارد نمایید"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="messageItemBtn">
-                                        <button>ارسال</button>
-                                    <button>پاک کردن فرم</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <a href="avascript:void(0)" id="toTopBtn" onclick="backToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <main id="main-card">
 
@@ -271,10 +266,11 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-11">
                         <div class="cardCategory-title">
-                            <h2>باهم بریم به...</h2>
+                            <img src="assets/img/service-title.png" alt="">
+                            <a href="javascript:void(0)"><i class="fa-solid fa-caret-left"></i>مشاهده همه</a>
+                            <h2>دسته‌بندی طبیعت پایه کوه</h2>
                         </div>
                         <div class="cardCategory">
-                            <!-- <h2 id="carousel-heading">Splide Basic HTML Example</h2> -->
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
@@ -324,7 +320,7 @@
     
 
         <!-- About Us -->
-        <section id="about">
+        <!-- <section id="about">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-11">
@@ -383,10 +379,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Services -->
-        <section id="services">
+        <!-- <section id="services">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10">
@@ -448,7 +444,232 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+
+
+        <section id="services">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-11">
+                            <div class="services-title">
+                                <img src="assets/img/service-title.png" alt="">
+                                <h2>خدمات پایه کوه</h2>
+                                <a href="Javascript:void(0)">مشاهده خدمات<i class="fa-solid fa-caret-left"></i></a>
+                            </div>
+                        <div class="services">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-regular fa-compass"></i>
+                                                <p>اطلاعات مسیر</p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-solid fa-route"></i>
+                                                <p>مقایسه مسیرها </p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-solid fa-cloud-moon-rain"></i>
+                                                <p>وضعیت آب و هوا</p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-solid fa-seedling"></i>
+                                                <p>تشخیص نوع گیاهان</p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-solid fa-chart-line"></i>
+                                                <p>مشاهده شیب مسیر</p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-solid fa-mountain"></i>
+                                                <p> اطلاعات قله‌های اطرف</p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-solid fa-map-location-dot"></i>
+                                                <p>نمایش نقاط مهم روی نقشه</p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-solid fa-location-crosshairs"></i>
+                                                <p> فایل GPS مسیرهای کوهنوردی</p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-solid fa-map-location-dot"></i>
+                                                <p>نقشه ۳ بعدی مسیر کوهنوردی</p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="service-item">
+                                        <a href="Javascript:void(0)">
+                                            <div class="leftSideItem">
+                                                <i class="fa-solid fa-video"></i>
+                                                <p>ویدیو 3D از مسیرهای صعود شده</p>
+                                            </div>
+                                            <div class="rightSideItem">
+                                                <div class="likeItem">
+                                                    <P>+30</P>
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                </div>
+                                                <div class="unlikeItem">
+                                                    <p>0</p>
+                                                    <i class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+
+
+
+
+
     </main>
 
 
@@ -462,6 +683,20 @@
 
 
     <footer>
+        <div class="waveAnimation">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba( 119, 194, 249, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba( 160, 236, 255, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(  72, 154, 214, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb( 28, 106, 163 )" />
+                    
+                </g>
+            </svg>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">
@@ -510,7 +745,7 @@
                                 <ul>
                                     <li title="تلگرام"><a href="#"><i class="fa-solid fa-paper-plane"></i></a></li>
                                     <li title="اینستاگرام"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li title="توییتر"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li title="لینکدین"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                                     <li title="یوتیوب"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                                 </ul>
                                </div>
@@ -523,7 +758,7 @@
     </footer>
 
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>    
     <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
     <script src="assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
@@ -558,7 +793,13 @@
     
             splide.mount();
         </script>
-    
+        <script>
+            new Vivus('my-svg', {
+            type: 'delayed', 
+            duration: 170,
+            animTimingFunction: Vivus.EASE
+        });
+        </script>
     
 </body>
 </html>
