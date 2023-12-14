@@ -4,13 +4,13 @@
         display: none;
     }
     
+    .CounBoxC, .CounBoxD{
+        margin-top: 20px;
+    }  
+
     #about .about .about-content{
         padding: 0 10px;
     }
-    
-    #about .about .about-content .CounBoxC, .CounBoxD{
-        margin-top: 20px;
-    }   
     
     #about .about .about-img img{
         width: 250px;
@@ -31,7 +31,7 @@
     }
 
     #premiumProperty .premiumProperty .premiumItem img{
-        width: 100%;
+        width: 50%;
     }
 }
 
@@ -66,6 +66,10 @@
 
     #about .about .about-img img{
         width: 300px;
+    }
+
+    footer .waveAnimation{
+        top: -40px;
     }
 
     footer .footer-menu{
@@ -130,7 +134,7 @@
     }
 
     #premiumProperty .premiumProperty .premiumItem img{
-        width: 80%;
+        width: 60%;
     }
 }
 
