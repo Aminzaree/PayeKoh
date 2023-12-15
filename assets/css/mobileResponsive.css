@@ -21,9 +21,9 @@
     -o-transition: all 0.3s ease-in-out;
 }
 
-#responsiveMobileMenu:hover{
+/* #responsiveMobileMenu:hover{
     padding-bottom: 50px;
-}
+} */
 
 #responsiveMobileMenu p{
     text-align: center;
@@ -38,6 +38,41 @@
     font-weight: 500;
     font-family: "vazir";
     color: #000;
+}
+
+#responsiveMobileMenu button{
+    position: absolute;
+    top: -32px;
+    left: 45%;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+
+#responsiveMobileMenu.active{
+    padding-bottom: 50px;
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+#responsiveMobileMenu button svg{
+    font-size: 30px;
+    color: #337068;
 }
 
 #responsiveMobileMenu nav{
