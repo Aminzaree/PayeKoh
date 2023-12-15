@@ -851,99 +851,6 @@ header .header #header-input button:hover{
 /*------------------------------Services--------------------------*/
 /*----------------------------------------------------------------*/
 
-/* #services{
-    width: 100%;
-    padding: 70px 0;
-    background-image: url(../../assets/img/services-Background-blur.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-
-#services .services{
-    width: 100%;
-    padding: 30px 30px 40px 30px;
-    border: 3px solid #fff;
-    background-color: rgba(93, 129, 108, 0.4);
-    border-radius: 25px 0 25px 0;
-    -webkit-border-radius: 25px 0 25px 0;
-    -moz-border-radius: 25px 0 25px 0;
-    -ms-border-radius: 25px 0 25px 0;
-    -o-border-radius: 25px 0 25px 0;
-}
-
-#services .services h2{
-    text-align: center;
-    font-family: "kalameh";
-    font-weight: 600;
-    padding-bottom: 40px;
-    font-size: 35px;
-    color: #fff;
-}
-
-#services .services .service-item{
-    padding: 10px 0 25px 0;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-#services .services .service-item:hover{
-    transform: scale(1.07);
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
-    -ms-transform: scale(1.07);
-    -o-transform: scale(1.07);
-}
-
-#services .services .service-item a{
-    text-decoration: none;
-    color: #fff;
-}
-
-#services .services .service-item svg{
-    font-size: 50px;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-#services .services .service-item:hover .fa-cloud-moon-rain{
-    color: #004ebf;
-}
-
-#services .services .service-item:hover .fa-earth-asia{
-    color: rgb(255, 0, 0);
-}
-
-
-#services .services .service-item:hover .fa-chart-line{
-    color: rgb(17, 255, 0);
-}
-
-#services .services .service-item:hover .fa-chart-simple{
-    color: rgb(255, 242, 0);
-}
-
-#services .services .service-item p{
-    font-size: 25px;
-    font-family: "yekan";
-    font-weight: 700;
-    padding: 10px 0;
-    color: #ffffff;
-} */
-
-/*----------------------------------------------------------------*/
-/*------------------------------Services--------------------------*/
-/*----------------------------------------------------------------*/
-
 #services{
     width: 100%;
     padding: 20px 0 100px 0;
@@ -1029,28 +936,63 @@ header .header #header-input button:hover{
     padding-right: 5px;
 }
 
-
-#services .services-title{
-    text-align: center;
-    padding-bottom: 15px;
+#services .services{
+    width: 100%;
+    padding: 70px 0;
 }
 
-#services .services{
+#services .services .services-item{
+    padding-top: 80px;
+}
+
+#services .services .services-content{
     width: 100%;
 }
 
-#services .services .service-item{
-    background-color: #fff;
-    padding: 25px 12px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    position: relative;
-    margin-top: 20px;
-    border: 1px solid #e1e1e1;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+#services .services .services-content h3{
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 52px;
+    font-family: "ravi";
+}
+
+#services .services .services-content h3 span{
+    color: #006d95;
+}
+
+#services .services .services-content p{
+    color: #7a7a7a;
+    padding: 10px 0;
+    font-family: "ravi";
+    font-weight: 100;
+}
+
+#services .services .services-content ul{
+    padding-right: 15px;
+}
+
+#services .services .services-content ul li{
+    color: #7a7a7a;
+    font-family: ravi;
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+#services .services .services-content a{
+    text-decoration: none;
+    display: inline-block;
+    font-family: "vazir";
+    color: #006d95;
+    border: 1px solid #006d95;
+    margin-top: 8px;
+    text-align: center;
+    width: 250px;
+    padding: 7px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -1058,95 +1000,17 @@ header .header #header-input button:hover{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#services .services .service-item:hover{
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-}
-
-#services .services .service-item a{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
-}
-
-#services .services .service-item a .leftSideItem{
-    display: flex;
-    align-items: center;
-    padding-bottom: 15px;
-}
-
-#services .services .service-item a .leftSideItem svg{
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-    border-radius: 15px;
-    margin-left: 10px;
+#services .services .services-content a:hover{
     color: #fff;
-    background-color: #35A29F;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    border-color: #fff;
+    background-color: #006d95;
 }
 
-#services .services .service-item a .leftSideItem p{
-    color: #252525;
+#services .services .services-img{
+    text-align: center;
+    width: 100%;
 }
 
-#services .services .service-item a .rightSideItem{
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-}
-
-#services .services .service-item a .rightSideItem .likeItem{
-    margin-left: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-}
-
-#services .services .service-item a .rightSideItem .likeItem svg{
-    margin-right: 5px;
-}
-
-#services .services .service-item a .rightSideItem .likeItem p{
-    font-size: 14px;
-}
-
-#services .services .service-item a .rightSideItem .unlikeItem{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-}
-
-#services .services .service-item a .rightSideItem .unlikeItem svg{
-    margin-right: 5px;
-}
-
-#services .services .service-item a .rightSideItem .unlikeItem p{
-    font-size: 14px;
-}
-
-
-.service-title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 12px;
-}
-
-.service-title h3{
-    padding-top: 23px;
-    font-family: "yekanBakh";
-    font-size: 35px;
+#services .services .services-img img{
+    width: 40%;
 }
