@@ -6,8 +6,7 @@ setTimeout(function(){
     // Hide the loading container when the delay is over
     const loadingContainer = document.getElementById("loading-container");
     loadingContainer.style.display = "none";
-}, 5000);
-
+}, 2000);
 
 
 /*----------------------------------------------------------------*/
@@ -61,21 +60,41 @@ window.addEventListener("scroll", function () {
 })
 
 
+/*----------------------------------------------------------------*/
+/*----------------------------Quick Menu--------------------------*/
+/*----------------------------------------------------------------*/
+
+
+const quickMenu = document.getElementById("responsiveMobileMenu");
+
+quickMenu.addEventListener("click", toggleQuickMneu);
+
+function toggleQuickMneu(){
+    quickMenu.classList.toggle("active");
+}
+
+document.addEventListener("click", function(event){
+    let target = event.target;
+    if(!quickMenu.contains(target)){
+        quickMenu.classList.remove("active");
+    }
+})
+
+
 
 /*----------------------------------------------------------------*/
 /*----------------------------Progress Bar------------------------*/
 /*----------------------------------------------------------------*/
 
 
-const progressBar = document.querySelector(".progress-bar");
+// const progressBar = document.querySelector(".progress-bar");
 
-window.addEventListener("scroll", function(){
-    const winScroll = this.window.pageYOffset;
-    const height = this.document.documentElement.scrollHeight - this.window.innerHeight;
-    const scrolled = (winScroll/height) * 100;
-    progressBar.style.width = `${scrolled}%`
-})
-
+// window.addEventListener("scroll", function(){
+//     const winScroll = this.window.pageYOffset;
+//     const height = this.document.documentElement.scrollHeight - this.window.innerHeight;
+//     const scrolled = (winScroll/height) * 100;
+//     progressBar.style.width = `${scrolled}%`
+// })
 
 
 /*----------------------------------------------------------------*/
@@ -98,6 +117,7 @@ function backToTop() {
         behavior: "smooth"
     });
 }
+
 
 /*----------------------------------------------------------------*/
 /*----------------------------Counter Up--------------------------*/
