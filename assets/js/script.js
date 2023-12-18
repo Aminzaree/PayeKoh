@@ -96,6 +96,7 @@ document.addEventListener("click", function(event){
 //     progressBar.style.width = `${scrolled}%`
 // })
 
+// Fuck You Dear JavaScript 😡🙂🧡
 
 /*----------------------------------------------------------------*/
 /*--------------------------To Top Button-------------------------*/
@@ -147,4 +148,27 @@ counters.forEach(counter => {
     }
 
     updateCounter()
+})
+
+
+/*----------------------------------------------------------------*/
+/*-----------------------------Accordion--------------------------*/
+/*----------------------------------------------------------------*/
+
+const accordionTitle = document.querySelectorAll(".accordionTitle");
+
+accordionTitle.forEach(item => {
+    item.addEventListener("click", function(){
+        item.classList.toggle("active");
+
+        const accordionContent = item.nextElementSibling;
+
+        if(accordionContent.style.height){
+            accordionContent.style.height = null;
+            item.querySelector("svg").classList.replace("fa-chevron-up", "fa-chevron-down");
+        }else{
+            accordionContent.style.height = accordionContent.scrollHeight + "px";
+            item.querySelector("svg").classList.replace("fa-chevron-down", "fa-chevron-up")
+        }
+    })
 })
