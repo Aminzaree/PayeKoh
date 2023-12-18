@@ -21,6 +21,14 @@
         width: 70%;
     }
     
+    #contactUs .contactUs-title p{
+        padding-bottom: 25px;
+    }
+
+    #payeKohDescription .payeKohDescription .description-item{
+        margin-top: 25px;
+    }
+
 }
 
 
@@ -90,9 +98,13 @@
         padding-bottom: 10px;
     }
 
-    #premiumProperty .premiumProperty .premiumItem img{
-        width: 60%;
+    #counterUp .counter-section .CounBoxB{
+        margin-top: 25px;
     }
+
+    /* #premiumProperty .premiumProperty .premiumItem img{
+        width: 60%;
+    } */
 
     #services .services .services-item{
         border-top: 1px solid #a1a1a1;
