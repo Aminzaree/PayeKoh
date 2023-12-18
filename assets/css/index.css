@@ -36,6 +36,43 @@ header{
     background-position: center;
 }
 
+#ContactSlider{
+    width: 85%;
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    background-color: red;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    padding: 20px 20px;
+    background-color: rgba(93, 129, 108, 0.5);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#ContactSlider .splide__track ul li{
+    text-align: center;
+    color: #fff;
+    font-family: "ravi";
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#ContactSlider .splide__arrow{
+    display: none;
+}
+
+#ContactSlider .splide__pagination{
+    display: none;
+}
+
 header #menu{
     width: 98%;
     position: relative;
@@ -63,7 +100,7 @@ header #menu{
 header #menu.sticky{
     width: 100%;
     padding: 8px;
-    background-color: rgba(225, 225, 225, 0.7);
+    background-color: rgba( 225, 237, 255, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -84,7 +121,7 @@ header #menu.sticky{
 
 
 header #menu.sticky:hover{
-    background-color: rgba(225, 225, 225, 1);
+    background-color: rgba( 225, 237, 255, 1);
 }
 
 header #menu.sticky #mainNavbar nav ul li a{
@@ -487,11 +524,43 @@ header .header #header-input button:hover{
     color: #fff;
 }
 
-.counter-section{
+
+/*----------------------------------------------------------------*/
+/*----------------------------CounterUp---------------------------*/
+/*----------------------------------------------------------------*/
+
+#counterUp{
+    width: 100%;
+    padding: 80px 0;
+    background-image: url(../../assets/img/bg-1.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: fixed;
+}
+
+
+#counterUp .counterUp-title{
+    text-align: center;
+}
+
+#counterUp .counterUp-title p{
+    color: #7a7a7a;
+    font-size: 20px;
+    font-family: "ravi";
+    padding-bottom: 10px;
+}
+
+#counterUp .counterUp-title h2{
+    font-family: "ravi";
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#counterUp .counter-section{
     padding-top: 50px;
 }
 
-.counter-section .counterBox{
+#counterUp .counter-section .counterBox{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -509,38 +578,78 @@ header .header #header-input button:hover{
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     cursor: pointer;
-    backdrop-filter: blur(10px);
-    background: rgba(225, 225, 225, 0.2);
+    background-color: #fff;
     border: 1px solid #e1e1e1;
 }
 
-.counter-section .counterBox:hover{
+/* .counter-section .counterBox:hover{
     transform: scale(1.03);
     -webkit-transform: scale(1.03);
     -moz-transform: scale(1.03);
     -ms-transform: scale(1.03);
     -o-transform: scale(1.03);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+} */
+
+#counterUp .counter-section .CounBoxD, .CounBoxE, .CounBoxF{
+    margin-top: 25px;
 }
 
-.counter-section .counterBox p{
+#counterUp .counter-section .counterBox p{
     font-family: "kalameh";
     font-size: 20px;
-    padding-top: 10px !important;
-    color: #fff !important;
+    padding: 10px 0 !important;
+    color: #7a7a7a !important;
 }
 
-.counter-section .counterBox .counter{
+#counterUp .counter-section .counterBox .counter{
     padding: 0 !important;
-    color: #fff !important;
+    color: #000 !important;
     font-family: "kalameh";
     font-size: 25px;
 }
 
-.counter-section .counterBox svg{
+#counterUp .counter-section .counterBox svg{
     font-size: 30px;
-    color: #fff;
 }
+
+#counterUp .counter-section .CounBoxA svg{
+    color: #00b6ff;
+}
+
+#counterUp .counter-section .CounBoxB svg{
+    color: #ff00b9;
+}
+
+#counterUp .counter-section .CounBoxC svg{
+    color: #00ff2e;
+}
+
+#counterUp .counter-section .CounBoxD svg{
+    color: #00ffff;
+}
+
+#counterUp .counter-section .CounBoxF svg{
+    color: #ff6800;
+}
+
+/*----------------------------------------------------------------*/
+/*-------------------------------About----------------------------*/
+/*----------------------------------------------------------------*/
+
+#about{
+    width: 100%;
+    padding: 80px 0;
+    background-color: #e1edff;
+    text-align: center;
+}
+
+#about h2{
+    font-size: 32px;
+    font-weight: 800;
+    font-family: "ravi";
+}
+
 
 
 /*----------------------------------------------------------------*/
@@ -548,7 +657,7 @@ header .header #header-input button:hover{
 /*----------------------------------------------------------------*/
 
 
-#cardCategory{
+/* #cardCategory{
     width: 100%;
     padding: 50px 0 80px 0;
     background-image: url(../../assets/img/Vector.png);
@@ -760,60 +869,12 @@ header .header #header-input button:hover{
 
 .splide__arrow svg{
     color: #fff !important;
-}
+} */
 
 /*----------------------------------------------------------------*/
 /*------------------------------About-----------------------------*/
 /*----------------------------------------------------------------*/
 
-#about{
-    width: 100%;
-    padding: 50px 0;
-    /* background-image: url(../../assets/img/bg-6.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-attachment: fixed; */
-}
-
-#about .about{
-    width: 100%;
-    padding: 30px 0;
-    /* background-image: url(../../assets/img/theme-1.png), linear-gradient(135deg, rgb(71, 170, 155), rgb(60, 64, 174)); */
-    /* background-image: url(../../assets/img/theme-1.png), linear-gradient(135deg, rgba(41, 108, 103, 1), rgba(106, 134, 109, 1)); */
-    background-image: url(../../assets/img/theme-1.png), url(../../assets/img//theme-2.png), linear-gradient(135deg, #0172af, #74febd);
-    background-repeat: no-repeat, no-repeat;
-    background-position: top left, bottom right;
-    background-size: 100%;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-#about .about .about-content{
-    padding-right: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#about .about .about-content h2{
-    font-size: 50px;
-    font-family: "kalameh";
-    color: #071952;
-}
-
-#about .about .about-content h4{
-    font-family: "yekanBakh";
-    padding-top: 30px;
-    padding-bottom: 15px;
-    color: #205295;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: cursor 2s step-start ,     text 3s steps(17) alternate infinite;
-    -webkit-animation: cursor 2s step-start ,     text 3s steps(17) alternate infinite;
-}
 
 /* @keyframes cursor {
 	0%, 10% { 
@@ -830,22 +891,6 @@ header .header #header-input button:hover{
   }
 } */
 
-#about .about .about-content p{
-    font-weight: 600;
-    color: #27374D;
-    text-align: justify;
-    line-height: 2;
-}
-
-#about .about .about-img{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#about .about .about-img img{
-    width: 300px;
-}
 
 /*----------------------------------------------------------------*/
 /*------------------------------Services--------------------------*/
@@ -853,7 +898,7 @@ header .header #header-input button:hover{
 
 #services{
     width: 100%;
-    padding: 20px 0 100px 0;
+    padding: 0 0 50px 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -950,14 +995,10 @@ header .header #header-input button:hover{
 }
 
 #services .services .services-content h3{
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 900;
     line-height: 52px;
     font-family: "ravi";
-}
-
-#services .services .services-content h3 span{
-    color: #006d95;
 }
 
 #services .services .services-content p{
@@ -1014,3 +1055,304 @@ header .header #header-input button:hover{
 #services .services .services-img img{
     width: 40%;
 }
+
+
+/*----------------------------------------------------------------*/
+/*---------------------Paye Koh Description-----------------------*/
+/*----------------------------------------------------------------*/
+
+#payeKohDescription{
+    width: 100%;
+    padding: 30px 0 80px 0;
+    background-image: url(../../assets/img/bg-4.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: fixed;
+}
+
+#payeKohDescription .payeKohDescription-title{
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+#payeKohDescription .payeKohDescription-title h2{
+    font-family: "ravi";
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#payeKohDescription .payeKohDescription{
+    width: 100%;
+}
+
+#payeKohDescription .payeKohDescription .description-item{
+    text-align: center;
+}
+
+#payeKohDescription .payeKohDescription .description-item svg{
+    font-size: 35px;
+}
+
+#payeKohDescription .payeKohDescription .description-item .fa-circle-check{
+    color: #00c1ff;
+}
+
+#payeKohDescription .payeKohDescription .description-item .fa-circle-info{
+    color: #00ff5d;
+}
+
+#payeKohDescription .payeKohDescription .description-item .fa-shield-halved{
+    color: #002eff;
+}
+
+#payeKohDescription .payeKohDescription .description-item .fa-face-smile{
+    color: #ff3e00;
+}
+
+#payeKohDescription .payeKohDescription .description-item .fa-diagram-project{
+    color: #ecff00;
+}
+
+#payeKohDescription .payeKohDescription .description-item h3{
+    font-family: "ravi";
+    font-weight: 700;
+    padding: 10px 0;
+    padding-top: 7px;
+}
+
+#payeKohDescription .payeKohDescription .description-item p{
+    color: #7a7a7a;
+    font-size: 16px;
+    font-family: "ravi";
+}
+
+
+/*----------------------------------------------------------------*/
+/*----------------------------Accordion---------------------------*/
+/*----------------------------------------------------------------*/
+
+#accordion{
+    width: 100%;
+    padding: 30px 0 80px 0;
+    background-image: url(../../assets/img/bg-4.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: fixed;
+}
+
+#accordion .accordion-title{
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+#accordion .accordion-title h2{
+    font-family: "ravi";
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#accordion .accordion{
+    width: 100%;
+}
+
+#accordion #mainAccordion{
+    /* background-color: #e1edff; */
+    padding: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#accordion .accordion-img{
+    width: 100%;
+    text-align: center;
+}
+
+#accordion .accordion-img img{
+    width: 50%;
+}
+
+#accordion .mainAccordion{
+    width: 100%;
+    margin: 10px 0;
+}
+
+#accordion .mainAccordion .accordionTitle{
+    color: #1c6aa3;
+    background-color: #e1edff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#accordion .mainAccordion .accordionContent{
+    background-color: transparent;
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#accordion .mainAccordion .accordionContent p{
+    color: #4a4a4a;
+    padding: 10px 5px;
+    margin: 0 10px;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/*----------------------------Contact Us--------------------------*/
+/*----------------------------------------------------------------*/
+
+#contactUs{
+    width: 100%;
+    padding: 30px 0 120px 0;
+}
+
+#contactUs .contactUs-title{
+    text-align: center;
+}
+
+#contactUs .contactUs-title h2{
+    font-family: "ravi";
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#contactUs .contactUs-title p{
+    color: #7a7a7a;
+    font-size: 18px;
+    font-family: "ravi";
+    padding-top: 7px;
+    padding-bottom: 45px;
+}
+
+#contactUs .contactUs{
+    width: 100%;
+}
+
+#contactUs .contactUs .contactUs-InputBox{
+    width: 100%;
+    background-color: #e1edff;
+    padding: 25px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#contactUs .contactUs .contactUs-InputBoxItem{
+    width: 100%;
+    padding-top: 15px;
+}
+
+#contactUs .contactUs .contactUs-InputBox label{
+    width: 100%;
+    font-size: 13px;
+}
+
+#contactUs .contactUs .contactUs-InputBox input{
+    font-family: "vazir";
+    width: 100%;
+    margin-top: 7px;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#contactUs .contactUs .contactUs-InputBox textarea{
+    font-family: "vazir";
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    resize: none;
+    overflow-y: auto;
+    padding: 10px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#contactUs .contactUs .contactUs-Btn{
+    width: 100%;
+    padding-top: 10px;
+}
+
+#contactUs .contactUs .contactUs-Btn button{
+    width: 100%;
+    font-family: "vazir";
+    font-weight: 600;
+    padding: 10px 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#contactUs .contactUs .contactUs-Btn button.sendMessage{
+    background-color: #00b6ff;
+    border: 2px solid #00b6ff;
+}
+
+#contactUs .contactUs .contactUs-Btn button.sendMessage:hover{
+    color: #00b6ff;
+    border-color:#00b6ff;
+    background-color: #fff;
+}
+
+#contactUs .contactUs .contactUs-Btn button.delForm{
+    background-color: #ff0800;
+    border: 2px solid #ff0800;
+}
+
+#contactUs .contactUs .contactUs-Btn button.delForm:hover{
+    color: #ff0800;
+    border-color:#ff0800;
+    background-color: #fff;
+}
+
+#contactUs .contactUs .contactUs-img{
+    width: 100%;
+}
+
+#contactUs .contactUs .contactUs-img img{
+    width: 100%;
+}
+
+
