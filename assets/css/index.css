@@ -335,15 +335,14 @@ header #menu .userBtn button:hover:nth-child(2){
 #mainHeader-content{
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 50%;
-    transform: translate(50%, -50%);
-    -webkit-transform: translate(50%, -50%);
-    -moz-transform: translate(50%, -50%);
-    -ms-transform: translate(50%, -50%);
-    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -45%);
+    -webkit-transform: translate(50%, -45%);
+    -moz-transform: translate(50%, -45%);
+    -ms-transform: translate(50%, -45%);
+    -o-transform: translate(50%, -45%);
 }
-
 
 header .header #mainTitle{
     text-align: center;
@@ -371,113 +370,72 @@ header .header .mainTitle img.logoTxt{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#inputBox-header{
-    width: 100%;
-}
-
-header .header #header-input{
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
+.mainHeaderContent{
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(93, 129, 108, 0.5);
-    /* background-color: rgba(225, 225, 225, 0.7); */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    border: 3px solid #fff;
-    border-radius: 25px 0 25px 0;
-    -webkit-border-radius: 25px 0 25px 0;
-    -moz-border-radius: 25px 0 25px 0;
-    -ms-border-radius: 25px 0 25px 0;
-    -o-border-radius: 25px 0 25px 0;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
 }
 
-header .header #header-input:hover{
-    transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    -moz-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    -o-transform: scale(1.03);
-}
-
-header #header-input .inputSelect-header{
-    text-align: start;
-    padding-right: 15px;
-}
-
-header #header-input .inputSelect-header label{
-    font-family: "vazir";
-    font-size: 16px;
-    font-family: 600;
-    font-size: 15px;
+.mainHeaderContent h1{
+    font-family: "ravi";
+    font-weight: 800;
     color: #fff;
+    padding: 15px 0;
+    font-size: 35px;
 }
 
-header #header-input .inputSelect-header label svg{
-    color: rgb(255, 255, 255);
-    margin-left: 8px;
-}
-
-header #header-input .inputSelect-header select{
-    margin-bottom: 10px;
-    padding: 5px 20px;
-    font-size: 16px;
-    font-family: "vazir";
-    color: #fff;
-    background-color: rgba(145, 165, 154, 0.8);
-    /* background-color: rgba(225, 225, 225, 0.7); */
-    /* background-color: #35A29F; */
-    border: none;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-header #header-input .inputSelect-header select:hover{
-    background-color: #fff;
-    color: #000;
-    /* background-color: #088395; */
-}
-
-header .header #header-input .inputSelect-header select option{
-    font-family: "vazir" !important;
-    cursor: pointer !important;
-}
-
-header .header .inputheaderBox{
+.random-word {
+    display: block;
+    font-family: "ravi";
+    font-weight: 400;
+    font-size: 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: rgba(207, 207, 207, 0.9);
+    /* letter-spacing: 3px; */
     width: 100%;
-}
-
-header .header #header-input input{
-    font-family: "vazir";
-    font-weight: 600;
-    width: 78%;
-    padding: 15px 15px;
-    border: none;
-    outline: none;
+  /*   transition: all 1.25s; */
+    animation: slidedown 4s infinite;
+    -webkit-animation: slidedown 4s infinite;
+    -moz-animation: slidedown 4s infinite;
+  }
+  
+  @keyframes slidedown {
+    0% {
+      opacity: 50;
+    }
+    
+    5% {
+      opacity: 0;
+      transform: translateY(0.5em);
+    }
+    
+    7% {
+      transform: translateY(-1em);
+    }
+    
+    10% {
+      opacity: 0;
+    }
+    
+    20% {
+      transform: translateY(0);
+      opacity: 100;
+    }
+  }
+  
+.mainHeaderContent a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 7px 10px;
     color: #fff;
-    background-color: rgba(145, 165, 154, 0.8);
-    /* background-color: rgba(225, 225, 225, 0.7); */
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-left: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -485,45 +443,28 @@ header .header #header-input input{
     -o-transition: all 0.3s ease-in-out;
 }
 
-header .header #header-input input:hover{
+.mainHeaderContent a.joinUs{
+    color: #337068; 
     background-color: #fff;
-    color: #000;
+    border: 2px solid #337068;
 }
 
-header .header #header-input input:focus{
-    background-color: #fff;
-    color: #000;
+.mainHeaderContent a.joinUs:hover{
+    color: #fff; 
+    background-color: #337068;
+    border: 2px solid #fff;
 }
 
-header .header #header-input button{
-    font-family: "vazir";
-    font-weight: 600;
-    width: 18%;
-    padding: 15px 15px;
-    margin-right: 5px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    /* background-color: rgba(145, 165, 154, 0.8); */
-    /* background-color: rgba(225, 225, 225, 0.7); */
-    background-color: #35A29F;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
+.mainHeaderContent a.mtprotoConnection{
+    color: #fff; 
+    border: 2px solid #fff;
 }
 
-header .header #header-input button:hover{
-    background-color: #088395;
-    color: #fff;
+.mainHeaderContent a.mtprotoConnection:hover{
+    color: #fff; 
+    background-color: #337068;
+    border: 2px solid #fff;
 }
-
 
 /*----------------------------------------------------------------*/
 /*----------------------------CounterUp---------------------------*/
@@ -640,7 +581,7 @@ header .header #header-input button:hover{
 #about{
     width: 100%;
     padding: 80px 0;
-    background-color: #e1edff;
+    background-color: #e7effb;
     text-align: center;
 }
 
@@ -1005,7 +946,8 @@ header .header #header-input button:hover{
     color: #7a7a7a;
     padding: 10px 0;
     font-family: "ravi";
-    font-weight: 100;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 #services .services .services-content ul{
@@ -1014,8 +956,9 @@ header .header #header-input button:hover{
 
 #services .services .services-content ul li{
     color: #7a7a7a;
+    font-size: 17px;
     font-family: ravi;
-    font-weight: 600;
+    font-weight: 100;
     padding: 5px 0;
 }
 
