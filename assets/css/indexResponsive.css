@@ -10,7 +10,7 @@
     }
     
     .CounBoxC, .CounBoxD{
-        margin-top: 20px;
+        margin-top: 25px;
     }  
 
     #premiumProperty .premiumProperty .premiumItem img{
@@ -41,6 +41,10 @@
     
     header .header .mainTitle img.logoTxt{
         width: 310px;
+    }
+
+    #toTopBtn.active{
+        bottom: 75px;
     }
 
     .mainHeaderContent h1{
@@ -162,9 +166,12 @@
         width: 210px;
     }
 
-    header #header-input .inputSelect-header select{
-        padding: 4px 8px;
-        font-size: 13px;
+    .mainHeaderContent h1{
+        font-size: 24px;
+    }
+
+    .mainHeaderContent span{
+        font-size: 18px;
     }
 
     #premiumProperty .premiumProperty .premiumItem img{
