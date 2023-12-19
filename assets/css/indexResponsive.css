@@ -43,8 +43,12 @@
         width: 310px;
     }
 
-    #header-input{
-        padding: 0 10px;
+    .mainHeaderContent h1{
+        font-size: 28px;
+    }
+    
+    .mainHeaderContent span{
+        font-style: 18px;
     }
 
     #services .services .services-img img{
@@ -102,8 +106,16 @@
         font-size: 28px !important;
     }
 
-    #counterUp .counter-section .CounBoxB{
+    #counterUp .counter-section .CounBoxA, .CounBoxB{
         margin-top: 25px;
+    }
+
+    #counterUp .counter-section .counterBox p{
+        font-size: 17px;
+    }
+
+    #counterUp .counter-section .counterBox .counter{
+        font-size: 22px;
     }
 
     #services .services .services-item{
@@ -114,16 +126,11 @@
     }
 
     #services .services .services-content{
-        text-align: center;
         padding-top: 20px;
     }
 
     #services .services .services-content h3{
         font-size: 25px;
-    }
-
-    #services .services .services-content ul li{
-        list-style: none;
     }
 
     #services .services{
