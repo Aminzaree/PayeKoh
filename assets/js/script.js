@@ -9,6 +9,7 @@ setTimeout(function(){
 }, 2000);
 
 
+
 /*----------------------------------------------------------------*/
 /*---------------------------Mobile Html--------------------------*/
 /*----------------------------------------------------------------*/
@@ -24,6 +25,7 @@ setTimeout(function(){
 // }
 
 // window.onload = checkRedirect;
+
 
 
 /*------------------------------------------------*/
@@ -45,6 +47,61 @@ toggleMenu.addEventListener("click", function () {
 })
 
 
+
+/*----------------------------------------------------------------*/
+/*------------------Random Change Text Animation------------------*/
+/*----------------------------------------------------------------*/
+
+let i = 0;
+
+const randomizeText = () => {
+  const phrase = document.querySelector('.random-word');
+  const compStyles = window.getComputedStyle(phrase);
+  const animation = compStyles.getPropertyValue('animation');
+  const animationTime = parseFloat(animation.match(/\d*[.]?\d+/)) * 1000;
+  
+  const phrases = ['جی پس اس مسیر رو دریافت کنید', 'وضعیت آب و هوای کوهستان رو برات چک کنه', 'نقشه سه بعدی از کوهستان رو بهت نمایش بده'];
+  
+  i = randomNum(i, phrases.length);
+  const newPhrase = phrases[i];
+  
+  setTimeout(() => {
+    phrase.textContent = newPhrase;
+  }, 400); // time to allow opacity to hit 0 before changing word
+}
+
+const randomNum = (num, max) => {
+  let j = Math.floor(Math.random() * max);
+  
+  // ensure diff num every time
+  if (num === j) {
+    return randomNum(i, max);
+  } else {
+    return j;
+  }
+}
+
+const getAnimationTime = () => {
+  const phrase = document.querySelector('.random-word');
+  const compStyles = window.getComputedStyle(phrase);
+  let animation = compStyles.getPropertyValue('animation');
+  
+  // firefox support for non-shorthand property
+  animation != "" ? animation : animation = compStyles.getPropertyValue('-moz-animation-duration');
+  
+    // webkit support for non-shorthand property
+  animation != "" ? animation : animation = compStyles.getPropertyValue('-webkit-animation-duration');
+  
+  
+  const animationTime = parseFloat(animation.match(/\d*[.]?\d+/)) * 1000;
+  return animationTime;
+}
+
+randomizeText();
+setInterval(randomizeText, getAnimationTime());
+
+
+
 /*----------------------------------------------------------------*/
 /*---------------------------Menu Sticky--------------------------*/
 /*----------------------------------------------------------------*/
@@ -60,10 +117,10 @@ window.addEventListener("scroll", function () {
 })
 
 
+
 /*----------------------------------------------------------------*/
 /*----------------------------Quick Menu--------------------------*/
 /*----------------------------------------------------------------*/
-
 
 const quickMenu = document.getElementById("responsiveMobileMenu");
 
@@ -86,7 +143,6 @@ document.addEventListener("click", function(event){
 /*----------------------------Progress Bar------------------------*/
 /*----------------------------------------------------------------*/
 
-
 // const progressBar = document.querySelector(".progress-bar");
 
 // window.addEventListener("scroll", function(){
@@ -97,6 +153,8 @@ document.addEventListener("click", function(event){
 // })
 
 // Fuck You Dear JavaScript 😡🙂🧡
+
+
 
 /*----------------------------------------------------------------*/
 /*--------------------------To Top Button-------------------------*/
@@ -120,10 +178,10 @@ function backToTop() {
 }
 
 
+
 /*----------------------------------------------------------------*/
 /*----------------------------Counter Up--------------------------*/
 /*----------------------------------------------------------------*/
-
 
 const counters = document.querySelectorAll(".counter");
 
@@ -149,6 +207,7 @@ counters.forEach(counter => {
 
     updateCounter()
 })
+
 
 
 /*----------------------------------------------------------------*/
