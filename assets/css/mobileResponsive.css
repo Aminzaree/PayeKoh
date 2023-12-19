@@ -334,9 +334,9 @@
 
 @media screen and (max-width: 768px){
 
-    header .header{
+    /* header .header{
         display: none;
-    }
+    } */
 
     #help-container{
         display: none;
