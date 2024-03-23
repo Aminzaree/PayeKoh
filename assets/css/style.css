@@ -157,6 +157,57 @@ footer{
     position: relative;
 }
 
+footer .topFooter .sendEmail{
+    padding: 5px 35px;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: -51.5px;
+    background-color: #38A3A5;
+    border-radius: 0 80px 0 0;
+    -webkit-border-radius: 0 80px 0 0;
+    -moz-border-radius: 0 80px 0 0;
+    -ms-border-radius: 0 80px 0 0;
+    -o-border-radius: 0 80px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+footer .topFooter .sendEmail p{
+    color: #fff;
+    font-family: "ravi";
+    font-weight: 300;
+}
+
+footer .topFooter .sendEmail .emailBox input{
+    width: 250px;
+    font-family: "ravi";
+    font-weight: 100;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 66px;
+    -webkit-border-radius: 66px;
+    -moz-border-radius: 66px;
+    -ms-border-radius: 66px;
+    -o-border-radius: 66px;
+}
+
+.mainFooter{
+    position: relative;
+}
+
+.mainFooter::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 800px;
+    background-color: red;
+}
+
+
 footer .footerAbout{
     width: 100%;
     display: flex;

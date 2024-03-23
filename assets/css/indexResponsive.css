@@ -57,6 +57,10 @@
         margin-top: 25px;
     }
 
+    footer .topFooter .sendEmail::after{
+        display: none;
+    }
+
 }
 
 
@@ -101,6 +105,25 @@
 
     footer .footer-social{
         margin-top: 20px;
+    }
+
+    footer .topFooter .sendEmail{
+        top: -118px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    footer .topFooter .sendEmail p{
+        padding-bottom: 10px;
+    }
+    
+    footer .topFooter .sendEmail .emailBox button{
+        position: relative;
+        left: 91px;
+        bottom: 0;
     }
 
     #copyRight{
