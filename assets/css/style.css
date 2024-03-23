@@ -120,7 +120,7 @@ body{
 }
 
 #toTopBtn:hover{
-    background-color: rgba(31, 111, 143, 1);
+    background-color: #38A3A5;
 }
 
 #toTopBtn.active{
@@ -151,10 +151,47 @@ footer{
     width: 100%;
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #1d1d1b;
+    background-color: #337068;
     background-repeat: no-repeat;
     background-position: right;
     position: relative;
+}
+
+footer .topFooter .sendEmail{
+    padding: 5px 35px;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: -52px;
+    background-color: #38A3A5;
+    border-radius: 0 45px 0 0;
+    -webkit-border-radius: 0 45px 0 0;
+    -moz-border-radius: 0 45px 0 0;
+    -ms-border-radius: 0 45px 0 0;
+    -o-border-radius: 0 45px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .topFooter .sendEmail p{
+    color: #fff;
+    font-family: "ravi";
+    font-weight: 300;
+}
+
+footer .topFooter .sendEmail .emailBox input{
+    width: 250px;
+    font-family: "ravi";
+    font-weight: 100;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 66px;
+    -webkit-border-radius: 66px;
+    -moz-border-radius: 66px;
+    -ms-border-radius: 66px;
+    -o-border-radius: 66px;
 }
 
 footer .footerAbout{
@@ -250,6 +287,7 @@ footer .contactUs ul li a:hover{
 footer .contactUs ul li a svg{
     margin-left: 7px;
     font-size: 15px;
+    color: #cbad86;
 }
 
 footer .contactUs h2{
@@ -291,7 +329,9 @@ footer .contactUs ul li a:hover{
 footer .contactUs ul li a svg{
     margin-left: 7px;
     font-size: 15px;
+    color: #cbad86;
 }
+
 footer .quickAccess h2{
     color: #cbad86;
     font-size: 15px;
@@ -331,48 +371,12 @@ footer .quickAccess ul li a:hover{
 footer .quickAccess ul li a svg{
     margin-left: 7px;
     font-size: 15px;
+    color: #cbad86;
 }
 
 footer .copyRight{
     width: 100%;
     background-color: #000;
-}
-
-footer .topFooter .sendEmail{
-    padding: 5px 35px;
-    position: absolute;
-    z-index: 99;
-    left: 0;
-    top: -52px;
-    background-color: #00b6ff;
-    border-radius: 0 45px 0 0;
-    -webkit-border-radius: 0 45px 0 0;
-    -moz-border-radius: 0 45px 0 0;
-    -ms-border-radius: 0 45px 0 0;
-    -o-border-radius: 0 45px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-footer .topFooter .sendEmail p{
-    color: #fff;
-    font-family: "ravi";
-    font-weight: 300;
-}
-
-footer .topFooter .sendEmail .emailBox input{
-    width: 250px;
-    font-family: "ravi";
-    font-weight: 100;
-    padding: 10px 10px;
-    border: none;
-    outline: none;
-    border-radius: 66px;
-    -webkit-border-radius: 66px;
-    -moz-border-radius: 66px;
-    -ms-border-radius: 66px;
-    -o-border-radius: 66px;
 }
 
 #copyRight img{
@@ -382,260 +386,13 @@ footer .topFooter .sendEmail .emailBox input{
 #copyRight{
     width: 100%;
     background-color: #000;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
-    border-bottom: 8px solid #00b6ff;
+    border-bottom: 8px solid #38A3A5;
 }
 
 #copyRight p{
     color: #fff;
+    font-size: 13px;
 }
 
-/* footer .topFooter .sendEmail .emailBox button{
-    position: absolute;
-    font-family: "ravi";
-    font-weight: 100;
-    bottom: 9px;
-    left: 39px;
-    padding: 6px 25px;
-    border: none;
-    background-color: #00b6ff;
-    color: #fff;
-    border-radius: 76px;
-    -webkit-border-radius: 76px;
-    -moz-border-radius: 76px;
-    -ms-border-radius: 76px;
-    -o-border-radius: 76px;
-    cursor: pointer;
-} */
-
-/* footer{
-    width: 100%;
-    padding-top: 50px;
-    background-color: #1c6aa3;
-    background-repeat: no-repeat;
-    background-position: right;
-    position: relative;
-}
-
-footer .waveAnimation{
-    position: absolute;
-    width: 100%;
-    top: -100px;
-}
-
-
-footer .footer-about{
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-footer .footer-about img{
-    width: 100px;
-}
-
-footer .footer-about h3{
-    font-size: 40px;
-    font-family: "yekan";
-    color: #fff;
-}
-
-footer .footer-about p{
-    font-size: 14px;
-    color: #e1e1e1;
-}
-
-footer .footer-aboutContent p{
-    padding-top: 15px;
-    padding-right: 15px;
-    text-align: justify;
-    color: #bbd0de;
-}
-
-
-footer .footer-menu h2{
-    color: #bbd0de;
-    font-family: "yekan";
-    padding-bottom: 10px;
-    border-bottom: 2px solid #fff;
-}
-
-footer .footer-menu ul{
-    width: 100%;
-    padding-top: 10px;
-}
-
-footer .footer-menu ul li{
-    list-style: none;
-    margin: 15px 10px;
-}
-
-footer .footer-menu ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-footer .footer-menu ul li a:hover{
-    color: #fff;
-}
-
-footer .footer-menu ul li a svg{
-    margin-left: 10px;
-    font-size: 20px;
-}
-
-
-footer .footer-lorem h2{
-    color: #bbd0de;
-    font-family: "yekan";
-    padding-bottom: 10px;
-    border-bottom: 2px solid #fff;
-}
-
-footer .footer-lorem p{
-    color: #bbd0de;
-    padding-top: 15px;
-    text-align: justify;
-}
-
-
-footer .footer-buttom{
-    margin-top: 40px;
-    padding: 15px;
-    background-color: #507394;
-    border-radius: 20px 20px 0 0;
-    -webkit-border-radius: 20px 20px 0 0;
-    -moz-border-radius: 20px 20px 0 0;
-    -ms-border-radius: 20px 20px 0 0;
-    -o-border-radius: 20px 20px 0 0;
-}
-
-footer .footer-buttom p{
-    color: #fff;
-}
-
-footer .footer-buttom p span{
-    font-family: "kalameh";
-    font-size: 23px;
-    color: yellow;
-}
-
-footer .footer-buttom ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer .footer-buttom ul li{
-    list-style: none;
-}
-
-footer .footer-buttom ul li a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    background-color: #fff;
-    margin: 0 10px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-footer .footer-buttom ul li a svg{
-    font-size: 22px;
-}
-
-footer .footer-buttom ul li:nth-child(1) a svg{
-    color: #006aff;
-    transition: all 0.3s ease-in-out;
-    font-size: 20px !important;
-}
-
-footer .footer-buttom ul li:hover:nth-child(1) a{
-    background-color: #006aff;
-    transform: scale(1.07);
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
-    -ms-transform: scale(1.07);
-    -o-transform: scale(1.07);
-}
-
-footer .footer-buttom ul li:hover:nth-child(1) a svg{
-    color: #fff;
-}
-
-footer .footer-buttom ul li:nth-child(2) a svg{
-    color: #ff2f00;
-    transition: all 0.3s ease-in-out;
-}
-
-footer .footer-buttom ul li:hover:nth-child(2) a{
-    background-color: #ff2f00;
-    transform: scale(1.07);
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
-    -ms-transform: scale(1.07);
-    -o-transform: scale(1.07);
-}
-
-footer .footer-buttom ul li:hover:nth-child(2) a svg{
-    color: #fff;
-}
-
-
-footer .footer-buttom ul li:nth-child(3) a svg{
-    color: #006aff;
-    transition: all 0.3s ease-in-out;
-    font-size: 20px !important;
-}
-
-footer .footer-buttom ul li:hover:nth-child(3) a{
-    background-color: #006aff;
-    transform: scale(1.07);
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
-    -ms-transform: scale(1.07);
-    -o-transform: scale(1.07);
-}
-
-footer .footer-buttom ul li:hover:nth-child(3) a svg{
-    color: #fff;
-}
-
-
-footer .footer-buttom ul li:nth-child(4) a svg{
-    color: #ff0000;
-    transition: all 0.3s ease-in-out;
-    font-size: 20px !important;
-}
-
-footer .footer-buttom ul li:hover:nth-child(4) a{
-    background-color: #ff0000;
-    transform: scale(1.07);
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
-    -ms-transform: scale(1.07);
-    -o-transform: scale(1.07);
-}
-
-footer .footer-buttom ul li:hover:nth-child(4) a svg{
-    color: #fff;
-}
- */

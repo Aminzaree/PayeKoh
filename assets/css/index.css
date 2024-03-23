@@ -136,38 +136,6 @@ header #menu.sticky #mainNavbar nav ul li.active a svg{
     color: #fff;
 }
 
-header #menu #Subscription{
-    border: none;
-    font-family: "yekanBakh";
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #337068;
-    border: 1px solid #337068;
-    padding: 5px 8px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-header #menu #Subscription:hover{
-    color: #337068;
-    background-color: #fff;
-    transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    -moz-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    -o-transform: scale(1.03);
-}
-
 header #menu #Subscription svg{
     margin-left: 5px;
 }
@@ -263,8 +231,8 @@ header #menu #mainNavbar nav ul li a:hover svg{
 }
 
 header #menu .userBtn button{
-    font-family: "yekanBakh";
-    font-weight: 600;
+    font-family: "ravi";
+    font-weight: 500;
     font-size: 16px;
     width: 70px;
     padding: 5px 8px;
@@ -650,7 +618,7 @@ header .header .mainTitle img.logoTxt{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #006d95;
+    color: #38A3A5;
     padding: 7px 10px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -666,7 +634,7 @@ header .header .mainTitle img.logoTxt{
 
 #services .services-title a:hover{
     color: #fff;
-    background-color: #a0deff;
+    background-color: #38A3A5;
 }
 
 #services .services-title svg{
@@ -724,8 +692,8 @@ header .header .mainTitle img.logoTxt{
     text-decoration: none;
     display: inline-block;
     font-family: "vazir";
-    color: #006d95;
-    border: 1px solid #006d95;
+    color: #38A3A5;
+    border: 1px solid #38A3A5;
     margin-top: 8px;
     text-align: center;
     width: 250px;
@@ -745,7 +713,7 @@ header .header .mainTitle img.logoTxt{
 #services .services .services-content a:hover{
     color: #fff;
     border-color: #fff;
-    background-color: #006d95;
+    background-color: #38A3A5;
 }
 
 #services .services .services-img{
@@ -853,7 +821,6 @@ header .header .mainTitle img.logoTxt{
 }
 
 #accordion #mainAccordion{
-    /* background-color: #e1edff; */
     padding: 20px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -877,9 +844,9 @@ header .header .mainTitle img.logoTxt{
 }
 
 #accordion .mainAccordion .accordionTitle{
-    color: #1c6aa3;
-    background-color: #e1edff;
-    padding: 10px;
+    color: #fff;
+    background-color: #38A3A5;
+    padding: 14px;
     cursor: pointer;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -889,6 +856,12 @@ header .header .mainTitle img.logoTxt{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+#accordion .mainAccordion .accordionTitle h5{
+    font-family: ravi;
+    font-weight: 400;
+    font-size: 15px;
 }
 
 
@@ -908,6 +881,8 @@ header .header .mainTitle img.logoTxt{
     color: #4a4a4a;
     padding: 10px 5px;
     margin: 0 10px;
+    font-family: "ravi";
+    font-weight: 100;
 }
 
 
@@ -945,7 +920,7 @@ header .header .mainTitle img.logoTxt{
 
 #contactUs .contactUs .contactUs-InputBox{
     width: 100%;
-    background-color: #e1edff;
+    background-color: #38A3A5;
     padding: 25px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -962,6 +937,7 @@ header .header .mainTitle img.logoTxt{
 #contactUs .contactUs .contactUs-InputBox label{
     width: 100%;
     font-size: 13px;
+    color: #fff;
 }
 
 #contactUs .contactUs .contactUs-InputBox input{
@@ -1023,13 +999,13 @@ header .header .mainTitle img.logoTxt{
 }
 
 #contactUs .contactUs .contactUs-Btn button.sendMessage{
-    background-color: #00b6ff;
-    border: 2px solid #00b6ff;
+    background-color: #337068;
+    border: 2px solid #337068;
 }
 
 #contactUs .contactUs .contactUs-Btn button.sendMessage:hover{
-    color: #00b6ff;
-    border-color:#00b6ff;
+    color: #337068;
+    border-color:#337068;
     background-color: #fff;
 }
 
