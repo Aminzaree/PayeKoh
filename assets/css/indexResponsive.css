@@ -57,9 +57,6 @@
         margin-top: 25px;
     }
 
-    footer .mainFooter .main-footer{
-        padding-top: 20px;
-    }
 }
 
 
@@ -104,25 +101,6 @@
 
     footer .footer-social{
         margin-top: 20px;
-    }
-
-    footer .topFooter .sendEmail{
-        top: -118px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    footer .topFooter .sendEmail p{
-        padding-bottom: 10px;
-    }
-    
-    footer .topFooter .sendEmail .emailBox button{
-        position: relative;
-        left: 91px;
-        bottom: 0;
     }
 
     #copyRight{
@@ -207,6 +185,10 @@
          margin-top: 10px;
     }
 
+    footer .footerAbout p{
+        width: 100%;
+    }
+
 }
 
 
@@ -230,10 +212,6 @@
     }
 
     #premiumProperty .premiumProperty .premiumItem img{
-        width: 100%;
-    }
-
-    footer .topFooter .sendEmail .emailBox input{
         width: 100%;
     }
 }
