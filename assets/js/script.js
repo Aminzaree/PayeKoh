@@ -359,3 +359,56 @@ function delForm(){
     descriptionResult.innerHTML = "";
 }
 
+
+
+/*----------------------------------------------------------------*/
+/*----------------------------Dark Mode---------------------------*/
+/*----------------------------------------------------------------*/
+
+const darkModeBtn = document.getElementById("darkMode");
+const body = document.body;
+
+darkModeBtn.addEventListener("click", function(){
+    const counterUp = document.getElementById("counterUp");
+    const services = document.getElementById("services");
+    const payeKohDescription = document.getElementById("payeKohDescription");
+    const accordionSection = document.getElementById("accordion");
+    const contactUsSection = document.getElementById("contactUs");
+    const footer = document.querySelector("footer");
+
+
+    if(darkModeBtn.classList.toggle("active")){
+
+        body.style.backgroundColor = "rgba(28, 28, 28, 1)";
+
+        counterUp.classList.add("active");
+
+        services.classList.add("active");
+
+        payeKohDescription.classList.add("active");
+
+        accordion.classList.add("active");
+
+        contactUsSection.classList.add("active");
+
+        footer.classList.add("active");
+
+
+    }else{
+        
+        body.style.backgroundColor = "rgba(248, 249, 250, 1)";
+
+        counterUp.classList.remove("active");
+
+        services.classList.remove("active");
+
+        payeKohDescription.classList.remove("payeKohDescription");
+
+        accordion.classList.add("remove");
+
+        contactUsSection.remove("contactUsSection");
+
+        footer.classList.remove("remove");
+
+    }
+})

@@ -465,6 +465,10 @@ header .header .mainTitle img.logoTxt{
     font-weight: 800;
 }
 
+#counterUp.active .counterUp-title h2, p{
+    color: #fff;
+}
+
 #counterUp .counter-section{
     padding-top: 50px;
 }
@@ -491,14 +495,10 @@ header .header .mainTitle img.logoTxt{
     border: 1px solid #e1e1e1;
 }
 
-/* .counter-section .counterBox:hover{
-    transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    -moz-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    -o-transform: scale(1.03);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-} */
+#counterUp.active .counter-section .counterBox{
+    background-color: rgba(42, 42, 42, 1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
 
 #counterUp .counter-section .CounBoxD, .CounBoxE, .CounBoxF{
     margin-top: 25px;
@@ -509,6 +509,10 @@ header .header .mainTitle img.logoTxt{
     font-size: 20px;
     padding: 10px 0 !important;
     color: #7a7a7a !important;
+}
+
+#counterUp.active .counter-section .counterBox p{
+    color: #fff !important;
 }
 
 #counterUp .counter-section .counterBox .counter{
@@ -666,6 +670,15 @@ header .header .mainTitle img.logoTxt{
     font-weight: 900;
     line-height: 52px;
     font-family: "ravi";
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#services.active .services .services-content h3{
+    color: #fff;
 }
 
 #services .services .services-content p{
@@ -744,6 +757,15 @@ header .header .mainTitle img.logoTxt{
     font-family: "ravi";
     font-size: 32px;
     font-weight: 800;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#payeKohDescription.active .payeKohDescription-title h2{
+    color: #fff;
 }
 
 #payeKohDescription .payeKohDescription{
@@ -783,6 +805,15 @@ header .header .mainTitle img.logoTxt{
     font-weight: 700;
     padding: 10px 0;
     padding-top: 7px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#payeKohDescription.active .payeKohDescription .description-item h3{
+    color: #fff;
 }
 
 #payeKohDescription .payeKohDescription .description-item p{
@@ -814,6 +845,15 @@ header .header .mainTitle img.logoTxt{
     font-family: "ravi";
     font-size: 32px;
     font-weight: 800;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#accordion.active .accordion-title h2{
+    color: #fff;
 }
 
 #accordion .accordion{
@@ -904,6 +944,15 @@ header .header .mainTitle img.logoTxt{
     font-family: "ravi";
     font-size: 32px;
     font-weight: 800;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#contactUs.active .contactUs-title h2{
+    color: #fff;
 }
 
 #contactUs .contactUs-title p{
