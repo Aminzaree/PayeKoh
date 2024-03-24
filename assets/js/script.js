@@ -2,11 +2,11 @@
 /*-----------------------------Loading----------------------------*/
 /*----------------------------------------------------------------*/
 
-// setTimeout(function () {
-//     // Hide the loading container when the delay is over
-//     const loadingContainer = document.getElementById("loading-container");
-//     loadingContainer.style.display = "none";
-// }, 2000);
+setTimeout(function () {
+    // Hide the loading container when the delay is over
+    const loadingContainer = document.getElementById("loading-container");
+    loadingContainer.style.display = "none";
+}, 2000);
 
 
 /*----------------------------------------------------------------*/
