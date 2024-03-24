@@ -80,7 +80,6 @@ header #menu{
     margin: 0 auto;
     padding: 15px 20px;
     background-color: rgba(93, 129, 108, 0.5);
-    /* background-color: rgba(225, 225, 225, 0.9); */
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     display: flex;
     align-items: center;
@@ -117,8 +116,6 @@ header #menu.sticky{
     -ms-border-radius: 0;
     -o-border-radius: 0;
 }
-
-
 
 header #menu.sticky:hover{
     background-color: rgba( 225, 237, 255, 1);
@@ -555,12 +552,25 @@ header .header .mainTitle img.logoTxt{
     padding: 80px 0;
     background-color: #e7effb;
     text-align: center;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#about.active{
+    background-color: rgba(42, 42, 42, 1);
 }
 
 #about h2{
     font-size: 32px;
     font-weight: 800;
     font-family: "ravi";
+}
+
+#about.active h2{
+    color: #fff;
 }
 
 /*----------------------------------------------------------------*/
@@ -896,6 +906,15 @@ header .header .mainTitle img.logoTxt{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#accordion.active .mainAccordion .accordionTitle{
+    background-color: rgba(42, 42, 42, 1);
 }
 
 #accordion .mainAccordion .accordionTitle h5{
@@ -968,14 +987,23 @@ header .header .mainTitle img.logoTxt{
 }
 
 #contactUs .contactUs .contactUs-InputBox{
-    width: 100%;
-    background-color: #38A3A5;
-    padding: 25px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+     width: 100%;
+     background-color: #38A3A5;
+     padding: 25px;
+     border-radius: 15px;
+     -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+     -ms-border-radius: 15px;
+     -o-border-radius: 15px;
+     transition: all 0.3s ease-in-out;
+     -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+     -ms-transition: all 0.3s ease-in-out;
+     -o-transition: all 0.3s ease-in-out;
+}
+
+#contactUs.active .contactUs .contactUs-InputBox{
+    background-color: rgba(42, 42, 42, 1);
 }
 
 #contactUs .contactUs .contactUs-InputBoxItem{

@@ -76,7 +76,11 @@
     }
 
     #toTopBtn.active{
-        bottom: 75px;
+        bottom: 77px;
+    }
+
+    #darkMode{
+        bottom: 77px;
     }
 
     .mainHeaderContent h1{

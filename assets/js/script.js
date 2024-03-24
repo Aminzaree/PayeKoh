@@ -2,11 +2,11 @@
 /*-----------------------------Loading----------------------------*/
 /*----------------------------------------------------------------*/
 
-setTimeout(function () {
-    // Hide the loading container when the delay is over
-    const loadingContainer = document.getElementById("loading-container");
-    loadingContainer.style.display = "none";
-}, 2000);
+// setTimeout(function () {
+//     // Hide the loading container when the delay is over
+//     const loadingContainer = document.getElementById("loading-container");
+//     loadingContainer.style.display = "none";
+// }, 2000);
 
 
 /*----------------------------------------------------------------*/
@@ -362,13 +362,15 @@ function delForm(){
 
 
 /*----------------------------------------------------------------*/
-/*----------------------------Dark Mode---------------------------*/
+/*--------------------------Dark Mode Button----------------------*/
 /*----------------------------------------------------------------*/
 
 const darkModeBtn = document.getElementById("darkMode");
-const body = document.body;
 
 darkModeBtn.addEventListener("click", function(){
+    const body = document.body;
+    const headerSection = document.querySelector("header");
+    const aboutSection = document.getElementById("about");
     const counterUp = document.getElementById("counterUp");
     const services = document.getElementById("services");
     const payeKohDescription = document.getElementById("payeKohDescription");
@@ -379,36 +381,68 @@ darkModeBtn.addEventListener("click", function(){
 
     if(darkModeBtn.classList.toggle("active")){
 
+        // Dark Mode Button background
+        darkModeBtn.style.backgroundColor = "#fff";
+        darkModeBtn.querySelector("svg").style.color = "rgba(28, 28, 28, 1)";
+
+        //Change Background Color
         body.style.backgroundColor = "rgba(28, 28, 28, 1)";
 
+        //add class active for header
+        headerSection.classList.add("active");
+
+        //add class active for About Section
+        aboutSection.classList.add("active");
+
+        //add class active for Counter Up
         counterUp.classList.add("active");
 
+        //add class active for Services
         services.classList.add("active");
 
+        //add class active for PayeKoh Description
         payeKohDescription.classList.add("active");
 
+        //add class active for Accordion
         accordion.classList.add("active");
 
+        //add class active for Contact Us
         contactUsSection.classList.add("active");
 
+        //add class active for Footer
         footer.classList.add("active");
 
-
     }else{
-        
+
+        // Dark Mode Button background
+        darkModeBtn.style.backgroundColor = "rgba(28, 28, 28, 1)";
+        darkModeBtn.querySelector("svg").style.color = "#fff";
+
         body.style.backgroundColor = "rgba(248, 249, 250, 1)";
 
+        //Remove class active for header
+        headerSection.classList.add("remove");
+        
+        //Remove class active for About Section
+        aboutSection.classList.remove("active")
+
+        //Remove class active for About Counter Up
         counterUp.classList.remove("active");
 
+        //Remove class active for Services
         services.classList.remove("active");
 
-        payeKohDescription.classList.remove("payeKohDescription");
+        //Remove class active for PayeKoh Description
+        payeKohDescription.classList.remove("active");
 
-        accordion.classList.add("remove");
+        //Remove class active for Accordion
+        accordion.classList.remove("active");
 
-        contactUsSection.remove("contactUsSection");
+        //Remove class active for Contact Us
+        contactUsSection.classList.remove("active");
 
-        footer.classList.remove("remove");
+        //Remove class active for Footer
+        footer.classList.remove("active")
 
     }
 })
