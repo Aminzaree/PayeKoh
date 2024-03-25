@@ -173,8 +173,8 @@ body {
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    animation: jello-horizontal 3s;
-    -webkit-animation: jello-horizontal 3s;
+    animation: jello-horizontal 7s;
+    -webkit-animation: jello-horizontal 7s;
 }
 
 #darkMode svg {
@@ -281,12 +281,16 @@ footer {
     position: relative;
 }
 
+footer.active{
+    background-color: rgba(42, 42, 42, 1);
+}
+
 footer .topFooter .sendEmail {
-    padding: 5px 35px;
+    padding: 10px 35px;
     position: absolute;
     z-index: 99;
     left: 0;
-    top: -51.5px;
+    top: -46px;
     background-color: #38A3A5;
     border-radius: 0 80px 0 0;
     -webkit-border-radius: 0 80px 0 0;
@@ -295,7 +299,7 @@ footer .topFooter .sendEmail {
     -o-border-radius: 0 80px 0 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 1;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -305,7 +309,7 @@ footer .topFooter .sendEmail {
 }
 
 footer.active .topFooter .sendEmail {
-    background-color: rgba(42, 42, 42, 1);
+    background-color: rgba(42, 42, 42, 0.5);
 }
 
 footer .topFooter .sendEmail p {
@@ -313,33 +317,6 @@ footer .topFooter .sendEmail p {
     font-family: "ravi";
     font-weight: 300;
 }
-
-footer .topFooter .sendEmail .emailBox input {
-    width: 250px;
-    font-family: "ravi";
-    font-weight: 100;
-    padding: 10px 10px;
-    border: none;
-    outline: none;
-    border-radius: 66px;
-    -webkit-border-radius: 66px;
-    -moz-border-radius: 66px;
-    -ms-border-radius: 66px;
-    -o-border-radius: 66px;
-}
-
-.mainFooter {
-    position: relative;
-}
-
-.mainFooter::before {
-    content: "";
-    top: 0;
-    left: 0;
-    width: 800px;
-    background-color: red;
-}
-
 
 footer .footerAbout {
     width: 100%;

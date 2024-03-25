@@ -421,7 +421,7 @@ darkModeBtn.addEventListener("click", function(){
         body.style.backgroundColor = "rgba(248, 249, 250, 1)";
 
         //Remove class active for header
-        headerSection.classList.add("remove");
+        headerSection.classList.remove("active");
         
         //Remove class active for About Section
         aboutSection.classList.remove("active")
