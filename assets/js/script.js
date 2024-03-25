@@ -370,6 +370,7 @@ const darkModeBtn = document.getElementById("darkMode");
 darkModeBtn.addEventListener("click", function(){
     const body = document.body;
     const headerSection = document.querySelector("header");
+    const mobileMenuSection = document.getElementById("responsiveMobileMenu");
     const aboutSection = document.getElementById("about");
     const counterUp = document.getElementById("counterUp");
     const services = document.getElementById("services");
@@ -390,6 +391,9 @@ darkModeBtn.addEventListener("click", function(){
 
         //add class active for header
         headerSection.classList.add("active");
+
+        //add class active for Mobile Menu
+        mobileMenuSection.classList.add("changeBgColor");
 
         //add class active for About Section
         aboutSection.classList.add("active");
@@ -422,6 +426,9 @@ darkModeBtn.addEventListener("click", function(){
 
         //Remove class active for header
         headerSection.classList.remove("active");
+
+        //Remove class active for Mobile Menu
+        mobileMenuSection.classList.remove("changeBgColor");
         
         //Remove class active for About Section
         aboutSection.classList.remove("active")

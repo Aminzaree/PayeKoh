@@ -21,6 +21,10 @@
     -o-transition: all 0.3s ease-in-out;
 }
 
+#responsiveMobileMenu.changeBgColor{
+    background-color: rgba(42, 42, 42, 1);
+}
+
 /* #responsiveMobileMenu:hover{
     padding-bottom: 50px;
 } */
