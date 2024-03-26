@@ -453,3 +453,16 @@ darkModeBtn.addEventListener("click", function(){
 
     }
 })
+
+
+
+/*----------------------------------------------------------------*/
+/*------------------------------News------------------------------*/
+/*----------------------------------------------------------------*/
+
+const news = document.getElementById("news");
+const newsBtn = document.getElementById("newsBtn");
+
+newsBtn.addEventListener("click", function(){
+    news.classList.toggle("active");
+})
