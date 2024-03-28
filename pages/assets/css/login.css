@@ -161,7 +161,7 @@ header #menu #mainNavbar nav ul li a:hover svg{
 }
 
 #login .login h1 {
-    color: #fff;
+    color: #cbad86;
     font-family: "ravi";
     font-weight: 800;
     text-align: center;
@@ -175,6 +175,7 @@ header #menu #mainNavbar nav ul li a:hover svg{
 
 #login .login .inputBox svg{
     position: absolute;
+    z-index: 100;
     left: 13px;
     top: 15px;
     color: #fff;
@@ -182,6 +183,11 @@ header #menu #mainNavbar nav ul li a:hover svg{
 }
 
 #login .login .inputBox .fa-eye{
+    left: 40px;
+    cursor: pointer;
+}
+
+#login .login .inputBox .fa-eye-slash{
     left: 40px;
     cursor: pointer;
 }
@@ -211,6 +217,7 @@ header #menu #mainNavbar nav ul li a:hover svg{
 
 #login .login .inputBox input:hover{
     transform: scale(1.02);
+    border-color: #38b2ac;
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -ms-transform: scale(1.02);
@@ -219,11 +226,27 @@ header #menu #mainNavbar nav ul li a:hover svg{
 
 #login .login .inputBox input:focus{
     transform: scale(1.02);
+    border-color: #38b2ac;
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -ms-transform: scale(1.02);
     -o-transform: scale(1.02);
 }
+
+#login .login .inputBox p#usernameResult{
+    font-size: 13px;
+    color: red;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+#login .login .inputBox p#passwordResult{
+    font-size: 13px;
+    color: red;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
 
 #login .login .inputBtn {
     padding: 25px 0;
@@ -277,7 +300,7 @@ header #menu #mainNavbar nav ul li a:hover svg{
     font-weight: 700;
     font-size: 14px;
     line-height: 19.6px;
-    color: #ffffff;
+    color: #cbad86;
     font-family: "ravi";
     margin-right: 3px;
     transition: color 0.3s ease-in-out;
@@ -306,14 +329,6 @@ header #menu #mainNavbar nav ul li a:hover svg{
     font-weight: 400;
 }
 
-@media screen and (max-width: 400px){
-    .inputHelp{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 #login .login .switchBox{
     display: flex;
     align-items: center;
@@ -329,6 +344,23 @@ header #menu #mainNavbar nav ul li a:hover svg{
     font-family: "ravi";
     font-weight: 400;
     color: #fff;
+}
+
+@media screen and (max-width: 400px){
+    .inputHelp{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inputHelp .forgotPassword{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #login .login .switchBox{
+        justify-content: center;
+    }
 }
 
 #login .login .switchBox .switch{
@@ -413,6 +445,6 @@ footer{
 }
 
 footer p{
-    color: #fff;
+    color: #cbad86;
     font-size: 14px;
 }
