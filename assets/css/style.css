@@ -306,6 +306,11 @@ body {
     -webkit-animation: heartbeat 2s infinite;
 }
 
+#news.active button{
+    animation: none;
+    -webkit-animation: none;
+}
+
 #news p {
     padding: 5px 8px;
     background-color: #191917;
@@ -327,7 +332,6 @@ body {
     background-color: #fff;
     color: #191917;
 }
-
 
 /**
  * ----------------------------------------

@@ -250,7 +250,8 @@ header #menu #mainNavbar nav ul li a:hover svg{
     color: #afafaf;
 }
 
-header #menu .userBtn button{
+header #menu .userBtn a{
+    text-decoration: none;
     font-family: "ravi";
     font-weight: 500;
     font-size: 16px;
@@ -266,7 +267,7 @@ header #menu .userBtn button{
     -o-transition: all 0.3s ease-in-out;
 }
 
-header #menu .userBtn button:nth-child(1){
+header #menu .userBtn a:nth-child(1){
     border-radius: 0 10px 10px 0;
     -webkit-border-radius: 0 10px 10px 0;
     -moz-border-radius: 0 10px 10px 0;
@@ -277,7 +278,7 @@ header #menu .userBtn button:nth-child(1){
     border: 1px solid #fff;
 }
 
-header #menu .userBtn button:hover:nth-child(1){
+header #menu .userBtn a:hover:nth-child(1){
     color: rgba(51, 113, 104, 1);
     background-color: #fff;
     /* border: 1px solid #adc6c3; */
@@ -293,7 +294,7 @@ header #menu .userBtn button:hover:nth-child(1){
     -o-transform: scale(1.06);
 }
 
-header #menu .userBtn button:nth-child(2){
+header #menu .userBtn a:nth-child(2){
     color: #fff;
     background-color: #337068;
     border-radius: 10px 0 0 10px;
@@ -303,7 +304,7 @@ header #menu .userBtn button:nth-child(2){
     -o-border-radius: 10px 0 0 10px;
 }
 
-header #menu .userBtn button:hover:nth-child(2){
+header #menu .userBtn a:hover:nth-child(2){
     color: #337068;
     background-color: #fff;
     border: 1px solid #337068;
