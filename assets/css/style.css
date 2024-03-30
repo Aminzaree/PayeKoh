@@ -85,10 +85,10 @@
 
 html {
     scroll-behavior: smooth;
+    direction: rtl;
 }
 
 body {
-    direction: rtl;
     font-family: "vazir";
     background-color: rgba(248, 249, 250, 1);
     transition: background 0.3s ease-in-out;

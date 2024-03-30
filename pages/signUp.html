@@ -63,30 +63,23 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4">
                     <div class="login">
-                        <h1>عضویت</h1>
+                        <h1><i class="fa-solid fa-user-plus"></i>عضویت</h1>
                         <div class="inputBox">
-                            <i class="fa-solid fa-pen"></i>
-                            <input type="text" name="fname" id="fname" placeholder="نام">
-                        </div>
-                        <div class="inputBox">
-                            <i class="fa-solid fa-pen"></i>
-                            <input type="text" name="lname" id="lname" placeholder="نام خانوادگی">
-                        </div>
-                        <div class="inputBox">
+                            <label for="phoneNumber">با شماره موبایل‌تان وارد شوید:</label>
                             <i class="fa-solid fa-mobile-screen-button"></i>
                             <input type="text" name="phoneNumber" id="phoneNumber" placeholder="موبایل">
                         </div>
-                        <div class="inputBox">
-                            <i class="fa-solid fa-envelope"></i>
-                            <input type="email" name="email" id="email" placeholder="ایمیل">
-                        </div>
-                        <div class="inputBox">
-                            <span id="showPassword" onclick="showPassword()"><i class="fa-solid fa-eye"></i></span>
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" name="password" id="password" placeholder="پسورد شما">
-                        </div>
                         <div class="inputBtn">
-                            <button onclick="signIn()" type="button">عضویت</button>
+                            <button onclick="signUp()" type="button">عضویت</button>
+                        </div>
+                        <div class="SignUp-InputBox-other">
+                            <div class="SignUp-InputBox-other-line"></div>
+                            <div class="SignUp-InputBox-other-text">یا</div>
+                            <div class="SignUp-InputBox-other-line"></div>
+                        </div>
+                        <div class="register">
+                            <button id="GoogleBtn" type="button"><i class="fa-brands fa-google"></i>عضویت با گوگل</button>
+                            <button id="telegramBtn" type="button"><i class="fa-brands fa-telegram"></i>عضویت با تلگرام</button>
                         </div>
                         <p class="signUp">قبلا تو پایه کوه عضو شدم :)<a href="login.html">ورود به حسابم</a></p>
                     </div>

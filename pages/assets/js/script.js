@@ -77,3 +77,32 @@ function showPassword(){
         showPasswordBtn.querySelector("svg").classList.replace("fa-eye-slash" , "fa-eye");
     }
 }
+
+
+/*----------------------------------------------------------------*/
+/*------------------------SignUp Validation-----------------------*/
+/*----------------------------------------------------------------*/
+
+
+function signUp(){
+    const numberRegex = /[0-9]/;
+    const phoneNumber = document.getElementById("phoneNumber");
+
+    if(phoneNumber.value.match(numberRegex) == null){
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "warning",
+            title: "شماره وارد شده صحیح نیست."
+          });
+    }
+}
