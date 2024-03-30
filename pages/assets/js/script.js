@@ -1,3 +1,22 @@
+/*------------------------------------------------*/
+/*---------------Responsive Menu------------------*/
+/*------------------------------------------------*/
+
+const toggleMenu = document.querySelector(".toggleMenu");
+const responsiveMenu = document.querySelector(".responsiveMenu")
+
+toggleMenu.addEventListener("click", function () {
+    responsiveMenu.classList.toggle("active");
+    if (toggleMenu.classList.toggle("active")) {
+        toggleMenu.querySelector("svg").classList.replace("fa-bars", "fa-xmark");
+        toggleMenu.querySelector("svg").style.color = "rgba(255, 255, 255, 1)";
+    } else {
+        toggleMenu.querySelector("svg").classList.replace("fa-xmark", "fa-bars");
+        toggleMenu.querySelector("svg").style.color = "rgba(95, 95, 95, 1)";
+    }
+})
+
+
 /*----------------------------------------------------------------*/
 /*------------------------SignIn Validation-----------------------*/
 /*----------------------------------------------------------------*/

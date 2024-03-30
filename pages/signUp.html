@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/signUp.css">
     <link rel="stylesheet" href="../assets/css/indexResponsive.css">
     <link rel="stylesheet" href="../assets/css/gridSystem.css">
     <link rel="stylesheet" href="../assets/css/responsiveMenu.css">
     <link rel="stylesheet" href="../assets/css/mobileResponsive.css">
     <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.min.css " rel="stylesheet">
-    <title>پایه کوه |  ورود یا ثبت نام</title>
+    <title>پایه کوه | عضویت</title>
 </head>
 <body>
 
@@ -63,34 +63,32 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4">
                     <div class="login">
-                        <h1>ورود</h1>
+                        <h1>عضویت</h1>
+                        <div class="inputBox">
+                            <i class="fa-solid fa-pen"></i>
+                            <input type="text" name="fname" id="fname" placeholder="نام">
+                        </div>
+                        <div class="inputBox">
+                            <i class="fa-solid fa-pen"></i>
+                            <input type="text" name="lname" id="lname" placeholder="نام خانوادگی">
+                        </div>
+                        <div class="inputBox">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="موبایل">
+                        </div>
                         <div class="inputBox">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="text" name="email" id="email" placeholder="ایمیل یا شماره موبایل">
-                            <p id="usernameResult"></p>
+                            <input type="email" name="email" id="email" placeholder="ایمیل">
                         </div>
                         <div class="inputBox">
                             <span id="showPassword" onclick="showPassword()"><i class="fa-solid fa-eye"></i></span>
                             <i class="fa-solid fa-lock"></i>
                             <input type="password" name="password" id="password" placeholder="پسورد شما">
-                            <p id="passwordResult"></p>
-                        </div>
-                        <div class="inputHelp">
-                            <div class="forgotPassword">
-                                <a href="#">رمزمو یادم رفته :(</a>
-                            </div>
-                            <div class="inputBox switchBox">
-                                <p>منو یادت بمونه</p>
-                                <label class="switch">
-                                    <input id="checkBx" type="checkbox" checked="">
-                                    <span class="slider rounded"></span>
-                                </label>
-                            </div>
                         </div>
                         <div class="inputBtn">
-                            <button onclick="signIn()" type="button">ورود</button>
+                            <button onclick="signIn()" type="button">عضویت</button>
                         </div>
-                        <p class="signUp">در پایه کوه حساب کاربری نداشتم!<a href="signUp.html">ساخت حساب جدید</a></p>
+                        <p class="signUp">قبلا تو پایه کوه عضو شدم :)<a href="login.html">ورود به حسابم</a></p>
                     </div>
                 </div>
             </div>
