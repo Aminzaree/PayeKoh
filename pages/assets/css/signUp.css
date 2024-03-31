@@ -144,16 +144,16 @@ header #menu #mainNavbar nav ul li a:hover svg {
 /*------------------------------Login-----------------------------*/
 /*----------------------------------------------------------------*/
 
-#login {
+#SignUp {
     width: 100%;
     padding-top: 30px;
 }
 
-#login .login {
+#SignUp .SignUp {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 30px 30px;
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     border: 3px solid rgba(255, 255, 255, 1);
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -197,6 +197,16 @@ header #menu #mainNavbar nav ul li a:hover svg {
     -o-transition: all 0.3s ease-in-out;
 }
 
+.register button:hover{
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    background-color: #fff;
+    color: #000;
+}
+
 .register button:nth-child(1) svg{
     color: #ea4335;
     padding-left: 10px;
@@ -209,23 +219,23 @@ header #menu #mainNavbar nav ul li a:hover svg {
     font-size: 20px;
 }
 
-#login .login h1 {
+#SignUp .SignUp h1 {
     color: #0088cc;
     font-family: "ravi";
     font-weight: 800;
 }
 
-#login .login h1 svg {
+#SignUp .SignUp h1 svg {
     padding-left: 5px;
 }
 
-#login .login .inputBox {
+#SignUp .SignUp .inputBox {
     width: 100%;
     position: relative;
     padding-top: 15px;
 }
 
-#login .login .inputBox svg {
+#SignUp .SignUp .inputBox svg {
     position: absolute;
     z-index: 100;
     left: 13px;
@@ -234,24 +244,24 @@ header #menu #mainNavbar nav ul li a:hover svg {
     font-size: 20px;
 }
 
-#login .login .inputBox .fa-eye {
+#SignUp .SignUp .inputBox .fa-eye {
     left: 40px;
     cursor: pointer;
 }
 
-#login .login .inputBox .fa-eye-slash {
+#SignUp .SignUp .inputBox .fa-eye-slash {
     left: 40px;
     cursor: pointer;
 }
 
-#login .login .inputBox label {
+#SignUp .SignUp .inputBox label {
     font-family: "ravi";
     font-weight: 500;
     color: #fff;
     padding-right: 10px;
 }
 
-#login .login .inputBox input {
+#SignUp .SignUp .inputBox input {
     width: 100%;
     height: 50px;
     padding: 20px;
@@ -275,7 +285,7 @@ header #menu #mainNavbar nav ul li a:hover svg {
     -o-transition: all 0.3s ease-in-out;
 }
 
-#login .login .inputBox input:hover {
+#SignUp .SignUp .inputBox input:hover {
     transform: scale(1.02);
     border-color: #38b2ac;
     -webkit-transform: scale(1.02);
@@ -284,7 +294,7 @@ header #menu #mainNavbar nav ul li a:hover svg {
     -o-transform: scale(1.02);
 }
 
-#login .login .inputBox input:focus {
+#SignUp .SignUp .inputBox input:focus {
     transform: scale(1.02);
     border-color: #38b2ac;
     -webkit-transform: scale(1.02);
@@ -293,44 +303,44 @@ header #menu #mainNavbar nav ul li a:hover svg {
     -o-transform: scale(1.02);
 }
 
-#login .login .inputBox p#usernameResult {
+#SignUp .SignUp .inputBox p#usernameResult {
     font-size: 13px;
     color: red;
     padding-right: 15px;
     padding-bottom: 15px;
 }
 
-#login .login .inputBox p#passwordResult {
+#SignUp .SignUp .inputBox p#passwordResult {
     font-size: 13px;
     color: red;
     padding-right: 15px;
     padding-bottom: 15px;
 }
 
-#login .login .inputBtn {
+#SignUp .SignUp .inputBtn {
     padding: 10px 0 25px 0;
 }
 
-#login .login .SignUp-InputBox-other {
+#SignUp .SignUp .SignUp-InputBox-other {
     align-items: center;
     display: flex;
     gap: 8px;
     margin-bottom: 24px;
 }
 
-#login .login .SignUp-InputBox-other-text {
+#SignUp .SignUp .SignUp-InputBox-other-text {
     color: #fff;
     font-family: "ravi";
     font-weight: 500;
 }
 
-#login .login .SignUp-InputBox-other-line {
+#SignUp .SignUp .SignUp-InputBox-other-line {
     background-color: #fff;
     flex-grow: 1;
     height: 1px;
 }
 
-#login .login .inputBtn button {
+#SignUp .SignUp .inputBtn button {
     width: 100%;
     height: 45px;
     padding: 8px 0;
@@ -354,7 +364,7 @@ header #menu #mainNavbar nav ul li a:hover svg {
     -o-transition: all 0.3s ease-in-out;
 }
 
-#login .login .inputBtn button:hover {
+#SignUp .SignUp .inputBtn button:hover {
     color: #fff;
     background-color: #38b2ac;
     transform: scale(0.95);
@@ -364,7 +374,7 @@ header #menu #mainNavbar nav ul li a:hover svg {
     -o-transform: scale(0.95);
 }
 
-#login .login p.signUp {
+#SignUp .SignUp p.signUp {
     font-size: 14px;
     line-height: 19.6px;
     font-weight: 400;
@@ -373,7 +383,7 @@ header #menu #mainNavbar nav ul li a:hover svg {
     font-family: "ravi";
 }
 
-#login .login p.signUp a {
+#SignUp .SignUp p.signUp a {
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;

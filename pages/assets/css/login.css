@@ -150,8 +150,8 @@ header #menu #mainNavbar nav ul li a:hover svg{
 #login .login {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 30px 30px;
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     border: 3px solid rgba(255, 255, 255, 1);
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -161,11 +161,17 @@ header #menu #mainNavbar nav ul li a:hover svg{
 }
 
 #login .login h1 {
-    color: #cbad86;
+    color: #0088cc;
     font-family: "ravi";
     font-weight: 800;
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#login .login h1 svg {
+    padding-left: 5px;
 }
 
 #login .login .inputBox {
