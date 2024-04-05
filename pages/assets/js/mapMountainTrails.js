@@ -1,3 +1,13 @@
+function moreDetails() {
+    Swal.fire({
+        title: "اشتراک ویژه پایه کوه",
+        text: "برای دسترسی به این ویژگی می‌توانید اشتراک ما را از طریق لینک زیر تهیه کنید.",
+        confirmButtonText: "بستن",
+        footer: '<a href="#">لینکو میندازیم اینجا</a>'
+      });
+}
+
+
 let isTextVisible = true;
 
 function showMore() {

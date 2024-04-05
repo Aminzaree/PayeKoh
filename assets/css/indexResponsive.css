@@ -29,6 +29,10 @@
         margin-top: 25px;
     }
 
+    #mapSection #maps .viewMap .viewMapActions .viewMapActions_center button{
+        display: block;
+    }
+
     footer .topFooter .sendEmail{
         border-radius: 0;
         -webkit-border-radius: 0;
@@ -93,6 +97,10 @@
 
     #services .services .services-img img{
         width: 70%;
+    }
+    
+    header .page-bg{
+        height: 150px;
     }
 
     footer .waveAnimation{
@@ -210,6 +218,17 @@
 
     #contactUs .contactUs .contactUs-Btn button.delForm{
          margin-top: 10px;
+    }
+
+    #mapSection #maps .viewMap .viewMapActions{
+        display: block;
+    }
+
+    #mapSection #maps .viewMap .viewMapActions .viewMapActions_right, .counter, .viewMapActions_left{
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     footer .footerAbout p{

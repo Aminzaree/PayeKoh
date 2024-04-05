@@ -75,6 +75,8 @@ header #menu nav ul li:hover::after {
 }
 
 header .userBtn a:nth-child(1) {
+    border: 1px solid #38A3A5;
+    color: #fff;
     border-radius: 0 10px 10px 0;
     -webkit-border-radius: 0 10px 10px 0;
     -moz-border-radius: 0 10px 10px 0;
@@ -83,7 +85,9 @@ header .userBtn a:nth-child(1) {
 }
 
 header .userBtn a:hover:nth-child(1) {
-
+    background-color: #fff;
+    border: 1px solid #38A3A5;
+    color: #38A3A5;
     transform: scale(1.06);
     -webkit-transform: scale(1.06);
     -moz-transform: scale(1.06);
@@ -239,6 +243,7 @@ body {
 }
 
 #mapSection #maps .viewMap .viewMapActions .viewMapActions_center button {
+    display: none;
     animation: heartbeat 2s infinite;
     -webkit-animation: heartbeat 2s infinite;
 }
@@ -579,6 +584,8 @@ body {
 
 #mapSection #WeatherForecast {
     width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 #mapSection #WeatherForecast .WeatherForecast {
@@ -614,7 +621,47 @@ body {
     color: #767676;
 }
 
-#mapSection #WeatherForecast p a {
-    text-decoration: none;
+#mapSection #WeatherForecast p span {
     color: #337068;
+}
+
+#mapSection #rating {
+    width: 100%;
+    padding: 20px 0;
+}
+
+#mapSection #rating h2 {
+    font-family: "ravi";
+    font-weight: 700;
+    font-size: 14px;
+    color: #767676;
+    padding-bottom: 10px;
+}
+
+#mapSection #rating h2 svg {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+#mapSection #rating ul li{
+    list-style: none;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mapSection #rating ul li p{
+    font-family: "ravi";
+    font-weight: 200;
+    font-size: 15px;
+}
+
+#mapSection #rating ul li svg{
+    color: rgb(255, 255, 74);
+}
+
+.swal2-confirm{
+    font-family: "ravi";
+    font-weight: 700;
 }
