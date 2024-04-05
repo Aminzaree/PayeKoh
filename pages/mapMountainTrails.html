@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="assets/css/mapMountainTrails.css">
+    <link rel="stylesheet" href="../assets/css/indexResponsive.css">
+    <link rel="stylesheet" href="../assets/css/gridSystem.css">
+    <link rel="stylesheet" href="../assets/css/responsiveMenu.css">
+    <link rel="stylesheet" href="../assets/css/mobileResponsive.css">
+    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.min.css " rel="stylesheet">
+    <title>پایه کوه | نقشه مسیرهای کوهنوردی</title>
+</head>
+<body>
+
+    <header>
+        <div class="toggleMenu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="responsiveMenu">
+            <div class="logo">
+                <!-- <h2>پایه کوه</h2> -->
+                <a href="javascript:void(0)"><img src="assets/img/paye-koh-text-white.png" alt="لوگو پایه کوه"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html" title="خانه">خانه</a></li>
+                    <li><a href="javascript:void(0)">برنامه‌های فعال</a></li>
+                    <li><a href="javascript:void(0)">تیم ما</a></li>
+                    <li><a href="javascript:void(0)">درباره ما</a></li>
+                    <li><a href="subscription.html">خرید اشتراک</a></li>
+                    <li><a href="javascript:void(0)">تماس با ما</a></li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <button type="button" title="ورود">ورود</button>
+                <button type="button" title="عضویت">عضویت</button>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="mainNavbar">
+                <nav>
+                    <ul>
+                        <a href="../index.html"><img src="../assets/img/paye-koh-text-white.png" alt="لوگو پایه کوه"></a>
+                        <li class="active"><a href="../index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a></li>
+                        <li title="برنامه‌های فعال"><a href="javascript:void(0)">برنامه‌های فعال</a></li>
+                        <li title="تیم ما"><a href="javascript:void(0)">تیم ما</a></li>
+                        <li title="درباره ما"><a href="javascript:void(0)">درباره ما</a></li>
+                        <li title="تماس با ما"><a href="javascript:void(0)">تماس با ما</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- <div class="userBtn">
+                <a href="login.html" title="ورود">ورود</a>
+                <a href="signUp.html" title="عضویت">عضویت</a>
+            </div> -->
+        </div>
+        <div class="page-bg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="pageHeader-content">
+                            <h1>مسیرها</h1>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="pageHeader-nav">
+                            <ul>
+                                <li><a href="../index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a></li>
+                                <li><a href="#" title="خانه">مسیرها</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+    </header>
+
+    <main id="main-card">
+
+        <!-- mapSection -->
+        <section id="mapSection">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10">
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                <div id="maps">
+                                    <h2>قله تی کیو پی 😎</h2>
+                                    <div class="viewMap">
+                                        <div class="viewMapActions">
+                                            <div class="viewMapActions_right">
+                                                <button type="button"><i class="fa-regular fa-heart"></i>پسندیدم</button>
+                                                <button type="button"><i class="fa-regular fa-comment"></i>ثبت نظر</button>
+                                                <button type="button"><i class="fa-regular fa-star"></i>امتیاز</button>
+                                            </div>
+                                            <!-- <div class="viewMapActions_center">
+                                                <button type="button">دکمه 1</button>
+                                                <button type="button">دکمه 2</button>
+                                            </div> -->
+                                            <div class="viewMapActions_left">
+                                                <button type="button"><i class="fa-regular fa-bookmark"></i>ذخیره</button>
+                                                <button type="button"><i class="fa-solid fa-share-nodes"></i>اشتراک</button>
+                                            </div>
+                                        </div>
+                                        <div id="map">
+                                            
+                                        </div>
+                                        <!-- <div class="comments">
+                                            <input type="text" name="comments" id="comments" placeholder="نظرات شما">
+                                            <i class="fa-regular fa-paper-plane"></i>
+                                        </div> -->
+                                        <div class="lightBox">
+                                            <h2><i class="fa-regular fa-image"></i>تصاویر مسیرها</h2>
+                                            <a data-fslightbox="gallery" href="assets/img/login-bg.png">
+                                                <img class="img" src="assets/img/login-bg.png" alt="Child in mountains">
+                                            </a>
+                                            <a data-fslightbox="gallery" href="assets/img/mountain-background-blur.jpg">
+                                                <img class="img" src="assets/img/mountain-background-blur.jpg" alt="Child in mountains">
+                                            </a>
+                                            <a data-fslightbox="gallery" href="assets/img/mountainCover-Green.jpg">
+                                                <img class="img" src="assets/img/mountainCover-Green.jpg" alt="Child in mountains">
+                                            </a>
+                                            <a data-fslightbox="gallery" href="assets/img/mountain-background-blur.jpg">
+                                                <img class="img" src="assets/img/mountain-background-blur.jpg" alt="Child in mountains">
+                                            </a>
+                                            <a data-fslightbox="gallery" href="assets/img/login-bg.png">
+                                                <img class="img" src="assets/img/login-bg.png" alt="Child in mountains">
+                                            </a>
+                                            <a data-fslightbox="gallery" href="assets/img/mountainCover-Green.jpg">
+                                                <img class="img" src="assets/img/mountainCover-Green.jpg" alt="Child in mountains">
+                                            </a>
+                                            <a data-fslightbox="gallery" href="assets/img/mountain-background-blur.jpg">
+                                                <img class="img" src="assets/img/mountain-background-blur.jpg" alt="Child in mountains">
+                                            </a>
+                                            <a data-fslightbox="gallery" href="assets/img/login-bg.png">
+                                                <img class="img" src="assets/img/login-bg.png" alt="Child in mountains">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div id="mapDetails">
+                                    <div class="downloadMap">
+                                        <button type="button"><i class="fa-solid fa-cloud-arrow-down"></i>دانلود نقشه</button>
+                                        <button type="button"><i class="fa-solid fa-location-crosshairs"></i>نمایش در مسیر یاب</button>
+                                    </div>
+                                    <div class="aboutMap">
+                                        <h2><i class="fa-solid fa-route"></i>شرح سفر</h2>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
+                                    </div>
+                                    <div id="trailStats">
+                                        <h2><i class="fa-solid fa-person-hiking"></i>آمار مسیر</h2>
+                                        <div class="trailStats">
+                                            <div class="trailStateItem ts-right">
+                                                <p>مسافت</p>
+                                                <p>٤٧ کیلومتر</p>
+                                            </div>
+                                            <div class="trailStateItem ts-left">
+                                                <p>ارتفاع قله</p>
+                                                <p>۴۶۰٥ متر</p>
+                                            </div>
+                                            <div class="trailStateItem ts-right">
+                                                <p>بیشترین ارتفاع</p>
+                                                <p>۴۶۰٥ متر</p>
+                                            </div>
+                                            <div class="trailStateItem ts-left">
+                                                <p>کمترین ارتفاع</p>
+                                                <p>٤٧۰ متر</p>
+                                            </div>
+                                            <div class="trailStateItem ts-right">
+                                                <p>زمان صعود</p>
+                                                <p>۸ ساعت</p>
+                                            </div>
+                                            <div class="trailStateItem ts-left">
+                                                <p>مختصات</p>
+                                                <p>لورم ایپسوم</p>
+                                            </div>
+                                            <div class="trailStateItem ts-right">
+                                                <p>تاریخ آپلود</p>
+                                                <p>۱۶ فروردین</p>
+                                            </div>
+                                            <div class="trailStateItem ts-left">
+                                                <p>برنامه فعال</p>
+                                                <p>برنامه‌ای موجود نیست</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="WeatherForecast">
+                                        <h2><i class="fa-solid fa-temperature-low"></i>پیش بینی آب و هوا</h2>
+                                        <div class="WeatherForecast">
+                                            <i class="fa-solid fa-cloud-showers-water"></i>
+                                            <i class="fa-solid fa-sun"></i>
+                                            <i class="fa-regular fa-snowflake"></i>
+                                        </div>
+                                        <p>پیش بینی آب و هوای این مسیر را می‌توانید با اشتراک ویژه پایه کوه مشاهده کنید. <a href="#">اطلاعات بیشتر...</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Start Footer 😀-->
+    <footer>
+        <div class="container">
+             <div class="topFooter">
+                <div class="row">
+                    <div class="col-12 col-lg-6 sendEmail">
+                        <p>هوشمندانه صعود کنید</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mainFooter">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="footerAbout">
+                            <img src="assets/img/final-png2.png" alt="">
+                            <img src="assets/img/paye-koh-text-white.png" alt="">
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
+                            <ul>
+                                <li><a href="javascript:void(0)"><i class="fa-solid fa-paper-plane"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8 main-footer">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="contactUs">
+                                    <h2>تماس با تیم پایه کوه</h2>
+                                    <ul>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم ایپسوم</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم ایپسوم متن ساختگی</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="quickAccess">
+                                    <h2>دسترسی سریع</h2>
+                                    <ul>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-house"></i>خانه</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-coins"></i>خرید اشتراک</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-user"></i>برنامه‌های فعال</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-comment"></i>سوالات متداول</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-circle-info"></i>درباره ما</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-phone"></i>تماس با ما</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="contactUs">
+                                    <h2>تماس با تیم پایه کوه</h2>
+                                    <ul>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم ایپسوم</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم ایپسوم متن ساختگی</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="contactUs">
+                                    <h2>تماس با تیم پایه کوه</h2>
+                                    <ul>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم ایپسوم</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم ایپسوم متن ساختگی</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section id="copyRight">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12">
+                    <p>	&#169; تمامی حقوق وب سایت متعلق به تیم توسعه و طراحی <span>پایه کوه</span> می‌باشد.</p>  
+                </div>
+            </div>
+        </div>
+    </section
+
+    
+     
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/fslightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js "></script>
+    <script src="assets/js/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+    
+        var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+        osm.addTo(map);
+    
+        
+    
+        L.marker([51.5, -0.09]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();
+    </script>
+</body>
+</html>
