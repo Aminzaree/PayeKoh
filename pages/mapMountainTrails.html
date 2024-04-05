@@ -80,7 +80,15 @@
         <div class="progress">
             <div class="progress-bar"></div>
         </div>
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
     </header>
+
+    <!-- To Top Button -->
+    <a href="javascript:void(0)" id="toTopBtn" onclick="backToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <main id="main-card">
 
@@ -100,10 +108,10 @@
                                                 <button type="button"><i class="fa-regular fa-comment"></i>ثبت نظر</button>
                                                 <button type="button"><i class="fa-regular fa-star"></i>امتیاز</button>
                                             </div>
-                                            <!-- <div class="viewMapActions_center">
-                                                <button type="button">دکمه 1</button>
-                                                <button type="button">دکمه 2</button>
-                                            </div> -->
+                                            <div class="viewMapActions_center">
+                                                <button type="button"><i class="fa-solid fa-route"></i>اطلاعات مسیر</button>
+                                                
+                                            </div>
                                             <div class="viewMapActions_left">
                                                 <button type="button"><i class="fa-regular fa-bookmark"></i>ذخیره</button>
                                                 <button type="button"><i class="fa-solid fa-share-nodes"></i>اشتراک</button>
@@ -154,7 +162,8 @@
                                     </div>
                                     <div class="aboutMap">
                                         <h2><i class="fa-solid fa-route"></i>شرح سفر</h2>
-                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
+                                        <!-- <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p> -->
+                                        <p id="myText" onclick="showMore()">لورم ایپسوم متن ساختگی...</p>
                                     </div>
                                     <div id="trailStats">
                                         <h2><i class="fa-solid fa-person-hiking"></i>آمار مسیر</h2>
@@ -299,8 +308,9 @@
     </section
 
     
-     
+    <script src="../assets/js/script.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/mapMountainTrails.js"></script>
     <script src="assets/js/fslightbox.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -2,7 +2,7 @@
 /*------------------------------Header----------------------------*/
 /*----------------------------------------------------------------*/
 
-header #menu{
+header #menu {
     position: relative;
     z-index: 99;
     display: flex;
@@ -13,35 +13,35 @@ header #menu{
     box-shadow: 1px 1px 5px #000;
 }
 
-header #menu nav ul{
+header #menu nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header #menu nav ul li{
+header #menu nav ul li {
     list-style: none;
     margin: 0 10px;
     padding: 5px 10px;
 }
 
-header #menu nav ul li a{
+header #menu nav ul li a {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
 }
 
-header #menu nav ul li a svg{
+header #menu nav ul li a svg {
     margin-left: 7px;
 }
 
-header #menu nav ul a img{
+header #menu nav ul a img {
     width: 90px;
     margin-left: 15px;
 }
 
-header .userBtn a{
+header .userBtn a {
     font-family: "ravi";
     font-weight: 400;
     width: 80px;
@@ -56,7 +56,7 @@ header .userBtn a{
     -o-transition: all 0.3s ease-in-out;
 }
 
-header #menu nav ul li::after{
+header #menu nav ul li::after {
     content: " ";
     width: 0;
     height: 3px;
@@ -70,11 +70,11 @@ header #menu nav ul li::after{
     -o-transition: width 0.3s ease-in-out;
 }
 
-header #menu nav ul li:hover::after{
+header #menu nav ul li:hover::after {
     width: 100%;
 }
 
-header .userBtn a:nth-child(1){
+header .userBtn a:nth-child(1) {
     border-radius: 0 10px 10px 0;
     -webkit-border-radius: 0 10px 10px 0;
     -moz-border-radius: 0 10px 10px 0;
@@ -82,7 +82,7 @@ header .userBtn a:nth-child(1){
     -o-border-radius: 0 10px 10px 0;
 }
 
-header .userBtn a:hover:nth-child(1){
+header .userBtn a:hover:nth-child(1) {
 
     transform: scale(1.06);
     -webkit-transform: scale(1.06);
@@ -91,7 +91,7 @@ header .userBtn a:hover:nth-child(1){
     -o-transform: scale(1.06);
 }
 
-header .userBtn a:nth-child(2){
+header .userBtn a:nth-child(2) {
     color: #164863;
     margin-right: 2px;
     background-color: #64CCC5;
@@ -102,7 +102,7 @@ header .userBtn a:nth-child(2){
     -o-border-radius: 10px 0 0 10px;
 }
 
-header .userBtn a:hover:nth-child(2){
+header .userBtn a:hover:nth-child(2) {
     color: #64CCC5;
     background-color: #123c53;
     border: 1px solid #64CCC5;
@@ -113,7 +113,7 @@ header .userBtn a:hover:nth-child(2){
     -o-transform: scale(1.06);
 }
 
-header .page-bg{
+header .page-bg {
     width: 100%;
     background: url(../../assets/img/background-2.jpg);
     background-repeat: no-repeat;
@@ -126,17 +126,17 @@ header .page-bg{
     justify-content: center;
 }
 
-header .page-bg .pageHeader-content{
+header .page-bg .pageHeader-content {
     padding-bottom: 15px;
     text-align: center;
 }
 
-header .page-bg .pageHeader-content h1{
+header .page-bg .pageHeader-content h1 {
     font-family: "yekanBakh";
     color: #F4CE14;
 }
 
-header .page-bg .pageHeader-nav{
+header .page-bg .pageHeader-nav {
     padding: 5px 5px;
     border-radius: 7px;
     -webkit-border-radius: 7px;
@@ -146,35 +146,53 @@ header .page-bg .pageHeader-nav{
     background-color: rgba(132, 132, 132, 0.6);
 }
 
-header .page-bg .pageHeader-nav ul{
+header .page-bg .pageHeader-nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header .page-bg .pageHeader-nav ul li{
+header .page-bg .pageHeader-nav ul li {
     list-style: none;
     margin: 5px 10px;
 }
 
-header .page-bg .pageHeader-nav ul li:last-child::before{
+header .page-bg .pageHeader-nav ul li:last-child::before {
     content: "/ ";
     color: #fff;
     margin-left: 10px;
 }
 
-header .page-bg .pageHeader-nav ul li a{
+header .page-bg .pageHeader-nav ul li a {
     font-weight: 600;
     text-decoration: none;
     color: #fff;
 }
 
-header .page-bg .pageHeader-nav ul li a:hover{
+header .page-bg .pageHeader-nav ul li a:hover {
     color: #64CCC5;
 }
 
-header .page-bg .pageHeader-nav ul li a svg{
+header .page-bg .pageHeader-nav ul li a svg {
     margin-left: 5px;
+}
+
+header .progress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 7px;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+header .progress .progress-bar{
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgb(42, 245, 152), rgb(8, 179, 229));
+    /* background: linear-gradient(to right, rgb(184, 2, 216), rgb(225, 0, 43)); */
 }
 
 
@@ -184,10 +202,10 @@ header .page-bg .pageHeader-nav ul li a svg{
 
 #main-card {
     width: 100%;
-    padding-bottom: 80px;
+    padding-bottom: 140px;
 }
 
-body{
+body {
     font-family: "ravi";
 }
 
@@ -195,24 +213,24 @@ body{
 /*---------------------------Map Section--------------------------*/
 /*----------------------------------------------------------------*/
 
-#mapSection{
+#mapSection {
     width: 100%;
     padding: 50px 0;
 }
 
-#mapSection #maps{
+#mapSection #maps {
     width: 100%;
 }
 
-#mapSection #maps h1{
+#mapSection #maps h1 {
     font-weight: 100;
 }
 
-#mapSection #maps .viewMap{
+#mapSection #maps .viewMap {
     width: 100%;
 }
 
-#mapSection #maps .viewMap .viewMapActions{
+#mapSection #maps .viewMap .viewMapActions {
     width: 100%;
     display: flex;
     align-items: center;
@@ -220,15 +238,20 @@ body{
     padding: 20px 0 10px 0;
 }
 
-#mapSection #maps .viewMap .viewMapActions button{
+#mapSection #maps .viewMap .viewMapActions .viewMapActions_center button {
+    animation: heartbeat 2s infinite;
+    -webkit-animation: heartbeat 2s infinite;
+}
+
+#mapSection #maps .viewMap .viewMapActions button {
     font-family: "ravi";
     font-size: 14px;
     font-weight: 100;
     padding: 3px 10px;
     margin-left: 5px;
     background-color: transparent;
-    border: 1px solid #4b8c2a;
-    color: #4b8c2a;
+    border: 1px solid #38A3A5;
+    color: #38A3A5;
     cursor: pointer;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -237,13 +260,98 @@ body{
     -o-border-radius: 5px;
 }
 
-#mapSection #maps .viewMap .viewMapActions button svg{
+#mapSection #maps .viewMap .viewMapActions button svg {
     font-size: 14px;
     margin-left: 5px;
-    color: #4b8c2a;
+    color: #38A3A5;
 }
 
-#mapSection #maps .viewMap #map{
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+
+#mapSection #maps .viewMap #map {
     width: 100%;
     height: 400px;
     border-radius: 10px;
@@ -254,12 +362,12 @@ body{
     margin-bottom: 10px;
 }
 
-#mapSection #maps .viewMap .lightBox{
+#mapSection #maps .viewMap .lightBox {
     width: 100%;
     padding: 20px 0;
 }
 
-#mapSection #maps .viewMap .lightBox h2{
+#mapSection #maps .viewMap .lightBox h2 {
     font-family: "ravi";
     font-weight: 700;
     font-size: 14px;
@@ -267,17 +375,17 @@ body{
     padding-bottom: 10px;
 }
 
-#mapSection #maps .viewMap .lightBox h2 svg{
+#mapSection #maps .viewMap .lightBox h2 svg {
     margin-left: 5px;
     font-size: 14px;
 }
 
 
-#mapSection #maps .viewMap .lightBox a{
+#mapSection #maps .viewMap .lightBox a {
     text-decoration: none;
 }
 
-#mapSection #maps .viewMap .lightBox a img{
+#mapSection #maps .viewMap .lightBox a img {
     width: 150px;
     height: 100px;
     margin-left: 5px;
@@ -289,12 +397,12 @@ body{
 }
 
 
-#mapSection #maps .comments{
+#mapSection #maps .comments {
     width: 100%;
     position: relative;
 }
 
-#mapSection #maps .comments input{
+#mapSection #maps .comments input {
     width: 100%;
     display: flex;
     padding: 10px 10px;
@@ -312,11 +420,11 @@ body{
     -o-border-radius: 10px;
 }
 
-#mapSection #maps .comments input:focus{
+#mapSection #maps .comments input:focus {
     color: #000;
 }
 
-#mapSection #maps .comments svg{
+#mapSection #maps .comments svg {
     position: absolute;
     font-size: 18px;
     top: 12px;
@@ -330,13 +438,13 @@ body{
 
 
 
-#mapSection #mapDetails{
+#mapSection #mapDetails {
     width: 100%;
     padding: 0 20px;
     padding-top: 49px;
 }
 
-#mapSection #mapDetails .downloadMap{
+#mapSection #mapDetails .downloadMap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -344,7 +452,7 @@ body{
     justify-content: center;
 }
 
-#mapSection #mapDetails .downloadMap button{
+#mapSection #mapDetails .downloadMap button {
     width: 100%;
     padding: 8px 15px;
     margin-top: 10px;
@@ -366,41 +474,41 @@ body{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#mapSection #mapDetails .downloadMap button svg{
+#mapSection #mapDetails .downloadMap button svg {
     font-size: 18px;
     margin-left: 5px;
 }
 
-#mapSection #mapDetails .downloadMap button:nth-child(1){
-    background-color: #4b8c2a;
+#mapSection #mapDetails .downloadMap button:nth-child(1) {
+    background-color: #38A3A5;
     color: #fff;
-    border: 2px solid #4b8c2a;
+    border: 2px solid #38A3A5;
 }
 
-#mapSection #mapDetails .downloadMap button:nth-child(1):hover{
+#mapSection #mapDetails .downloadMap button:nth-child(1):hover {
     background-color: #fff;
-    color: #4b8c2a;
-    border: 2px solid #4b8c2a;
+    color: #38A3A5;
+    border: 2px solid #38A3A5;
 }
 
-#mapSection #mapDetails .downloadMap button:nth-child(2){
+#mapSection #mapDetails .downloadMap button:nth-child(2) {
     background-color: #fff;
-    color: #4b8c2a;
-    border: 2px solid #4b8c2a;
+    color: #38A3A5;
+    border: 2px solid #38A3A5;
 }
 
-#mapSection #mapDetails .downloadMap button:nth-child(2):hover{
+#mapSection #mapDetails .downloadMap button:nth-child(2):hover {
     background-color: #337068;
     color: #fff;
     border: 2px solid #337068;
 }
 
-#mapSection .aboutMap{
+#mapSection .aboutMap {
     width: 100%;
     padding: 20px 0;
 }
 
-#mapSection .aboutMap h2{
+#mapSection .aboutMap h2 {
     font-family: "ravi";
     font-weight: 700;
     font-size: 14px;
@@ -408,36 +516,37 @@ body{
     padding-bottom: 10px;
 }
 
-#mapSection .aboutMap h2 svg{
+#mapSection .aboutMap h2 svg {
     margin-left: 5px;
     font-size: 14px;
 }
 
-#mapSection .aboutMap p{
+#mapSection .aboutMap p {
     font-size: 14px;
     font-weight: 300;
     color: #767676;
+    cursor: pointer;
 }
 
-#mapSection #trailStats{
+#mapSection #trailStats {
     width: 100%;
     padding: 20px 0;
     border-top: 1px solid #f0f0f0;
 }
 
-#mapSection #trailStats h2{
+#mapSection #trailStats h2 {
     font-family: "ravi";
     font-weight: 700;
     font-size: 14px;
     color: #767676;
 }
 
-#mapSection #trailStats h2 svg{
+#mapSection #trailStats h2 svg {
     margin-left: 5px;
     font-size: 14px;
 }
 
-#mapSection #trailStats .trailStats{
+#mapSection #trailStats .trailStats {
     width: 100%;
     display: flex;
     align-items: center;
@@ -445,7 +554,7 @@ body{
     flex-wrap: wrap;
 }
 
-#mapSection #trailStats .trailStats .trailStateItem{
+#mapSection #trailStats .trailStats .trailStateItem {
     width: 50%;
     padding: 10px 0;
     margin-bottom: 10px;
@@ -453,13 +562,13 @@ body{
     border-bottom: 1px solid #f0f0f0;
 }
 
-#mapSection #trailStats .trailStats .trailStateItem p:nth-child(1){
+#mapSection #trailStats .trailStats .trailStateItem p:nth-child(1) {
     color: #777;
     font-weight: 200;
     font-size: 14px;
 }
 
-#mapSection #trailStats .trailStats .trailStateItem p:nth-child(2){
+#mapSection #trailStats .trailStats .trailStateItem p:nth-child(2) {
     font-weight: 200;
     font-size: 15px;
 }
@@ -468,44 +577,44 @@ body{
     border-left: 1px solid #f0f0f0;
 } */
 
-#mapSection #WeatherForecast{
+#mapSection #WeatherForecast {
     width: 100%;
 }
 
-#mapSection #WeatherForecast .WeatherForecast{
+#mapSection #WeatherForecast .WeatherForecast {
     width: 100%;
     text-align: center;
 
 }
 
-#mapSection #WeatherForecast h2{
+#mapSection #WeatherForecast h2 {
     font-family: "ravi";
     font-weight: 700;
     font-size: 14px;
     color: #767676;
 }
 
-#mapSection #WeatherForecast h2 svg{
+#mapSection #WeatherForecast h2 svg {
     margin-left: 5px;
     font-size: 14px;
 }
 
-#mapSection #WeatherForecast .WeatherForecast svg{
+#mapSection #WeatherForecast .WeatherForecast svg {
     font-size: 50px;
     padding: 20px 20px;
 }
 
-#mapSection #WeatherForecast .WeatherForecast svg:nth-child(2){
+#mapSection #WeatherForecast .WeatherForecast svg:nth-child(2) {
     color: #777;
 }
 
-#mapSection #WeatherForecast p{
+#mapSection #WeatherForecast p {
     font-size: 14px;
     font-weight: 300;
     color: #767676;
 }
 
-#mapSection #WeatherForecast p a{
+#mapSection #WeatherForecast p a {
     text-decoration: none;
     color: #337068;
 }

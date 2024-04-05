@@ -106,3 +106,25 @@ function signUp(){
           });
     }
 }
+
+
+/*----------------------------------------------------------------*/
+/*--------------------------To Top Button-------------------------*/
+/*----------------------------------------------------------------*/
+
+window.addEventListener("scroll", function () {
+    const toTop = document.querySelector("#toTopBtn");
+    if (this.window.pageYOffset > 100) {
+        toTop.classList.add("active");
+    } else {
+        toTop.classList.remove("active");
+    }
+})
+
+
+function backToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
