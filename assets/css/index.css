@@ -233,12 +233,14 @@ header #menu #mainNavbar nav ul li.active:hover svg{
 
 header #menu #mainNavbar nav ul li a{
     text-decoration: none;
+    font-family: "ravi";
+    font-weight: 300;
     color: #fff;
     font-size: 16px;
 }
 
 header #menu #mainNavbar nav ul li a:hover{
-    color: #afafaf;
+    color: #337068;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -247,7 +249,7 @@ header #menu #mainNavbar nav ul li a:hover{
 }
 
 header #menu #mainNavbar nav ul li a:hover svg{
-    color: #afafaf;
+    color: #337068;
 }
 
 header #menu .userBtn a{
