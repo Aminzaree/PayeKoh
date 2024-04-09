@@ -29,6 +29,12 @@
         margin-top: 25px;
     }
 
+    #mapSection #maps .viewMap .viewMapActions .viewMapActions_center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     #mapSection #maps .viewMap .viewMapActions .viewMapActions_center button{
         display: block;
     }

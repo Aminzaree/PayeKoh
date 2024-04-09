@@ -206,7 +206,7 @@ header .progress .progress-bar{
 
 #main-card {
     width: 100%;
-    padding-bottom: 140px;
+    /* padding-bottom: 140px; */
 }
 
 body {
@@ -664,4 +664,150 @@ body {
 .swal2-confirm{
     font-family: "ravi";
     font-weight: 700;
+}
+
+
+/*----------------------------------------------------------------*/
+/*---------------------------Most Visited-------------------------*/
+/*----------------------------------------------------------------*/
+
+#mostVisited{
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f0f0f0;
+    padding: 50px 0 130px 0;
+}
+
+#mostVisited .mostVisited{
+    width: 100%;
+}
+
+#mostVisited  .mostVisited .mostVisitedTitle{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#mostVisited  .mostVisited .mostVisitedTitle h2 {
+    font-family: "ravi";
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+#mostVisited .mostVisited .trailCard{
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#mostVisited .mostVisited .trailCard:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transform: scale(1.009);
+    -webkit-transform: scale(1.009);
+    -moz-transform: scale(1.009);
+    -ms-transform: scale(1.009);
+    -o-transform: scale(1.009);
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-header{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-header svg{
+    font-size: 35px;
+    color: #333;
+    padding-left: 15px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-header h2{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #333;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-header p{
+    font-size: smaller;
+    font-weight: 300;
+    color: #767676;
+    padding-top: 5px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body{
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyRight{
+    width: 50%;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 5px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyRight .trailCardDetails{
+    width: 50%;
+    padding-bottom: 7px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyRight .trailCardDetails p:nth-child(1) {
+    color: #333;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyRight .trailCardDetails p:nth-child(2) {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft{
+    width: 50%;
+    padding-right: 10px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft img{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg{
+    display: flex;
+    align-items: center;
+    padding-top: 7px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg img{
+    width: 50px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg p{
+    color: #333;
+    font-size: 14px;
+    font-weight: 300;
+    padding-right: 10px;
+}
+
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg .userImgName p:nth-child(1){
+    color: #333;
+    font-weight: 100;
+    font-size: 12px;
 }
