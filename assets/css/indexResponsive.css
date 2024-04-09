@@ -39,6 +39,14 @@
         display: block;
     }
 
+    #mostVisited  .mostVisited .mostVisitedTitle{
+        padding-bottom: 5px;
+    }
+
+    #mostVisited .mostVisited .trailCard{
+        margin-top: 25px;
+    }
+
     footer .topFooter .sendEmail{
         border-radius: 0;
         -webkit-border-radius: 0;
