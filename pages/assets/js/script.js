@@ -18,63 +18,92 @@ toggleMenu.addEventListener("click", function () {
 
 
 /*----------------------------------------------------------------*/
-/*------------------------SignIn Validation-----------------------*/
+/*----------------------------SignIn Ajax-------------------------*/
 /*----------------------------------------------------------------*/
 
-function signIn(){
 
+function signIn() {
     let username = document.getElementById("email");
     let password = document.getElementById("password");
     let usernameResult = document.getElementById("usernameResult");
     let passwordResult = document.getElementById("passwordResult");
 
-    if(username.value === ""){
-        usernameResult.innerHTML = "لطفا آیدی یا شماره موبایل خود را وارد کنید."
-    }else{
-        usernameResult.innerHTML = " ";
-    }
 
-    if(password.value == ""){
-        passwordResult.innerHTML = "لطفا گذرواژه خود را وارد کنید."
-    }else{
-        passwordResult.innerHTML = " ";
-    }
+    if (username.value !== "" && password.value !== "") {
 
-    if(username.value === "" || password.value == ""){
-        const Toast = Swal.mixin({
-            toast: true,
-            position: "top-end",
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.onmouseenter = Swal.stopTimer;
-              toast.onmouseleave = Swal.resumeTimer;
+        usernameResult.innerHTML = " "
+        passwordResult.innerHTML = " "
+
+        $.ajax({
+            url: "URL",
+            type: "POST",
+            data: {
+                email: "your email",
+                password: "your password"
+            },
+            success: function (data) {
+                localStorage.token = data.token;
+                alert("توکن در لوکال استوریج ذخیره شد");
+                console.log(data.token);
+            },
+            error: function (xhr, status, error) {
+                alert("اوضاع خرابه")
             }
-          });
-          Toast.fire({
-            icon: "warning",
-            title: "اطلاعات وارد شده کامل نیست."
-          });
-    }
-}
+        });
 
+    } else {
+
+        if (username.value === "") {
+            usernameResult.innerHTML = "لطفا آیدی یا شماره موبایل خود را وارد کنید."
+        } else {
+            usernameResult.innerHTML = " ";
+        }
+
+        if (password.value == "") {
+            passwordResult.innerHTML = "لطفا گذرواژه خود را وارد کنید."
+        } else {
+            passwordResult.innerHTML = " ";
+        }
+
+        if (username.value === "" || password.value == "") {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+            Toast.fire({
+                icon: "warning",
+                title: "اطلاعات وارد شده کامل نیست."
+            });
+        };
+
+    }
+
+
+
+}
 
 
 /*----------------------------------------------------------------*/
 /*-----------------------Show & Hide Password---------------------*/
 /*----------------------------------------------------------------*/
 
-function showPassword(){
+function showPassword() {
     let password = document.getElementById("password");
     let showPasswordBtn = document.getElementById("showPassword");
 
-    if(password.type === "password"){
-        password.setAttribute("type" , "text");
-        showPasswordBtn.querySelector("svg").classList.replace("fa-eye" , "fa-eye-slash");
-    }else{
-        password.setAttribute("type" , "password");
-        showPasswordBtn.querySelector("svg").classList.replace("fa-eye-slash" , "fa-eye");
+    if (password.type === "password") {
+        password.setAttribute("type", "text");
+        showPasswordBtn.querySelector("svg").classList.replace("fa-eye", "fa-eye-slash");
+    } else {
+        password.setAttribute("type", "password");
+        showPasswordBtn.querySelector("svg").classList.replace("fa-eye-slash", "fa-eye");
     }
 }
 
@@ -84,11 +113,11 @@ function showPassword(){
 /*----------------------------------------------------------------*/
 
 
-function signUp(){
+function signUp() {
     const numberRegex = /[0-9]/;
     const phoneNumber = document.getElementById("phoneNumber");
 
-    if(phoneNumber.value.match(numberRegex) == null){
+    if (phoneNumber.value.match(numberRegex) == null) {
         const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
@@ -96,14 +125,14 @@ function signUp(){
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
-              toast.onmouseenter = Swal.stopTimer;
-              toast.onmouseleave = Swal.resumeTimer;
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
             }
-          });
-          Toast.fire({
+        });
+        Toast.fire({
             icon: "warning",
             title: "شماره وارد شده صحیح نیست."
-          });
+        });
     }
 }
 
@@ -112,19 +141,19 @@ function signUp(){
 /*--------------------------To Top Button-------------------------*/
 /*----------------------------------------------------------------*/
 
-window.addEventListener("scroll", function () {
-    const toTop = document.querySelector("#toTopBtn");
-    if (this.window.pageYOffset > 100) {
-        toTop.classList.add("active");
-    } else {
-        toTop.classList.remove("active");
-    }
-})
+// window.addEventListener("scroll", function () {
+//     const toTop = document.querySelector("#toTopBtn");
+//     if (this.window.pageYOffset > 100) {
+//         toTop.classList.add("active");
+//     } else {
+//         toTop.classList.remove("active");
+//     }
+// })
 
 
-function backToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
+// function backToTop() {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// }

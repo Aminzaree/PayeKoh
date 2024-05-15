@@ -117,7 +117,7 @@ header #menu.sticky{
     -o-border-radius: 0;
 }
 
-header.active #menu.sticky{
+.dark-mode header #menu.sticky{
     background-color: rgba(42, 42, 42, 0.7);
 }
 
@@ -125,7 +125,7 @@ header #menu.sticky:hover{
     background-color: rgba( 225, 237, 255, 1);
 }
 
-header.active #menu.sticky:hover{
+.dark-mode header #menu.sticky:hover{
     background-color: rgba(42, 42, 42, 1);
 }
 
@@ -144,11 +144,11 @@ header #menu.sticky #mainNavbar nav ul li a svg{
     color: #000;
 }
 
-header.active #menu.sticky #mainNavbar nav ul li a{
+.dark-mode header #menu.sticky #mainNavbar nav ul li a{
     color: #fff;
 }
 
-header.active #menu.sticky #mainNavbar nav ul li a svg{
+.dark-mode header #menu.sticky #mainNavbar nav ul li a svg{
     color: #fff;
 }
 
@@ -322,6 +322,98 @@ header #menu .userBtn a:hover:nth-child(2){
     -o-transform: scale(1.06);
 }
 
+header #menu #userProfile{
+    position: relative;
+}
+
+header #menu #userProfile .userProfile{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(51, 112, 104, 0.3);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    cursor: pointer;
+}
+
+header #menu #userProfile .userProfile img{
+    width: 40px;
+    margin-left: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+header #menu #userProfile .userProfile .userHeader{
+    display: flex;
+    align-items: center;
+}
+
+header #menu #userProfile .userProfile .userHeader span{
+    font-size: 14px;
+    color: #fff;
+}
+
+header #menu #userProfile .userProfile .userHeader svg{
+    color: #fff;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+header #menu #userProfile .userContent{
+   position: absolute;
+   right: 0;
+   top: 0px;
+   opacity: 0;
+   visibility: hidden;
+   width: 158px;
+   padding: 15px 20px;
+   border-radius: 15px;
+   background-color: #fff;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   -ms-border-radius: 15px;
+   -o-border-radius: 15px;
+   z-index: 100;
+   transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+}
+
+header #menu #userProfile .userContent.active{
+    top: 57px;
+    opacity: 1;
+    visibility: visible;
+}
+
+header #menu #userProfile .userContent ul li{
+    list-style: none;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px solid #cfcfcf;
+    cursor: pointer;
+}
+
+header #menu #userProfile .userContent ul li:nth-child(1){
+    padding-top: 0;
+}
+
+header #menu #userProfile .userContent ul li:nth-child(3){
+    padding-bottom: 0;
+    border: none;
+    color: red;
+}
+
+header #menu #userProfile .userContent ul li svg{
+    margin-left: 5px;
+}
 
 #mainHeader-content{
     width: 100%;
@@ -488,7 +580,7 @@ header .header .mainTitle img.logoTxt{
     font-weight: 800;
 }
 
-#counterUp.active .counterUp-title h2, p{
+.dark-mode #counterUp .counterUp-title h2, p{
     color: #fff;
 }
 
@@ -518,7 +610,7 @@ header .header .mainTitle img.logoTxt{
     border: 1px solid #e1e1e1;
 }
 
-#counterUp.active .counter-section .counterBox{
+.dark-mode #counterUp .counter-section .counterBox{
     background-color: rgba(42, 42, 42, 1);
     border-color: rgba(255, 255, 255, 0.1);
 }
@@ -534,7 +626,7 @@ header .header .mainTitle img.logoTxt{
     color: #7a7a7a !important;
 }
 
-#counterUp.active .counter-section .counterBox p{
+.dark-mode #counterUp .counter-section .counterBox p{
     color: #fff !important;
 }
 
@@ -585,7 +677,7 @@ header .header .mainTitle img.logoTxt{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#about.active{
+.dark-mode #about{
     background-color: rgba(42, 42, 42, 1);
 }
 
@@ -595,7 +687,7 @@ header .header .mainTitle img.logoTxt{
     font-family: "ravi";
 }
 
-#about.active h2{
+.dark-mode #about h2{
     color: #fff;
 }
 
@@ -713,7 +805,7 @@ header .header .mainTitle img.logoTxt{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#services.active .services .services-content h3{
+.dark-mode #services .services .services-content h3{
     color: #fff;
 }
 
@@ -800,7 +892,7 @@ header .header .mainTitle img.logoTxt{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#payeKohDescription.active .payeKohDescription-title h2{
+.dark-mode #payeKohDescription .payeKohDescription-title h2{
     color: #fff;
 }
 
@@ -848,7 +940,7 @@ header .header .mainTitle img.logoTxt{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#payeKohDescription.active .payeKohDescription .description-item h3{
+.dark-mode #payeKohDescription .payeKohDescription .description-item h3{
     color: #fff;
 }
 
@@ -888,7 +980,7 @@ header .header .mainTitle img.logoTxt{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#accordion.active .accordion-title h2{
+.dark-mode #accordion .accordion-title h2{
     color: #fff;
 }
 
@@ -939,7 +1031,7 @@ header .header .mainTitle img.logoTxt{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#accordion.active .mainAccordion .accordionTitle{
+.dark-mode #accordion .mainAccordion .accordionTitle{
     background-color: rgba(42, 42, 42, 1);
 }
 
@@ -996,7 +1088,7 @@ header .header .mainTitle img.logoTxt{
     -o-transition: all 0.3s ease-in-out;
 }
 
-#contactUs.active .contactUs-title h2{
+.dark-mode #contactUs .contactUs-title h2{
     color: #fff;
 }
 
@@ -1028,7 +1120,7 @@ header .header .mainTitle img.logoTxt{
      -o-transition: all 0.3s ease-in-out;
 }
 
-#contactUs.active .contactUs .contactUs-InputBox{
+.dark-mode #contactUs .contactUs .contactUs-InputBox{
     background-color: rgba(42, 42, 42, 1);
 }
 

@@ -16,6 +16,8 @@
 <body>
 
     <header>
+
+        <!-- Responsive Menu -->
         <div class="toggleMenu">
             <i class="fas fa-bars"></i>
         </div>
@@ -39,25 +41,52 @@
                 <button type="button" title="عضویت">عضویت</button>
             </div>
         </div>
+
+        <!-- Main Navbar -->
+
         <div id="menu">
-            <div id="mainNavbar">
-                <nav>
-                    <ul>
-                        <a href="../index.html"><img src="../assets/img/paye-koh-text-white.png" alt="لوگو پایه کوه"></a>
-                        <li class="active"><a href="../index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a></li>
-                        <li title="برنامه‌های فعال"><a href="javascript:void(0)">برنامه‌های فعال</a></li>
-                        <li title="تیم ما"><a href="javascript:void(0)">تیم ما</a></li>
-                        <li title="درباره ما"><a href="javascript:void(0)">درباره ما</a></li>
-                        <li title="تماس با ما"><a href="javascript:void(0)">تماس با ما</a></li>
-                    </ul>
-                </nav>
+
+            <div class="header-topSection">
+                <div class="top-rightHeader">
+                    <a href="../index.html"><img src="../assets/img/paye koh text.png" alt="لوگو پایه کوه"></a>
+                </div>
+                <div class="left-header">
+                    
+                    <div class="userBtn">
+                        <a href="signUp.html"><i class="fa-regular fa-user"></i>ورود / ثبت‌نام</a>
+                    </div>
+                    <div class="leftHeader-content">
+                        <button class="js__dark-mode-toggle dark-mode-toggle" type="button">
+                            <span class="dark-mode-toggle__icon"></span>
+                            <span class="dark-mode-toggle__text hidden--visually">dark mode</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="userBtn">
-                <a href="login.html" title="ورود">ورود</a>
-                <a href="signUp.html" title="عضویت">عضویت</a>
+
+            <div class="header-bottomSection">
+                <div id="mainNavbar">
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="../index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a></li>
+                            <li title="برنامه‌های فعال"><a href="javascript:void(0)"><i class="fa-solid fa-person-hiking"></i>مسیرها</a></li>
+                            <li title="تیم ما"><a href="javascript:void(0)"><i class="fa-solid fa-people-group"></i>تیم ما</a></li>
+                            <li title="درباره ما"><a href="javascript:void(0)"><i class="fa-regular fa-circle-question"></i>درباره ما</a></li>
+                            <li title="تماس با ما"><a href="javascript:void(0)"><i class="fa-solid fa-link"></i>تماس با ما</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a class="startChat" href="#">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <span>شروع چت با پایه کوه</span>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
             </div>
+
         </div>
-        <div class="page-bg">
+
+
+        <!-- <div class="page-bg">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-10">
@@ -76,7 +105,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="progress">
             <div class="progress-bar"></div>
         </div>

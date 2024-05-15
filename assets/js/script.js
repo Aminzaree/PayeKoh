@@ -2,11 +2,11 @@
 /*-----------------------------Loading----------------------------*/
 /*----------------------------------------------------------------*/
 
-setTimeout(function () {
-    // Hide the loading container when the delay is over
-    const loadingContainer = document.getElementById("loading-container");
-    loadingContainer.style.display = "none";
-}, 2000);
+// setTimeout(function () {
+//     // Hide the loading container when the delay is over
+//     const loadingContainer = document.getElementById("loading-container");
+//     loadingContainer.style.display = "none";
+// }, 2000);
 
 
 /*----------------------------------------------------------------*/
@@ -24,7 +24,6 @@ setTimeout(function () {
 // }
 
 // window.onload = checkRedirect;
-
 
 
 /*------------------------------------------------*/
@@ -45,6 +44,16 @@ toggleMenu.addEventListener("click", function () {
     }
 })
 
+/*----------------------------------------------------------------*/
+/*--------------------------Profile User--------------------------*/
+/*----------------------------------------------------------------*/
+
+// const userProfile = document.querySelector(".userProfile");
+// const userContent = document.querySelector(".userContent");
+
+// userProfile.addEventListener("click", function(){
+//     userContent.classList.toggle("active");
+// })
 
 
 /*----------------------------------------------------------------*/
@@ -175,7 +184,6 @@ function backToTop() {
         behavior: "smooth"
     });
 }
-
 
 
 /*----------------------------------------------------------------*/
@@ -367,99 +375,19 @@ function delForm(){
 
 const darkModeBtn = document.getElementById("darkMode");
 
-darkModeBtn.addEventListener("click", function(){
+darkModeBtn.addEventListener("click", toggleDarkMode);
+
+function toggleDarkMode() {
     const body = document.body;
-    const headerSection = document.querySelector("header");
-    const mobileMenuSection = document.getElementById("responsiveMobileMenu");
-    const newsButton = document.getElementById("news");
-    const aboutSection = document.getElementById("about");
-    const counterUp = document.getElementById("counterUp");
-    const services = document.getElementById("services");
-    const payeKohDescription = document.getElementById("payeKohDescription");
-    const accordionSection = document.getElementById("accordion");
-    const contactUsSection = document.getElementById("contactUs");
-    const footer = document.querySelector("footer");
+    body.classList.toggle("dark-mode")
+}
 
-
-    if(darkModeBtn.classList.toggle("active")){
-
-        // Dark Mode Button background
-        darkModeBtn.style.backgroundColor = "#fff";
-        darkModeBtn.querySelector("svg").style.color = "rgba(28, 28, 28, 1)";
-
-        //Change Background Color
-        body.style.backgroundColor = "rgba(28, 28, 28, 1)";
-
-        //add class active for header
-        headerSection.classList.add("active");
-
-        //add class active for Mobile Menu
-        mobileMenuSection.classList.add("changeBgColor");
-
-        //add class active for News Button
-        newsButton.classList.add("DarkModeOn");
-
-        //add class active for About Section
-        aboutSection.classList.add("active");
-
-        //add class active for Counter Up
-        counterUp.classList.add("active");
-
-        //add class active for Services
-        services.classList.add("active");
-
-        //add class active for PayeKoh Description
-        payeKohDescription.classList.add("active");
-
-        //add class active for Accordion
-        accordion.classList.add("active");
-
-        //add class active for Contact Us
-        contactUsSection.classList.add("active");
-
-        //add class active for Footer
-        footer.classList.add("active");
-
-    }else{
-
-        // Dark Mode Button background
-        darkModeBtn.style.backgroundColor = "rgba(28, 28, 28, 1)";
-        darkModeBtn.querySelector("svg").style.color = "#fff";
-
-        body.style.backgroundColor = "rgba(248, 249, 250, 1)";
-
-        //Remove class active for header
-        headerSection.classList.remove("active");
-
-        //Remove class active for Mobile Menu
-        mobileMenuSection.classList.remove("changeBgColor");
-
-        //remove class active for News Button
-        newsButton.classList.remove("DarkModeOn");
-        
-        //Remove class active for About Section
-        aboutSection.classList.remove("active")
-
-        //Remove class active for About Counter Up
-        counterUp.classList.remove("active");
-
-        //Remove class active for Services
-        services.classList.remove("active");
-
-        //Remove class active for PayeKoh Description
-        payeKohDescription.classList.remove("active");
-
-        //Remove class active for Accordion
-        accordion.classList.remove("active");
-
-        //Remove class active for Contact Us
-        contactUsSection.classList.remove("active");
-
-        //Remove class active for Footer
-        footer.classList.remove("active")
-
+window.addEventListener("DOMContentLoaded", () => {
+    const isDarkModeActive = localStorage.getItem("darkMode") === "true";
+    if (isDarkModeActive) {
+        toggleDarkMode();
     }
-})
+});
 
 
 

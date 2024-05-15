@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,13 @@
     <link rel="stylesheet" href="assets/css/gridSystem.css">
     <link rel="stylesheet" href="assets/css/indexResponsive.css">
     <link rel="stylesheet" href="assets/css/responsiveMenu.css">
-    <link rel="stylesheet" href="assets/css/WaveContainer.css">
     <title>پایه کوه | صفحه اصلی</title>
 </head>
+
 <body>
 
     <!-- Loding -->
-    <div id="loading-container">
+    <!-- <div id="loading-container">
         <svg id="my-svg" width="208px" height="174px" viewBox="0 0 208 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Mountain---CodePen" transform="translate(-46.000000, -14.000000)" stroke="#000000">
@@ -51,28 +52,74 @@
             </g>
           </svg>
           <img src="assets/img/paye koh text.png" alt="">
-    </div>
+    </div> -->
 
     <!-- Header -->
-    <header>        
+    <header>
 
         <!-- Menu -->
         <div id="menu">
             <div id="mainNavbar">
                 <nav>
                     <ul>
-                        <li class="active"><a href="index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a></li>
-                        <li title="برنامه‌های فعال"><a href="pages/mapMountainTrails.html"><i class="fa-solid fa-person-hiking"></i>مسیرها</a></li>
-                        <li title="تیم ما"><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-people-group"></i>تیم ما</a></li>
-                        <li title="درباره ما"><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-regular fa-circle-question"></i>درباره ما</a></li>
-                        <li title="تماس با ما"><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-link"></i>تماس با ما</a></li>
+                        <li class="active"><a href="index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a>
+                        </li>
+                        <li title="برنامه‌های فعال"><a href="pages/mapMountainTrails.html"><i
+                                    class="fa-solid fa-person-hiking"></i>مسیرها</a></li>
+                        <li title="تیم ما"><a href="http://t.me/payekohbot?start=utm_site"><i
+                                    class="fa-solid fa-people-group"></i>تیم ما</a></li>
+                        <li title="درباره ما"><a href="http://t.me/payekohbot?start=utm_site"><i
+                                    class="fa-regular fa-circle-question"></i>درباره ما</a></li>
+                        <li title="تماس با ما"><a href="http://t.me/payekohbot?start=utm_site"><i
+                                    class="fa-solid fa-link"></i>تماس با ما</a></li>
                     </ul>
                 </nav>
             </div>
+            
+            <!-- {% if user.token %}
+                <div id="userProfile">
+                    <div class="userProfile">
+                        <img src="assets/img/user.png" alt="پروفایل شما">
+                        <div class="userHeader">
+                            <span>سعید تقی‌پور</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="userContent">
+                        <ul>
+                            <li id="profile"><i class="fa-regular fa-user"></i>پروفایل</li>
+                            <li id="dashboard"><i class="fa-solid fa-home"></i>داشبورد</li>
+                            <li id="logout"><i class="fa-solid fa-power-off"></i>خروج</li>
+                        </ul>
+                    </div>
+                </div>
+            {% else %}
+                <div class="userBtn">
+                    <a href="pages/login.html" title="ورود">ورود</a>
+                    <a href="pages/signUp.html" title="عضویت">عضویت</a>
+                </div>
+            {% endif %} -->
+
             <div class="userBtn">
                 <a href="pages/login.html" title="ورود">ورود</a>
                 <a href="pages/signUp.html" title="عضویت">عضویت</a>
             </div>
+            <!-- <div id="userProfile">
+                <div class="userProfile">
+                    <img src="assets/img/user.png" alt="پروفایل شما">
+                    <div class="userHeader">
+                        <span>سعید تقی‌پور</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="userContent">
+                    <ul>
+                        <li id="profile"><i class="fa-regular fa-user"></i>پروفایل</li>
+                        <li id="dashboard"><i class="fa-solid fa-home"></i>داشبورد</li>
+                        <li id="logout"><i class="fa-solid fa-power-off"></i>خروج</li>
+                    </ul>
+                </div>
+            </div> -->
         </div>
 
         <!-- Center Header -->
@@ -88,7 +135,8 @@
                     <h1>ربات تلگرامی پایه کوه اینجاست تا...</h1>
                     <span class="random-word"></span>
                     <a href="http://t.me/payekohbot?start=utm_site" class="joinUs">همین الان رایگان استفاده کنید</a>
-                    <a href="http://t.me/payekohbot?start=utm_site" class="mtprotoConnection">به mtproto اختصاصی پایه کوه متصل شوید</a>
+                    <a href="http://t.me/payekohbot?start=utm_site" class="mtprotoConnection">به mtproto اختصاصی پایه
+                        کوه متصل شوید</a>
                 </div>
             </div>
         </div>
@@ -99,11 +147,13 @@
             <div class="toggleMenu">
                 <i class="fas fa-bars"></i>
             </div>
-            <a href="http://t.me/payekohbot?start=utm_site"><button type="button" id="Subscription" title="خرید اشتراک"><i class="fa-solid fa-coins"></i>خرید اشتراک</button></a>
+            <a href="http://t.me/payekohbot?start=utm_site"><button type="button" id="Subscription"
+                    title="خرید اشتراک"><i class="fa-solid fa-coins"></i>خرید اشتراک</button></a>
         </div>
         <div class="responsiveMenu">
             <div class="logo">
-                <a href="http://t.me/payekohbot?start=utm_site"><img src="assets/img/paye-koh-text-white.png" alt="لوگو پایه کوه"></a>
+                <a href="http://t.me/payekohbot?start=utm_site"><img src="assets/img/paye-koh-text-white.png"
+                        alt="لوگو پایه کوه"></a>
             </div>
             <nav>
                 <ul>
@@ -127,16 +177,16 @@
                     <div class="col-12 col-md-10">
                         <div class="splide" role="group" aria-label="Splide Basic HTML Example" style="direction: ltr;">
                             <div class="splide__track">
-                                  <ul class="splide__list">
+                                <ul class="splide__list">
 
-                                      <li class="splide__slide">گروه پایه کوه</li>
-                                      <li class="splide__slide">کانال پایه کوه</li>
-                                      <li class="splide__slide">گروه تبادل موزیک</li>
-                                      <li class="splide__slide">ربات پایه کوه</li>
-                                      <li class="splide__slide">کانال موزیک کوه</li>
-                                  </ul>
+                                    <li class="splide__slide">گروه پایه کوه</li>
+                                    <li class="splide__slide">کانال پایه کوه</li>
+                                    <li class="splide__slide">گروه تبادل موزیک</li>
+                                    <li class="splide__slide">ربات پایه کوه</li>
+                                    <li class="splide__slide">کانال موزیک کوه</li>
+                                </ul>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,7 +196,7 @@
 
     <!-- Quick Menu Mobile Ver. 🙄-->
     <!-- This tag is displayed from 768 pixels 🙄-->
-    <div id="responsiveMobileMenu" >
+    <div id="responsiveMobileMenu">
         <button id="quickMenuBtn" type="button"><i class="fas fa-chevron-up"></i></button>
         <nav>
             <ul>
@@ -204,14 +254,14 @@
                         </div>
                         <div class="counter-section">
                             <div class="row">
-                                <div class="col-6 col-sm-6 col-lg-4" title="تعداد کاربران" >
+                                <div class="col-6 col-sm-6 col-lg-4" title="تعداد کاربران">
                                     <div class="counterBox CounBoxA">
                                         <i class="fa-solid fa-users"></i>
                                         <p>کاربران</p>
                                         <p class="counter" data-target="11500"></p>
                                     </div>
                                 </div>
-                                <div class="col-6 col-sm-6 col-lg-4" title="تعداد قله‌ها" >
+                                <div class="col-6 col-sm-6 col-lg-4" title="تعداد قله‌ها">
                                     <div class="counterBox CounBoxB">
                                         <i class="fa-solid fa-location-arrow"></i>
                                         <p>مسیرها</p>
@@ -219,28 +269,28 @@
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-6 col-lg-4">
-                                    <div class="counterBox CounBoxC" title="برنامه‌های  فعال" >
+                                    <div class="counterBox CounBoxC" title="برنامه‌های  فعال">
                                         <i class="fa-solid fa-mountain"></i>
                                         <p>قله‌ها</p>
                                         <p class="counter" data-target="500"></p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-6 col-lg-4">
-                                    <div class="counterBox CounBoxD" title="تعداد نقشه‌ها" >
+                                    <div class="counterBox CounBoxD" title="تعداد نقشه‌ها">
                                         <i class="fa-solid fa-user-group"></i>
                                         <p>اعضای گروه</p>
                                         <p class="counter" data-target="2000"></p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-6 col-lg-4">
-                                    <div class="counterBox CounBoxE" title="برنامه‌های  فعال" >
+                                    <div class="counterBox CounBoxE" title="برنامه‌های  فعال">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                         <p>قله‌های جستجو شده</p>
                                         <p class="counter" data-target="122345677"></p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-6 col-lg-4">
-                                    <div class="counterBox CounBoxF" title="برنامه‌های  فعال" >
+                                    <div class="counterBox CounBoxF" title="برنامه‌های  فعال">
                                         <i class="fa-regular fa-message"></i>
                                         <p>پیام‌های گروه</p>
                                         <p class="counter" data-target="3232232"></p>
@@ -258,11 +308,11 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-10">
-                            <div class="services-title">
-                                <!-- <img src="assets/img/service-title.png" alt=""> -->
-                                <!-- <a href="http://t.me/payekohbot?start=utm_site">مشاهده خدمات<i class="fa-solid fa-caret-left"></i></a> -->
-                            </div>
-                            <!-- <h2>خدمات پایه کوه</h2> -->
+                        <div class="services-title">
+                            <!-- <img src="assets/img/service-title.png" alt=""> -->
+                            <!-- <a href="http://t.me/payekohbot?start=utm_site">مشاهده خدمات<i class="fa-solid fa-caret-left"></i></a> -->
+                        </div>
+                        <!-- <h2>خدمات پایه کوه</h2> -->
                         <div class="services">
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-12 col-sm-6">
@@ -333,7 +383,8 @@
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="services-content">
-                                        <h3>نقشه کامل تمام مسیرهای صعود به قله با امکان مقایسه برای انتخاب بهترین مسیر</h3>
+                                        <h3>نقشه کامل تمام مسیرهای صعود به قله با امکان مقایسه برای انتخاب بهترین مسیر
+                                        </h3>
                                         <ul>
                                             <li>مقایسه مسیرهای صعود شده</li>
                                             <li>مشاهده چشمه‌های مسیر</li>
@@ -379,35 +430,40 @@
                                     <div class="description-item">
                                         <i class="fa-regular fa-circle-check"></i>
                                         <h3> کوهنوردی بدون مرز</h3>
-                                        <p>استفاده از ربات ما رایگان و بدون محدودیت هست، برای تجربه‌ی بیشتر و دسترسی به امکانات بیشتر، همین حالا از این ربات استفاده کنید.</p>
+                                        <p>استفاده از ربات ما رایگان و بدون محدودیت هست، برای تجربه‌ی بیشتر و دسترسی به
+                                            امکانات بیشتر، همین حالا از این ربات استفاده کنید.</p>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 col-lg-2">
                                     <div class="description-item">
                                         <i class="fa-solid fa-circle-info"></i>
                                         <h3>اطلاعات کامل همه قله‌ها </h3>
-                                        <p>از ارتفاعات شگفت‌انگیز البرز تا اقلیم‌های دست نیافتنی زاگرس، ربات پایه‌کوه شما را در تمام ماجراجویی‌هایتان در کوهستان همراهی می‌کند.</p>
+                                        <p>از ارتفاعات شگفت‌انگیز البرز تا اقلیم‌های دست نیافتنی زاگرس، ربات پایه‌کوه
+                                            شما را در تمام ماجراجویی‌هایتان در کوهستان همراهی می‌کند.</p>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 col-lg-2">
                                     <div class="description-item">
                                         <i class="fa-solid fa-shield-halved"></i>
                                         <h3>امنیت بالا</h3>
-                                        <p>ربات پایه کوه ما هیچ نیازی به دسترسی به اطلاعات شما ندارد، احترام به حریم خصوصی شما برای ما اولویت است.</p>
+                                        <p>ربات پایه کوه ما هیچ نیازی به دسترسی به اطلاعات شما ندارد، احترام به حریم
+                                            خصوصی شما برای ما اولویت است.</p>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 col-lg-2">
                                     <div class="description-item">
                                         <i class="fa-regular fa-face-smile"></i>
                                         <h3>سریع و ساده</h3>
-                                        <p>تجربه کاربری دلپذیر و قابل دسترسی که در پایه کوه فراهم کرده‌ایم، مناسب برای هر فرد با هر سن و با هر نوع دستگاهی است.</p>
+                                        <p>تجربه کاربری دلپذیر و قابل دسترسی که در پایه کوه فراهم کرده‌ایم، مناسب برای
+                                            هر فرد با هر سن و با هر نوع دستگاهی است.</p>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 col-lg-2">
                                     <div class="description-item">
                                         <i class="fa-solid fa-diagram-project"></i>
                                         <h3>الگوریتم‌های هوش مصنوعی</h3>
-                                        <p>ربات پایه کوه از الگوریتم‌های پیچیده هوش مصنوعی در خدمات خود استفاده میکند.</p>
+                                        <p>ربات پایه کوه از الگوریتم‌های پیچیده هوش مصنوعی در خدمات خود استفاده میکند.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -441,7 +497,9 @@
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="accordionContent">
-                                                <p>ربات پایه‌کوه یه رفیق کوهنورده که همه چی در مورد کوهنوردی تو ایران می‌دونه. از اطلاعات قله‌ها و مسیرها گرفته تا آب و هوا و تجهیزات لازم، هر چی بخوای بهت می‌گه.</p>
+                                                <p>ربات پایه‌کوه یه رفیق کوهنورده که همه چی در مورد کوهنوردی تو ایران
+                                                    می‌دونه. از اطلاعات قله‌ها و مسیرها گرفته تا آب و هوا و تجهیزات
+                                                    لازم، هر چی بخوای بهت می‌گه.</p>
                                             </div>
                                         </div>
                                         <div class="mainAccordion">
@@ -450,7 +508,8 @@
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="accordionContent">
-                                                <p>کافیه یه سر به آدرس [لینک ربات] تو تلگرام بزنی یا عبارت "پایه‌کوه" رو تو تلگرام سرچ کنی.</p>
+                                                <p>کافیه یه سر به آدرس [لینک ربات] تو تلگرام بزنی یا عبارت "پایه‌کوه" رو
+                                                    تو تلگرام سرچ کنی.</p>
                                             </div>
                                         </div>
                                         <div class="mainAccordion">
@@ -459,7 +518,8 @@
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="accordionContent">
-                                                <p>همه کسایی که عاشق کوهنوردین! فرقی نمی‌کنه مبتدی باشی یا حرفه‌ای، ربات پایه‌کوه به دردت می‌خوره.</p>
+                                                <p>همه کسایی که عاشق کوهنوردین! فرقی نمی‌کنه مبتدی باشی یا حرفه‌ای، ربات
+                                                    پایه‌کوه به دردت می‌خوره.</p>
                                             </div>
                                         </div>
                                         <div class="mainAccordion">
@@ -470,7 +530,8 @@
                                             <div class="accordionContent">
                                                 <p>مزایای ربات پایه‌کوه خیلی زیاده:
 
-                                                    به یه عالمه اطلاعات دقیق و کامل در مورد کوهنوردی تو ایران دسترسی پیدا می‌کنی،
+                                                    به یه عالمه اطلاعات دقیق و کامل در مورد کوهنوردی تو ایران دسترسی
+                                                    پیدا می‌کنی،
                                                     می‌تونی برای صعود به قله‌ها برنامه‌ریزی دقیق انجام بدی،
                                                     کوهنوردیت امن‌تر می‌شه،
                                                     دیگه تو کوهستان گم نمی‌شی،
@@ -484,12 +545,15 @@
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="accordionContent">
-                                                <p>ربات پایه‌کوه می‌تونه یه نقش خیلی مهم تو آینده کوهنوردی تو ایران داشته باشه. می‌تونه به ارتقای سطح دانش و مهارت کوهنوردان ایرانی کمک کنه و همچنین می‌تونه به افزایش ایمنی و لذت کوهنوردی تو ایران کمک کنه.</p>
+                                                <p>ربات پایه‌کوه می‌تونه یه نقش خیلی مهم تو آینده کوهنوردی تو ایران
+                                                    داشته باشه. می‌تونه به ارتقای سطح دانش و مهارت کوهنوردان ایرانی کمک
+                                                    کنه و همچنین می‌تونه به افزایش ایمنی و لذت کوهنوردی تو ایران کمک
+                                                    کنه.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -505,7 +569,8 @@
                     <div class="col-12 col-lg-10">
                         <div class="contactUs-title">
                             <h2>اگر ایده جدید داری...</h2>
-                            <p>اگر ایده جذاب یا جدیدی داری که به بهتر شدن پایه کوه کمک میکنه، ما بی‌صبرانه منتظر شنیدنش هستیم؛ میتونی نظرتو از فرم زیر برامون  ارسال کنی.</p>
+                            <p>اگر ایده جذاب یا جدیدی داری که به بهتر شدن پایه کوه کمک میکنه، ما بی‌صبرانه منتظر شنیدنش
+                                هستیم؛ میتونی نظرتو از فرم زیر برامون ارسال کنی.</p>
                         </div>
                         <div class="contactUs">
                             <div class="row justify-content-center align-items-center">
@@ -515,14 +580,15 @@
                                             <div class="col-12 col-sm-6">
                                                 <div class="contactUs-InputBoxItem">
                                                     <label for="fname">نام:</label>
-                                                    <input type="text" name="fname" id="fname" placeholder="نام" >
+                                                    <input type="text" name="fname" id="fname" placeholder="نام">
                                                     <p id="fnameResult"></p>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-sm-6">
                                                 <div class="contactUs-InputBoxItem">
                                                     <label for="lname">نام خانوادگی:</label>
-                                                    <input type="text" name="lname" id="lname" placeholder="نام خانوادگی">
+                                                    <input type="text" name="lname" id="lname"
+                                                        placeholder="نام خانوادگی">
                                                     <p id="lnameResult"></p>
                                                 </div>
                                             </div>
@@ -536,7 +602,8 @@
                                             <div class="col-12">
                                                 <div class="contactUs-InputBoxItem">
                                                     <label for="description">پیام شما:</label>
-                                                    <textarea name="description" id="description" placeholder="خواشحال میشیم اگر نظرتو اینجا برامون بنویسی... :) "></textarea>
+                                                    <textarea name="description" id="description"
+                                                        placeholder="خواشحال میشیم اگر نظرتو اینجا برامون بنویسی... :) "></textarea>
                                                     <p id="descriptionResult"></p>
                                                 </div>
                                             </div>
@@ -544,10 +611,12 @@
                                                 <div class="contactUs-Btn">
                                                     <div class="row">
                                                         <div class="col-12 col-sm-6">
-                                                            <button class="sendMessage" onclick="sendMessage()" type="button">ارسال</button>
+                                                            <button class="sendMessage" onclick="sendMessage()"
+                                                                type="button">ارسال</button>
                                                         </div>
                                                         <div class="col-12 col-sm-6">
-                                                            <button class="delForm" onclick="delForm()" type="button">پاک کردن فرم</button>
+                                                            <button class="delForm" onclick="delForm()"
+                                                                type="button">پاک کردن فرم</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -572,7 +641,7 @@
     <!-- Start Footer 😀-->
     <footer>
         <div class="container">
-             <div class="topFooter">
+            <div class="topFooter">
                 <div class="row">
                     <div class="col-12 col-lg-6 sendEmail">
                         <p>هوشمندانه صعود کنید</p>
@@ -585,7 +654,8 @@
                         <div class="footerAbout">
                             <img src="assets/img/final-png2.png" alt="">
                             <img src="assets/img/paye-koh-text-white.png" alt="">
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است </p>
                             <ul>
                                 <li><a href="javascript:void(0)"><i class="fa-solid fa-paper-plane"></i></a></li>
                                 <li><a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a></li>
@@ -601,9 +671,12 @@
                                 <div class="contactUs">
                                     <h2>تماس با تیم پایه کوه</h2>
                                     <ul>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم ایپسوم</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن ساختگی</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم ایپسوم متن ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم
+                                                ایپسوم</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن
+                                                ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم
+                                                ایپسوم متن ساختگی</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -611,12 +684,18 @@
                                 <div class="quickAccess">
                                     <h2>دسترسی سریع</h2>
                                     <ul>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-house"></i>خانه</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-coins"></i>خرید اشتراک</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-user"></i>برنامه‌های فعال</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-comment"></i>سوالات متداول</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-circle-info"></i>درباره ما</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-phone"></i>تماس با ما</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-house"></i>خانه</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-coins"></i>خرید اشتراک</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-user"></i>برنامه‌های فعال</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-comment"></i>سوالات متداول</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-circle-info"></i>درباره ما</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-phone"></i>تماس با ما</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -624,9 +703,12 @@
                                 <div class="contactUs">
                                     <h2>تماس با تیم پایه کوه</h2>
                                     <ul>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم ایپسوم</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن ساختگی</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم ایپسوم متن ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم
+                                                ایپسوم</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن
+                                                ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم
+                                                ایپسوم متن ساختگی</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -634,9 +716,12 @@
                                 <div class="contactUs">
                                     <h2>تماس با تیم پایه کوه</h2>
                                     <ul>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم ایپسوم</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن ساختگی</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم ایپسوم متن ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم
+                                                ایپسوم</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن
+                                                ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم
+                                                ایپسوم متن ساختگی</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -650,55 +735,57 @@
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-12">
-                    <p>	&#169; تمامی حقوق وب سایت متعلق به تیم توسعه و طراحی <span>پایه کوه</span> می‌باشد.</p>  
+                    <p> &#169; تمامی حقوق وب سایت متعلق به تیم توسعه و طراحی <span>پایه کوه</span> می‌باشد.</p>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
     <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            var splide = new Splide( '.splide', {
-            type   : 'loop',
+    
+    <script>
+        var splide = new Splide('.splide', {
+            type: 'loop',
             updateOnMove: true,
             perPage: 5,
             perMove: 1,
             autoplay: true,
             interval: 3000,
-            updateOnMove : true,
+            updateOnMove: true,
             focus: "center",
             breakpoints: {
-            1024: {
-              perPage: 3,
-             
-            },
-            767: {
-              perPage: 2,
-          
-            },
-            640: {
-              perPage: 1,
-            },
-          },
-            } );
-    
-            splide.mount();
-        </script>
+                1024: {
+                    perPage: 3,
 
-        <script>
+                },
+                767: {
+                    perPage: 2,
+
+                },
+                640: {
+                    perPage: 1,
+                },
+            },
+        });
+
+        splide.mount();
+    </script>
+
+    <!-- <script>
             new Vivus('my-svg', {
             type: 'delayed', 
             duration: 170,
             animTimingFunction: Vivus.EASE
         });
         </script>
-    
+     -->
 </body>
+
 </html>

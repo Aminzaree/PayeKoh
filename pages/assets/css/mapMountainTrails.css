@@ -5,12 +5,309 @@
 header #menu {
     position: relative;
     z-index: 99;
+    /*background-color: #0766AD;
+    */
+    background-color: #fbfbfb;
+    box-shadow: 0 4px 16px -3px #0000000f;
+    padding: 15px 145px;
+    padding-bottom: 0;
+    border-radius: 0 0 50px 50px;
+    -webkit-border-radius: 0 0 50px 50px;
+    -moz-border-radius: 0 0 50px 50px;
+    -ms-border-radius: 0 0 50px 50px;
+    -o-border-radius: 0 0 50px 50px;
+}
+
+header #menu .header-topSection {
+    width: 100%;
+    padding-bottom: 7px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #0766AD;
-    padding: 10px 20px 8px 20px;
-    box-shadow: 1px 1px 5px #000;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+}
+
+header #menu .header-topSection a img {
+    width: 100px;
+    padding: 0 10px;
+}
+
+header .left-header {
+    display: flex;
+    align-items: center;
+}
+
+header .left-header .leftHeader-content {
+    position: relative;
+}
+
+header .left-header .darkMode-control {
+    position: absolute;
+    left: 9px;
+    top: 45px;
+    /* opacity: 0;
+    visibility: hidden; */
+    width: 158px;
+    padding: 15px 10px;
+    border-radius: 15px;
+    background-color: #fff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+header .left-header .darkMode-control ul li {
+    list-style: none;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px solid #cfcfcf;
+    cursor: pointer;
+}
+
+header .left-header .darkMode-control ul li:nth-child(1) {
+    padding-top: 0;
+}
+
+header .left-header .darkMode-control ul li:nth-child(3) {
+    padding-bottom: 0;
+    border: none;
+}
+
+header .left-header .darkMode-control ul li svg {
+    margin-left: 5px;
+}
+
+header .userBtn {
+    padding: 7px 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+header .userBtn:hover {
+    border-color: #38A3A5
+}
+
+header .userBtn a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+header .userBtn:hover a {
+    color: #38A3A5;
+}
+
+header .userBtn a svg {
+    margin-left: 5px;
+}
+
+header .left-header button {
+    margin-right: 10px;
+    font-size: 18px;
+    /* padding: 8px 13px; */
+    color: #000;
+    border: 1px solid #000 !important;
+    background-color: transparent;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+
+
+:root {
+    --white: #fdfdfa;
+    --black: #4d4d4d;
+    --primary: #00b7c6;
+    --grey--dark: #aca79a;
+}
+
+:root[data-theme="dark"] {
+    --white: #4d4d4d;
+    --black: #efeeeb;
+    --primary: #ff851b;
+}
+
+
+
+.dark-mode-toggle {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: .4rem;
+    border: .2rem solid var(--grey--dark);
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+}
+
+.dark-mode-toggle:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+:root[data-theme="dark"] .dark-mode-toggle__text:before {
+    content: "deactivate ";
+}
+
+:root[data-theme="light"] .dark-mode-toggle__text:before {
+    content: "activate ";
+}
+
+.dark-mode-toggle__icon {
+    display: block;
+    background: #cbad86;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: width 0.3s, height 0.3s;
+    z-index: 1;
+    transform: rotate(-20deg);
+}
+
+.dark-mode-toggle__icon:before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    display: block;
+    border-right: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transition: opacity 0.3s, background-image 03s;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: spin__rays 4s linear infinite;
+    background-image: linear-gradient(0deg, transparent 46%, #cbad86 46%, #cbad86 54%, transparent 54%), linear-gradient(90deg, transparent 46%, #cbad86 46%, #cbad86 54%, transparent 54%), linear-gradient(45deg, transparent 47%, #cbad86 47%, #cbad86 53%, transparent 53%), linear-gradient(135deg, transparent 47%, #cbad86 47%, #cbad86 53%, transparent 53%);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.dark-mode-toggle__icon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #fbfbfb;
+    border-radius: 0.7rem;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 200%;
+    transform: translateY(-50%);
+    transition: left 0.3s;
+}
+
+.dark-mode-toggle:hover .dark-mode-toggle__icon {
+    background: var(--primary);
+}
+
+.dark-mode-toggle:hover .dark-mode-toggle__icon:before {
+    background-image: linear-gradient(0deg,
+            transparent 47%,
+            var(--primary) 47%,
+            var(--primary) 53%,
+            transparent 53%),
+        linear-gradient(90deg,
+            transparent 47%,
+            var(--primary) 47%,
+            var(--primary) 53%,
+            transparent 53%),
+        linear-gradient(45deg,
+            transparent 48%,
+            var(--primary) 48%,
+            var(--primary) 52%,
+            transparent 52%),
+        linear-gradient(135deg,
+            transparent 48%,
+            var(--primary) 48%,
+            var(--primary) 52%,
+            transparent 52%);
+}
+
+:root[data-theme="light"] .dark-mode-toggle__icon:after {
+    left: 40%;
+}
+
+:root[data-theme="dark"] .dark-mode-toggle__icon {
+    width: 20px;
+    height: 20px;
+}
+
+:root[data-theme="dark"] .dark-mode-toggle__icon:before {
+    opacity: 1;
+}
+
+@keyframes spin__rays {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+.hidden--visually {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+header #menu .header-bottomSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
 }
 
 header #menu nav ul {
@@ -22,11 +319,11 @@ header #menu nav ul {
 header #menu nav ul li {
     list-style: none;
     margin: 0 10px;
-    padding: 5px 10px;
+    padding: 5px 7px;
 }
 
 header #menu nav ul li a {
-    color: #fff;
+    color: #000;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
@@ -36,32 +333,12 @@ header #menu nav ul li a svg {
     margin-left: 7px;
 }
 
-header #menu nav ul a img {
-    width: 90px;
-    margin-left: 15px;
-}
-
-header .userBtn a {
-    font-family: "ravi";
-    font-weight: 400;
-    width: 80px;
-    padding: 8px 12px;
-    cursor: pointer;
-    border: none;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
 header #menu nav ul li::after {
     content: " ";
     width: 0;
     height: 3px;
     display: block;
-    background-color: #fff;
+    background-color: #38A3A5;
     margin-top: 5px;
     transition: width 0.3s ease-in-out;
     -webkit-transition: width 0.3s ease-in-out;
@@ -74,47 +351,26 @@ header #menu nav ul li:hover::after {
     width: 100%;
 }
 
-header .userBtn a:nth-child(1) {
-    border: 1px solid #38A3A5;
-    color: #fff;
-    border-radius: 0 10px 10px 0;
-    -webkit-border-radius: 0 10px 10px 0;
-    -moz-border-radius: 0 10px 10px 0;
-    -ms-border-radius: 0 10px 10px 0;
-    -o-border-radius: 0 10px 10px 0;
+header #menu .startChat {
+    font-family: "ravi";
+    font-weight: 600;
+    font-size: 15px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-header .userBtn a:hover:nth-child(1) {
-    background-color: #fff;
-    border: 1px solid #38A3A5;
+header #menu .startChat svg {
     color: #38A3A5;
-    transform: scale(1.06);
-    -webkit-transform: scale(1.06);
-    -moz-transform: scale(1.06);
-    -ms-transform: scale(1.06);
-    -o-transform: scale(1.06);
 }
 
-header .userBtn a:nth-child(2) {
-    color: #164863;
-    margin-right: 2px;
-    background-color: #64CCC5;
-    border-radius: 10px 0 0 10px;
-    -webkit-border-radius: 10px 0 0 10px;
-    -moz-border-radius: 10px 0 0 10px;
-    -ms-border-radius: 10px 0 0 10px;
-    -o-border-radius: 10px 0 0 10px;
+header #menu .startChat span {
+    padding: 0 7px;
 }
 
-header .userBtn a:hover:nth-child(2) {
-    color: #64CCC5;
-    background-color: #123c53;
-    border: 1px solid #64CCC5;
-    transform: scale(1.06);
-    -webkit-transform: scale(1.06);
-    -moz-transform: scale(1.06);
-    -ms-transform: scale(1.06);
-    -o-transform: scale(1.06);
+header #menu .startChat .fa-mobile-screen {
+    font-size: 20px;
 }
 
 header .page-bg {
@@ -181,7 +437,7 @@ header .page-bg .pageHeader-nav ul li a svg {
     margin-left: 5px;
 }
 
-header .progress{
+header .progress {
     position: fixed;
     top: 0;
     left: 0;
@@ -192,7 +448,7 @@ header .progress{
     z-index: 1000;
 }
 
-header .progress .progress-bar{
+header .progress .progress-bar {
     width: 0;
     height: 100%;
     background: linear-gradient(to right, rgb(42, 245, 152), rgb(8, 179, 229));
@@ -385,7 +641,6 @@ body {
     font-size: 14px;
 }
 
-
 #mapSection #maps .viewMap .lightBox a {
     text-decoration: none;
 }
@@ -400,7 +655,6 @@ body {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-
 
 #mapSection #maps .comments {
     width: 100%;
@@ -436,12 +690,6 @@ body {
     left: 10px;
     color: #767676;
 }
-
-
-
-
-
-
 
 #mapSection #mapDetails {
     width: 100%;
@@ -578,10 +826,6 @@ body {
     font-size: 15px;
 }
 
-/* #mapSection #trailStats .trailStats .ts-right{
-    border-left: 1px solid #f0f0f0;
-} */
-
 #mapSection #WeatherForecast {
     width: 100%;
     padding-bottom: 20px;
@@ -643,7 +887,7 @@ body {
     font-size: 14px;
 }
 
-#mapSection #rating ul li{
+#mapSection #rating ul li {
     list-style: none;
     margin-bottom: 7px;
     display: flex;
@@ -651,17 +895,17 @@ body {
     justify-content: space-between;
 }
 
-#mapSection #rating ul li p{
+#mapSection #rating ul li p {
     font-family: "ravi";
     font-weight: 200;
     font-size: 15px;
 }
 
-#mapSection #rating ul li svg{
+#mapSection #rating ul li svg {
     color: rgb(255, 255, 74);
 }
 
-.swal2-confirm{
+.swal2-confirm {
     font-family: "ravi";
     font-weight: 700;
 }
@@ -671,29 +915,29 @@ body {
 /*---------------------------Most Visited-------------------------*/
 /*----------------------------------------------------------------*/
 
-#mostVisited{
+#mostVisited {
     width: 100%;
     border-top: 1px solid #e0e0e0;
     background-color: #f0f0f0;
     padding: 50px 0 130px 0;
 }
 
-#mostVisited .mostVisited{
+#mostVisited .mostVisited {
     width: 100%;
 }
 
-#mostVisited  .mostVisited .mostVisitedTitle{
+#mostVisited .mostVisited .mostVisitedTitle {
     text-align: center;
     padding-bottom: 30px;
 }
 
-#mostVisited  .mostVisited .mostVisitedTitle h2 {
+#mostVisited .mostVisited .mostVisitedTitle h2 {
     font-family: "ravi";
     font-size: 32px;
     font-weight: 800;
-  }
+}
 
-#mostVisited .mostVisited .trailCard{
+#mostVisited .mostVisited .trailCard {
     width: 100%;
     background-color: #fff;
     padding: 15px 15px;
@@ -711,7 +955,7 @@ body {
     cursor: pointer;
 }
 
-#mostVisited .mostVisited .trailCard:hover{
+#mostVisited .mostVisited .trailCard:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     transform: scale(1.009);
     -webkit-transform: scale(1.009);
@@ -720,47 +964,47 @@ body {
     -o-transform: scale(1.009);
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-header{
+#mostVisited .mostVisited .trailCard .trailCard-header {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-header svg{
+#mostVisited .mostVisited .trailCard .trailCard-header svg {
     font-size: 35px;
     color: #333;
     padding-left: 15px;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-header h2{
+#mostVisited .mostVisited .trailCard .trailCard-header h2 {
     font-size: 16px;
     font-weight: 600;
     line-height: 25px;
     color: #333;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-header p{
+#mostVisited .mostVisited .trailCard .trailCard-header p {
     font-size: smaller;
     font-weight: 300;
     color: #767676;
     padding-top: 5px;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-body{
+#mostVisited .mostVisited .trailCard .trailCard-body {
     width: 100%;
     padding-top: 10px;
     display: flex;
     justify-content: center;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyRight{
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyRight {
     width: 50%;
     border-top: 1px solid #e0e0e0;
     padding-top: 5px;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyRight .trailCardDetails{
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyRight .trailCardDetails {
     width: 50%;
     padding-bottom: 7px;
 }
@@ -776,12 +1020,12 @@ body {
     font-size: 14px;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft{
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft {
     width: 50%;
     padding-right: 10px;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft img{
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft img {
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -789,24 +1033,24 @@ body {
     -o-border-radius: 5px;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg{
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg {
     display: flex;
     align-items: center;
     padding-top: 7px;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg img{
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg img {
     width: 50px;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg p{
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg p {
     color: #333;
     font-size: 14px;
     font-weight: 300;
     padding-right: 10px;
 }
 
-#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg .userImgName p:nth-child(1){
+#mostVisited .mostVisited .trailCard .trailCard-body .trailCard-bodyLeft .userImg .userImgName p:nth-child(1) {
     color: #333;
     font-weight: 100;
     font-size: 12px;

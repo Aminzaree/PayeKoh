@@ -90,7 +90,8 @@ html {
 
 body {
     font-family: "vazir";
-    background-color: rgba(248, 249, 250, 1);
+    /* background-color: rgba(248, 249, 250, 1); */
+    background-color: #f5f6f8;
     transition: background 0.3s ease-in-out;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
@@ -98,6 +99,9 @@ body {
     -o-transition: background 0.3s ease-in-out;
 }
 
+body.dark-mode{
+    background-color: rgba(28, 28, 28, 1);
+}
 
 /*----------------------------------------------------------------*/
 /*--------------------------TO Top Button-------------------------*/
@@ -441,7 +445,7 @@ footer {
     position: relative;
 }
 
-footer.active {
+.dark-mode footer {
     background-color: rgba(42, 42, 42, 1);
 }
 
@@ -468,7 +472,7 @@ footer .topFooter .sendEmail {
     -o-transition: all 0.3s ease-in-out;
 }
 
-footer.active .topFooter .sendEmail {
+.dark-mode footer .topFooter .sendEmail {
     background-color: rgba(42, 42, 42, 0.5);
 }
 
