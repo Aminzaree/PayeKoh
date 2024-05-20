@@ -28,9 +28,35 @@ header #menu .header-topSection {
     padding-bottom: 10px;
 }
 
+header #menu .header-topSection .top-rightHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 header #menu .header-topSection a img {
     width: 100px;
     padding: 0 10px;
+}
+
+header #menu .header-topSection .top-rightHeader input{
+    width: 500px;
+    border: 1px solid #38A3A5;
+    outline: none;
+    padding: 7px 35px;
+    font-family: "ravi";
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+header #menu .header-topSection .top-rightHeader svg{
+    position: absolute;
+    right: 257px;
+    top: 28px;
+    color: #767676;
 }
 
 header .left-header {
@@ -373,67 +399,65 @@ header #menu .startChat .fa-mobile-screen {
     font-size: 20px;
 }
 
-header .page-bg {
+header #page-bg {
     width: 100%;
-    background: url(../../assets/img/background-2.jpg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    height: 210px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 20px 0;
+    text-align: start;
 }
 
-header .page-bg .pageHeader-content {
-    padding-bottom: 15px;
+header #page-bg .page-bg{
+    width: 100%;
+    padding: 5px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 16px -3px #0000000f;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+header #page-bg .pageHeader-content {
     text-align: center;
 }
 
-header .page-bg .pageHeader-content h1 {
+header #page-bg .pageHeader-content h1 {
     font-family: "yekanBakh";
     color: #F4CE14;
 }
 
-header .page-bg .pageHeader-nav {
+header #page-bg .pageHeader-nav {
     padding: 5px 5px;
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
-    background-color: rgba(132, 132, 132, 0.6);
 }
 
-header .page-bg .pageHeader-nav ul {
+header #page-bg .pageHeader-nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header .page-bg .pageHeader-nav ul li {
+header #page-bg .pageHeader-nav ul li {
     list-style: none;
     margin: 5px 10px;
 }
 
-header .page-bg .pageHeader-nav ul li:last-child::before {
+header #page-bg .pageHeader-nav ul li:last-child::before {
     content: "/ ";
-    color: #fff;
+    color: #000;
     margin-left: 10px;
 }
 
-header .page-bg .pageHeader-nav ul li a {
+header #page-bg .pageHeader-nav ul li a {
     font-weight: 600;
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 
-header .page-bg .pageHeader-nav ul li a:hover {
+header #page-bg .pageHeader-nav ul li a:hover {
     color: #64CCC5;
 }
 
-header .page-bg .pageHeader-nav ul li a svg {
+header #page-bg .pageHeader-nav ul li a svg {
     margin-left: 5px;
 }
 
@@ -475,11 +499,15 @@ body {
 
 #mapSection {
     width: 100%;
-    padding: 50px 0;
+    /* padding: 50px 0; */
 }
 
 #mapSection #maps {
     width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px -3px #0000000f;
 }
 
 #mapSection #maps h1 {
@@ -693,11 +721,10 @@ body {
 
 #mapSection #mapDetails {
     width: 100%;
-    padding: 0 20px;
-    padding-top: 49px;
+    /* padding: 0 20px; */
 }
 
-#mapSection #mapDetails .downloadMap {
+#mapSection #mapDetails #downloadMap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -705,7 +732,7 @@ body {
     justify-content: center;
 }
 
-#mapSection #mapDetails .downloadMap button {
+#mapSection #mapDetails #downloadMap button {
     width: 100%;
     padding: 8px 15px;
     margin-top: 10px;
@@ -727,41 +754,40 @@ body {
     -o-transition: all 0.3s ease-in-out;
 }
 
-#mapSection #mapDetails .downloadMap button svg {
+#mapSection #mapDetails #downloadMap button svg {
     font-size: 18px;
     margin-left: 5px;
 }
 
-#mapSection #mapDetails .downloadMap button:nth-child(1) {
+#mapSection #mapDetails #downloadMap button:nth-child(1) {
     background-color: #38A3A5;
     color: #fff;
     border: 2px solid #38A3A5;
 }
 
-#mapSection #mapDetails .downloadMap button:nth-child(1):hover {
+#mapSection #mapDetails #downloadMap button:nth-child(1):hover {
     background-color: #fff;
     color: #38A3A5;
     border: 2px solid #38A3A5;
 }
 
-#mapSection #mapDetails .downloadMap button:nth-child(2) {
+#mapSection #mapDetails #downloadMap button:nth-child(2) {
     background-color: #fff;
     color: #38A3A5;
     border: 2px solid #38A3A5;
 }
 
-#mapSection #mapDetails .downloadMap button:nth-child(2):hover {
+#mapSection #mapDetails #downloadMap button:nth-child(2):hover {
     background-color: #337068;
     color: #fff;
     border: 2px solid #337068;
 }
 
-#mapSection .aboutMap {
+#mapSection #aboutMap {
     width: 100%;
-    padding: 20px 0;
 }
 
-#mapSection .aboutMap h2 {
+#mapSection #aboutMap h2 {
     font-family: "ravi";
     font-weight: 700;
     font-size: 14px;
@@ -769,12 +795,12 @@ body {
     padding-bottom: 10px;
 }
 
-#mapSection .aboutMap h2 svg {
+#mapSection #aboutMap h2 svg {
     margin-left: 5px;
     font-size: 14px;
 }
 
-#mapSection .aboutMap p {
+#mapSection #aboutMap p {
     font-size: 14px;
     font-weight: 300;
     color: #767676;
@@ -783,8 +809,6 @@ body {
 
 #mapSection #trailStats {
     width: 100%;
-    padding: 20px 0;
-    border-top: 1px solid #f0f0f0;
 }
 
 #mapSection #trailStats h2 {
@@ -812,7 +836,7 @@ body {
     padding: 10px 0;
     margin-bottom: 10px;
     text-align: center;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #efeeeb;
 }
 
 #mapSection #trailStats .trailStats .trailStateItem p:nth-child(1) {
@@ -828,8 +852,6 @@ body {
 
 #mapSection #WeatherForecast {
     width: 100%;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f0f0f0;
 }
 
 #mapSection #WeatherForecast .WeatherForecast {
@@ -871,7 +893,6 @@ body {
 
 #mapSection #rating {
     width: 100%;
-    padding: 20px 0;
 }
 
 #mapSection #rating h2 {
@@ -908,6 +929,36 @@ body {
 .swal2-confirm {
     font-family: "ravi";
     font-weight: 700;
+}
+
+.mapDetailsItem{
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 16px -3px #0000000f;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.rigester{
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.rigester svg{
+    margin-left: 5px;
 }
 
 

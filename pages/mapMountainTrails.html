@@ -49,6 +49,8 @@
             <div class="header-topSection">
                 <div class="top-rightHeader">
                     <a href="../index.html"><img src="../assets/img/paye koh text.png" alt="لوگو پایه کوه"></a>
+                    <!-- <input type="search" name="search" placeholder="جستجو">
+                    <i class="fa-solid fa-search"></i> -->
                 </div>
                 <div class="left-header">
                     
@@ -86,26 +88,32 @@
         </div>
 
 
-        <!-- <div class="page-bg">
+        <div id="page-bg">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-10">
-                        <div class="pageHeader-content">
-                            <h1>مسیرها</h1>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="col-10">
-                        <div class="pageHeader-nav">
-                            <ul>
-                                <li><a href="../index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a></li>
-                                <li><a href="#" title="خانه">مسیرها</a></li>
-                            </ul>
+                    <div class="col-12 col-md-10">
+                        <div class="page-bg">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div class="pageHeader-content">
+                                        <h1>مسیرها</h1>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="pageHeader-nav">
+                                        <ul>
+                                            <li><a href="../index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a></li>
+                                            <li><a href="#" title="خانه">مسیرها</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <div class="progress">
             <div class="progress-bar"></div>
         </div>
@@ -179,16 +187,16 @@
                             </div>
                             <div class="col-12 col-lg-4">
                                 <div id="mapDetails">
-                                    <div class="downloadMap">
+                                    <div id="downloadMap" class="mapDetailsItem">
                                         <button type="button"><i class="fa-solid fa-cloud-arrow-down"></i>دانلود نقشه</button>
                                         <button type="button"><i class="fa-solid fa-location-crosshairs"></i>نمایش در مسیر یاب</button>
                                     </div>
-                                    <div class="aboutMap">
+                                    <div id="aboutMap" class="mapDetailsItem">
                                         <h2><i class="fa-solid fa-route"></i>شرح سفر</h2>
                                         <!-- <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p> -->
                                         <p id="myText" onclick="showMore()">لورم ایپسوم متن ساختگی...</p>
                                     </div>
-                                    <div id="trailStats">
+                                    <div id="trailStats" class="mapDetailsItem">
                                         <h2><i class="fa-solid fa-person-hiking"></i>آمار مسیر</h2>
                                         <div class="trailStats">
                                             <div class="trailStateItem ts-right">
@@ -225,7 +233,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="WeatherForecast">
+                                    <div id="WeatherForecast" class="mapDetailsItem">
                                         <h2><i class="fa-solid fa-temperature-low"></i>پیش بینی آب و هوا</h2>
                                         <div class="WeatherForecast">
                                             <i class="fa-solid fa-cloud-showers-water"></i>
@@ -234,7 +242,7 @@
                                         </div>
                                         <p>پیش بینی آب و هوای این مسیر را می‌توانید با اشتراک ویژه پایه کوه مشاهده کنید. <span href="#" onclick="moreDetails()">اطلاعات بیشتر...</span></p>
                                     </div>
-                                    <div id="rating">
+                                    <div id="rating" class="mapDetailsItem">
                                         <h2><i class="fa-regular fa-star"></i>امتیازات</h2>
                                         <ul>
                                             <li><p>اطلاعات مسیر</p><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></li>
@@ -339,7 +347,7 @@
                                             <i class="fa-solid fa-person-hiking"></i>
                                             <div class="trailCardHeaderContent">
                                                 <h2>توچال</h2>
-                                                <p>مسیر: درکه، پلنگچال، ایستگاه پنج، ایستگاه هفت، قله</ح>
+                                                <p>مسیر: درکه، پلنگچال، ایستگاه پنج، ایستگاه هفت، قله</p>
                                             </div>
                                         </div>
                                         <div class="trailCard-body">

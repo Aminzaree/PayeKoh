@@ -3,7 +3,7 @@ function moreDetails() {
         title: "اشتراک ویژه پایه کوه",
         text: "برای دسترسی به این ویژگی می‌توانید اشتراک ما را از طریق لینک زیر تهیه کنید.",
         confirmButtonText: "بستن",
-        footer: '<a href="#">لینکو میندازیم اینجا</a>'
+        footer: '<a class="rigester" href="signUp.html"><i class="fa-regular fa-user"></i>ورود / ثبت‌نام</a>'
       });
 }
 
