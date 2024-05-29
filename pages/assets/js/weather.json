@@ -1,0 +1,9 @@
+[
+    {"day": "شنبه", "temperature": 25, "condition": "آفتابی"},
+    {"day": "یکشنبه", "temperature": 22, "condition": "ابری"},
+    {"day": "دوشنبه", "temperature": 23, "condition": "نیمه ابری"},
+    {"day": "سه‌شنبه", "temperature": 24, "condition": "آفتابی"},
+    {"day": "چهارشنبه", "temperature": 21, "condition": "بارانی"},
+    {"day": "پنج‌شنبه", "temperature": 20, "condition": "ابری"},
+    {"day": "جمعه", "temperature": 26, "condition": "آفتابی"}
+]

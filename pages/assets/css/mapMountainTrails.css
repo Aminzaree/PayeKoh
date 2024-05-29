@@ -399,16 +399,22 @@ header #menu .startChat .fa-mobile-screen {
     font-size: 20px;
 }
 
-header #page-bg {
+header .pageBg {
     width: 100%;
     padding: 20px 0;
     text-align: start;
 }
 
-header #page-bg .page-bg{
-    width: 100%;
+header .pageBg .page-bg{
+    position: relative;
+    width: 100% !important;
+    height: 150px !important;
     padding: 5px 0;
     background-color: #fff;
+    background: url(../img/night\ mountain.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 0 4px 16px -3px #0000000f;
     border-radius: 16px;
     -webkit-border-radius: 16px;
@@ -417,47 +423,52 @@ header #page-bg .page-bg{
     -o-border-radius: 16px;
 }
 
-header #page-bg .pageHeader-content {
+.particles-js-canvas-el{
+    position: absolute;
+    top: 0;
+}
+
+header .pageBg .pageHeader-content {
     text-align: center;
 }
 
-header #page-bg .pageHeader-content h1 {
+header .pageBg .pageHeader-content h1 {
     font-family: "yekanBakh";
-    color: #F4CE14;
+    color: #38A3A5;
 }
 
-header #page-bg .pageHeader-nav {
+header .pageBg .pageHeader-nav {
     padding: 5px 5px;
 }
 
-header #page-bg .pageHeader-nav ul {
+header .pageBg .pageHeader-nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header #page-bg .pageHeader-nav ul li {
+header .pageBg .pageHeader-nav ul li {
     list-style: none;
     margin: 5px 10px;
 }
 
-header #page-bg .pageHeader-nav ul li:last-child::before {
+header .pageBg .pageHeader-nav ul li:last-child::before {
     content: "/ ";
     color: #000;
     margin-left: 10px;
 }
 
-header #page-bg .pageHeader-nav ul li a {
+header .pageBg .pageHeader-nav ul li a {
     font-weight: 600;
     text-decoration: none;
     color: #000;
 }
 
-header #page-bg .pageHeader-nav ul li a:hover {
+header .pageBg .pageHeader-nav ul li a:hover {
     color: #64CCC5;
 }
 
-header #page-bg .pageHeader-nav ul li a svg {
+header .pageBg .pageHeader-nav ul li a svg {
     margin-left: 5px;
 }
 
@@ -852,15 +863,110 @@ body {
 
 #mapSection #WeatherForecast {
     width: 100%;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(56,163,165,1) 0%, rgba(51,112,104,0.9753035003063726) 82%); 
 }
 
-#mapSection #WeatherForecast .WeatherForecast {
+#mapSection #WeatherForecast .show-weather-body{
+    width: 100%;
+    padding: 20px;
+    background: url(../img/rain.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px 16px 0 0;
+    -webkit-border-radius: 16px 16px 0 0;
+    -moz-border-radius: 16px 16px 0 0;
+    -ms-border-radius: 16px 16px 0 0;
+    -o-border-radius: 16px 16px 0 0;
+}
+
+#mapSection #WeatherForecast .show-weather-body .weather-location p{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+#mapSection #WeatherForecast .show-weather-body .weather-temp{
+    text-align: center;
+}
+
+#mapSection #WeatherForecast .show-weather-body .weather-temp h1{
+    font-size: 70px;
+    color: #fff;
+}
+
+#mapSection #WeatherForecast .show-weather-body .weather-temp p{
+    font-size: 16px;
+    color: #fff;
+}
+
+#mapSection #WeatherForecast .show-weather-body svg{
+    margin-left: 5px;
+}
+
+
+#mapSection #WeatherForecast .show-weather-footer{
+    width: 100%;
+    padding: 10px;
+}
+
+#mapSection #WeatherForecast .show-weather-footer ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#mapSection #WeatherForecast .show-weather-footer ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 30%;
+    list-style: none;
+    padding: 10px 5px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+#mapSection #WeatherForecast .show-weather-footer ul li svg{
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+#mapSection #WeatherForecast .show-weather-footer ul li:hover{
+    background-color: rgba(56,163,165,0.5);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+
+
+/* #mapSection #WeatherForecast .WeatherForecast {
     width: 100%;
     text-align: center;
 
-}
+} */
 
-#mapSection #WeatherForecast h2 {
+/* #mapSection #WeatherForecast h2 {
     font-family: "ravi";
     font-weight: 700;
     font-size: 14px;
@@ -885,7 +991,7 @@ body {
     font-size: 14px;
     font-weight: 300;
     color: #767676;
-}
+} */
 
 #mapSection #WeatherForecast p span {
     color: #337068;

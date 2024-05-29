@@ -86,6 +86,24 @@
 html {
     scroll-behavior: smooth;
     direction: rtl;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(42, 245, 152) #c1c1c1; 
+}
+
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #c1c1c1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(42, 245, 152); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 body {

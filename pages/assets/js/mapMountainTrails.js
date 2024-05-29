@@ -111,3 +111,25 @@ const setDarkMode = (active = false) => {
   };
   
   initDarkMode();
+
+
+
+  /*----------------------------------------------------------------*/
+/*----------------------------Quick Menu--------------------------*/
+/*----------------------------------------------------------------*/
+
+const quickMenu = document.getElementById("responsiveMobileMenu");
+
+quickMenu.addEventListener("click", toggleQuickMneu);
+
+function toggleQuickMneu() {
+    quickMenu.classList.toggle("active");
+}
+
+document.addEventListener("click", function (event) {
+    let target = event.target;
+    if (!quickMenu.contains(target)) {
+        quickMenu.classList.remove("active");
+    }
+})
+

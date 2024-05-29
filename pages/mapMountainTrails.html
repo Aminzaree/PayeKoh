@@ -43,7 +43,6 @@
         </div>
 
         <!-- Main Navbar -->
-
         <div id="menu">
 
             <div class="header-topSection">
@@ -87,13 +86,28 @@
 
         </div>
 
+        <!-- Quick Menu Mobile Ver. 🙄-->
+        <!-- This tag is displayed from 768 pixels 🙄-->
+        <div id="responsiveMobileMenu">
+            <button id="quickMenuBtn" type="button"><i class="fas fa-chevron-up"></i></button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html"><i class="fa-solid fa-home"></i></a></li>
+                    <li><a href="mapMountainTrails.html"><i class="fa-solid fa-person-hiking"></i></a></li>
+                    <li><a href="javascript:void(0)"><i class="fa-solid fa-people-group"></i></a></li>
+                    <li><a href="javascript:void(0)"><i class="fa-solid fa-link"></i></a></li>
+                </ul>
+            </nav>
+            <p>هوشمندانه صعود کنید :)</p>
+        </div>
 
-        <div id="page-bg">
+
+        <div class="pageBg">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10">
-                        <div class="page-bg">
-                            <div class="row justify-content-center">
+                        <div class="page-bg" id="particles-js">
+                            <div class="row justify-content-center" style="padding-top: 20px;">
                                 <div class="col-12">
                                     <div class="pageHeader-content">
                                         <h1>مسیرها</h1>
@@ -234,13 +248,35 @@
                                         </div>
                                     </div>
                                     <div id="WeatherForecast" class="mapDetailsItem">
-                                        <h2><i class="fa-solid fa-temperature-low"></i>پیش بینی آب و هوا</h2>
+                                        <div class="show-weather-body">
+                                            <div class="weather-location">
+                                                <p><i class="fa-solid fa-location-dot"></i>تهران</p>
+                                            </div>
+                                            <div class="weather-temp">
+                                                <p><i class="fa-solid fa-cloud-showers-heavy"></i>بارانی</p>
+                                                <h1>۱۴°</h1>
+                                                <p><i class="fa-solid fa-calendar-days"></i>چهارشنبه - ۱۴۰۳/۳/۱</p>
+                                            </div>
+                                        </div>
+                                        <div id="weather-data" class="show-weather-footer">
+                                            <ul>
+                                                <!-- <li><i class="fa-solid fa-cloud-rain"></i>شنبه</li>
+                                                <li><i class="fa-solid fa-cloud"></i>یکشنبه</li>
+                                                <li><i class="fa-solid fa-cloud-showers-water"></i>دوشنبه</li>
+                                                <li><i class="fa-solid fa-snowflake"></i>سه‌شنبه</li>
+                                                <li><i class="fa-solid fa-snowflake"></i>چهارشنبه</li>
+                                                <li><i class="fa-solid fa-snowflake"></i>پنج‌شنبه</li> -->
+                                            </ul>
+                                        </div>
+
+
+                                        <!-- <h2><i class="fa-solid fa-temperature-low"></i>پیش بینی آب و هوا</h2>
                                         <div class="WeatherForecast">
                                             <i class="fa-solid fa-cloud-showers-water"></i>
                                             <i class="fa-solid fa-sun"></i>
                                             <i class="fa-regular fa-snowflake"></i>
                                         </div>
-                                        <p>پیش بینی آب و هوای این مسیر را می‌توانید با اشتراک ویژه پایه کوه مشاهده کنید. <span href="#" onclick="moreDetails()">اطلاعات بیشتر...</span></p>
+                                        <p>پیش بینی آب و هوای این مسیر را می‌توانید با اشتراک ویژه پایه کوه مشاهده کنید. <span href="#" onclick="moreDetails()">اطلاعات بیشتر...</span></p> -->
                                     </div>
                                     <div id="rating" class="mapDetailsItem">
                                         <h2><i class="fa-regular fa-star"></i>امتیازات</h2>
@@ -477,7 +513,10 @@
     
     <script src="../assets/js/script.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/app.js"></script>
     <script src="assets/js/mapMountainTrails.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/fslightbox.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -492,11 +531,33 @@
         });
         osm.addTo(map);
     
-        
-    
         L.marker([51.5, -0.09]).addTo(map)
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();
     </script>
+    
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: "URL",
+                method: "GET",
+                success: function(data){
+                    var weatherHTML = "";
+                    $.each(data, function(index, day){
+                    weatherHTML += "<li>";
+                    weatherHTML += "<h2>" + day.day +"</h2>";
+                    weatherHTML += "<p> دمای هوا" + day.temperature + "</p>";
+                    weatherHTML += "<p> وضعیت" + day.condition + "</p>";
+                    weatherHTML += "</li>";
+                    });
+                    $('#weather-data').html(weatherHTML);
+                },
+                error: function(xhr, status, error){
+                    console.error("خطایی در داده‌های آب و هوایی رخ داده است: ", status, error)
+                }
+            })
+        })
+    </script>
+
 </body>
 </html>
