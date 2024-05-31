@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fa">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +14,6 @@
 
 <body>
 
-    <!-- Header -->
     <header>
         <div id="menu">
             <div id="mainNavbar">
@@ -72,7 +70,7 @@
                             <i class="fa-solid fa-mobile-screen-button"></i>
                             <input type="text" name="email" id="email" placeholder="ایمیل یا شماره موبایل">
                         </div>
-                        <!-- <div class="inputBox">
+                        <div class="inputBox">
                             <label for="username">نام کاربری خود را وارد کنید</label>
                             <i class="fa-solid fa-mobile-screen-button"></i>
                             <input type="text" name="username" id="username" placeholder="نام کاربری شما">
@@ -86,7 +84,7 @@
                             <label for="repeatPassword">تکرار رمز عبور</label>
                             <i class="fa-solid fa-mobile-screen-button"></i>
                             <input type="text" name="repeatPassword" id="repeatPassword" placeholder="تکرار رمز عبور">
-                        </div> -->
+                        </div>
                         <div class="inputBtn">
                             <button onclick="signUp()" type="button">عضویت</button>
                         </div>
@@ -115,43 +113,82 @@
         </div>
     </footer>
 
+</body>
 
     <!-- <script src="../assets/js/script.js"></script> -->
     <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js "></script>
 
-    <script type="text/javascript">
 
+    <!-- <script type="text/javascript">
+
+     function signUp() {
+         var email = $("#email").val();
+         var username = $("#username").val();
+         var password = $("#password").val();
+         var repeatPassword = $("#repeatPassword").val();
+
+         $.ajax({
+             url: "http://213.134.17.109/auth/rest-auth/registration/",
+             type: "POST",
+             contentType: "application/json",
+             data: JSON.stringify({
+                username: username,
+                email: email,
+                password1: password,
+                password2: repeatPassword
+        }),
+             success: function (response) {
+                 alert("عوضیت شما با موفقیت انجام شد");
+             },
+             error: function (xhr, status, error) {
+                 alert("عدم برقراری ارتباط با سرور");
+             }
+         });
+     }
+
+    </script> -->
+
+
+    <script>
         function signUp() {
-            var phoneNumber = $("#email").val();
+            var email = $("#email").val();
             var username = $("#username").val();
             var password = $("#password").val();
             var repeatPassword = $("#repeatPassword").val();
 
-            $.ajax({
-                url: "my URL",
-                type: "POST",
-                data: {
-                    email: "myemail@example.com",
-                    username: "myusername",
-                    password: "mypassword",
-                    password2: "mypassword"
-                },
-
-                success: function (response) {
-                    alert("عوضیت شما با موفقیت انجام شد");
-                },
-                error: function (xhr, status, error) {
-                    alert("عدم برقراری ارتباط با سرور");
+            axios.post('http://213.134.17.109/auth/rest-auth/registration/', {
+                username: username,
+                email: email,
+                password1: password,
+                password2: repeatPassword
+            }, {
+                headers: {
+                    'Content-Type': 'application/json'
                 }
+            })
+            .then(function (response) {
+                alert("عضویت شما با موفقیت انجام شد");
+            })
+            .catch(function (error) {
+                if (error.response) {
+                    console.log(error.response.data);
+                    console.log(error.response.status);
+                    console.log(error.response.headers);
+                } else if (error.request) {
+                    console.log(error.request);
+                } else {
+                    console.log('Error', error.message);
+                }
+                alert("عدم برقراری ارتباط با سرور");
             });
         }
 
     </script>
 
-</body>
 
 </html>

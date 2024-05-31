@@ -62,18 +62,6 @@
     footer .mainFooter .contactUs{
         margin-top: 25px;
     }
-    
-    footer .mainFooter .contactUs{
-        margin-top: 25px;
-    }
-
-    footer .mainFooter .contactUs{
-        margin-top: 25px;
-    }
-
-    footer .mainFooter .contactUs{
-        margin-top: 25px;
-    }
 
     footer .topFooter .sendEmail::after{
         display: none;
@@ -90,7 +78,11 @@
     }
     
     header .header .mainTitle img.logoTxt{
-        width: 310px;
+        width: 310px;        
+    }
+
+    header .page-bg{
+        height: 150px;
     }
 
     #toTopBtn.active{
@@ -112,19 +104,8 @@
     #services .services .services-img img{
         width: 70%;
     }
-    
-    header .page-bg{
-        height: 150px;
-    }
 
-    footer .waveAnimation{
-        top: -40px;
-    }
-
-    footer .footer-menu{
-        margin-top: 35px;
-    }
-
+    footer .footer-menu,
     footer .footer-lorem{
         margin-top: 35px;
     }
@@ -243,10 +224,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    footer .footerAbout p{
-        width: 100%;
     }
 
 }
