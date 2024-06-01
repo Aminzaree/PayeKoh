@@ -1,0 +1,800 @@
+/*----------------------------------------------------------------*/
+/*------------------------------Header----------------------------*/
+/*----------------------------------------------------------------*/
+
+header #menu {
+    position: relative;
+    z-index: 99;
+    /*background-color: #0766AD;
+    */
+    background-color: #fbfbfb;
+    box-shadow: 0 4px 16px -3px #0000000f;
+    padding: 15px 145px;
+    padding-bottom: 0;
+    border-radius: 0 0 50px 50px;
+    -webkit-border-radius: 0 0 50px 50px;
+    -moz-border-radius: 0 0 50px 50px;
+    -ms-border-radius: 0 0 50px 50px;
+    -o-border-radius: 0 0 50px 50px;
+}
+
+header #menu .header-topSection {
+    width: 100%;
+    padding-bottom: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+}
+
+header #menu .header-topSection .top-rightHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header #menu .header-topSection a img {
+    width: 100px;
+    padding: 0 10px;
+}
+
+header #menu .header-topSection .top-rightHeader input{
+    width: 500px;
+    border: 1px solid #38A3A5;
+    outline: none;
+    padding: 7px 35px;
+    font-family: "ravi";
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+header #menu .header-topSection .top-rightHeader svg{
+    position: absolute;
+    right: 257px;
+    top: 28px;
+    color: #767676;
+}
+
+header .left-header {
+    display: flex;
+    align-items: center;
+}
+
+header .left-header .leftHeader-content {
+    position: relative;
+}
+
+header .left-header .darkMode-control {
+    position: absolute;
+    left: 9px;
+    top: 45px;
+    /* opacity: 0;
+    visibility: hidden; */
+    width: 158px;
+    padding: 15px 10px;
+    border-radius: 15px;
+    background-color: #fff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+header .left-header .darkMode-control ul li {
+    list-style: none;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px solid #cfcfcf;
+    cursor: pointer;
+}
+
+header .left-header .darkMode-control ul li:nth-child(1) {
+    padding-top: 0;
+}
+
+header .left-header .darkMode-control ul li:nth-child(3) {
+    padding-bottom: 0;
+    border: none;
+}
+
+header .left-header .darkMode-control ul li svg {
+    margin-left: 5px;
+}
+
+header .userBtn {
+    padding: 7px 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+header .userBtn:hover {
+    border-color: #38A3A5
+}
+
+header .userBtn a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+header .userBtn:hover a {
+    color: #38A3A5;
+}
+
+header .userBtn a svg {
+    margin-left: 5px;
+}
+
+header .left-header button {
+    margin-right: 10px;
+    font-size: 18px;
+    /* padding: 8px 13px; */
+    color: #000;
+    border: 1px solid #000 !important;
+    background-color: transparent;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+
+
+:root {
+    --white: #fdfdfa;
+    --black: #4d4d4d;
+    --primary: #00b7c6;
+    --grey--dark: #aca79a;
+}
+
+:root[data-theme="dark"] {
+    --white: #4d4d4d;
+    --black: #efeeeb;
+    --primary: #ff851b;
+}
+
+
+
+.dark-mode-toggle {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: .4rem;
+    border: .2rem solid var(--grey--dark);
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+}
+
+.dark-mode-toggle:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+:root[data-theme="dark"] .dark-mode-toggle__text:before {
+    content: "deactivate ";
+}
+
+:root[data-theme="light"] .dark-mode-toggle__text:before {
+    content: "activate ";
+}
+
+.dark-mode-toggle__icon {
+    display: block;
+    background: #cbad86;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: width 0.3s, height 0.3s;
+    z-index: 1;
+    transform: rotate(-20deg);
+}
+
+.dark-mode-toggle__icon:before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    display: block;
+    border-right: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transition: opacity 0.3s, background-image 03s;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: spin__rays 4s linear infinite;
+    background-image: linear-gradient(0deg, transparent 46%, #cbad86 46%, #cbad86 54%, transparent 54%), linear-gradient(90deg, transparent 46%, #cbad86 46%, #cbad86 54%, transparent 54%), linear-gradient(45deg, transparent 47%, #cbad86 47%, #cbad86 53%, transparent 53%), linear-gradient(135deg, transparent 47%, #cbad86 47%, #cbad86 53%, transparent 53%);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.dark-mode-toggle__icon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #fbfbfb;
+    border-radius: 0.7rem;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 200%;
+    transform: translateY(-50%);
+    transition: left 0.3s;
+}
+
+.dark-mode-toggle:hover .dark-mode-toggle__icon {
+    background: var(--primary);
+}
+
+.dark-mode-toggle:hover .dark-mode-toggle__icon:before {
+    background-image: linear-gradient(0deg,
+            transparent 47%,
+            var(--primary) 47%,
+            var(--primary) 53%,
+            transparent 53%),
+        linear-gradient(90deg,
+            transparent 47%,
+            var(--primary) 47%,
+            var(--primary) 53%,
+            transparent 53%),
+        linear-gradient(45deg,
+            transparent 48%,
+            var(--primary) 48%,
+            var(--primary) 52%,
+            transparent 52%),
+        linear-gradient(135deg,
+            transparent 48%,
+            var(--primary) 48%,
+            var(--primary) 52%,
+            transparent 52%);
+}
+
+:root[data-theme="light"] .dark-mode-toggle__icon:after {
+    left: 40%;
+}
+
+:root[data-theme="dark"] .dark-mode-toggle__icon {
+    width: 20px;
+    height: 20px;
+}
+
+:root[data-theme="dark"] .dark-mode-toggle__icon:before {
+    opacity: 1;
+}
+
+@keyframes spin__rays {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+.hidden--visually {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+header #menu .header-bottomSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+header #menu nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header #menu nav ul li {
+    list-style: none;
+    margin: 0 10px;
+    padding: 5px 7px;
+}
+
+header #menu nav ul li a {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header #menu nav ul li a svg {
+    margin-left: 7px;
+}
+
+header #menu nav ul li::after {
+    content: " ";
+    width: 0;
+    height: 3px;
+    display: block;
+    background-color: #38A3A5;
+    margin-top: 5px;
+    transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+}
+
+header #menu nav ul li:hover::after {
+    width: 100%;
+}
+
+header #menu .startChat {
+    font-family: "ravi";
+    font-weight: 600;
+    font-size: 15px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+header #menu .startChat svg {
+    color: #38A3A5;
+}
+
+header #menu .startChat span {
+    padding: 0 7px;
+}
+
+header #menu .startChat .fa-mobile-screen {
+    font-size: 20px;
+}
+
+header .pageBg {
+    width: 100%;
+    padding: 20px 0;
+    text-align: start;
+}
+
+header .pageBg .page-bg{
+    position: relative;
+    width: 100% !important;
+    height: 150px !important;
+    padding: 5px 0;
+    background-color: #fff;
+    background: url(../img/night\ mountain.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 16px -3px #0000000f;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.particles-js-canvas-el{
+    position: absolute;
+    top: 0;
+}
+
+header .pageBg .pageHeader-content {
+    text-align: center;
+}
+
+header .pageBg .pageHeader-content h1 {
+    font-family: "yekanBakh";
+    color: #38A3A5;
+}
+
+header .pageBg .pageHeader-nav {
+    padding: 5px 5px;
+}
+
+header .pageBg .pageHeader-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .pageBg .pageHeader-nav ul li {
+    list-style: none;
+    margin: 5px 10px;
+}
+
+header .pageBg .pageHeader-nav ul li:last-child::before {
+    content: "/ ";
+    color: #000;
+    margin-left: 10px;
+}
+
+header .pageBg .pageHeader-nav ul li a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+header .pageBg .pageHeader-nav ul li a:hover {
+    color: #64CCC5;
+}
+
+header .pageBg .pageHeader-nav ul li a svg {
+    margin-left: 5px;
+}
+
+header .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 7px;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+header .progress .progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgb(42, 245, 152), rgb(8, 179, 229));
+    /* background: linear-gradient(to right, rgb(184, 2, 216), rgb(225, 0, 43)); */
+}
+
+
+/*----------------------------------------------------------------*/
+/*------------------------------Contact Us------------------------*/
+/*----------------------------------------------------------------*/
+
+#contactUs{
+    width: 100%;
+    padding: 100px 0 150px 0;
+}
+
+#contactUs .contactUs{
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#contactUs .contactUs .contactInputBox{
+    width: 100%;
+    padding: 20px;
+}
+
+#contactUs .contactUs .contactInputBox .contactInputItem {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 0 0;
+    padding-left: 20px;
+}
+
+#contactUs .contactUs .contactInputBox .contactInputItem:nth-child(4){
+    margin-top: 25px;
+}
+
+#contactUs .contactUs .contactInputBox .contactInputItem input{
+    width: 100%;
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #7a7a7a;
+    outline: none;
+    font: 15px/24px "Lato", Arial, sans-serif;
+    font-family: "ravi" !important;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+#contactUs .contactUs .contactInputBox .contactInputItem textarea{
+    width: 100%;
+    font: 15px/24px "Lato", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "ravi" !important;
+    outline: none;
+    resize: none;
+}
+
+#contactUs .contactUs .contactInputBox .contactInputItem .inputIcon{
+    position: absolute;
+    left: 25px;
+    top: 2px;
+    background-color: #00b7c6;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+#contactUs .contactUs .contactInputBox .contactInputItem .inputIcon svg{
+    color: #fff;
+    font-size: 12px;
+}
+
+.contactInputBox .contactSendButton{
+    width: 100%;
+    text-align: end;
+}
+
+.contactInputBox .contactSendButton button{
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "ravi";
+    color: #fff;
+    background-color: #00b7c6;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.contactInputBox .contactSendButton button:hover{
+    background-color: #38A3A5;
+}
+
+
+.contactInput {
+    border: 0; 
+    padding: 4px 0;
+    border-bottom: 1px solid #ccc; 
+    background-color: transparent;
+}
+
+.contactInput ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #38A3A5;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    z-index: 3;
+}
+
+.contactInput:focus ~ .focus-border,
+.has-content.contactInput ~ .focus-border {
+    width: 95%; 
+    transition: 0.4s; 
+    right: 0;
+}
+
+.contactInput ~ label{
+    position: absolute; 
+    right: 0; 
+    width: 100%; 
+    top: 0; 
+    color: #7a7a7a; 
+    transition: 0.3s; 
+    z-index: 0; 
+    font-size: 14px;
+    font-family: "ravi";
+    font-weight: 400;
+}
+
+.contactInput:focus ~ label, .has-content.contactInput ~ label{
+    top: -16px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #38A3A5;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+
+.contactInput:focus ~ .focus-border,
+.has-content ~ .focus-border {
+    width: 95%; 
+    transition: 0.4s; 
+    right: 0;
+}
+
+.contactInput:focus ~ label, 
+.has-content ~ label {
+    top: -16px; 
+    font-weight: 500;
+    font-size: 12px; 
+    color: #38A3A5; 
+    transition: 0.3s;
+}
+
+
+
+#contactUs .contactUs .contactInfo{
+    position: relative;
+    font-family: "ravi";
+    padding: 30px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #00b7c6;
+    background-image: url(../img/Ellipse\ 7.png), url(../img/Ellipse\ 6.png), url(../img/Ellipse\ 5.png), url(../img/Ellipse\ 4.png), url(../img/Ellipse\ 3.png), url(../img/Ellipse\ 2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.particles-js-canvas-el{
+    position: absolute;
+    right: 0;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoHeader p{
+    font-size: 12px;
+    color: #e1e1e1;
+    padding-top: 10px;
+    line-height: 25px;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody{
+    width: 100%;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody ul{
+    width: 100%;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody ul li{
+    list-style: none;
+    margin: 5px 10px;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody ul li a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody ul li a svg {
+    margin-left: 5px;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter{
+    width: 100%;
+    padding-top: 15px;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li{
+    margin: 5px 5px;
+    list-style: none;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li a svg{
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    background-color: #00b7c6;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li:hover a{
+    color: #00b7c6;
+    background-color: #00b7c6;
+    border: 1px solid #fff;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li:hover a svg{
+    background-color: #fff;
+}
