@@ -285,14 +285,14 @@ header #menu #mainNavbar nav ul li a:hover svg {
     -o-transition: all 0.3s ease-in-out;
 }
 
-#SignUp .SignUp .inputBox input:hover {
+/* #SignUp .SignUp .inputBox input:hover {
     transform: scale(1.02);
     border-color: #38b2ac;
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -ms-transform: scale(1.02);
     -o-transform: scale(1.02);
-}
+} */
 
 #SignUp .SignUp .inputBox input:focus {
     transform: scale(1.02);
@@ -317,30 +317,11 @@ header #menu #mainNavbar nav ul li a:hover svg {
     padding-bottom: 15px;
 }
 
-#SignUp .SignUp .inputBtn {
+#SignUp .SignUp .codeBtn {
     padding: 10px 0 25px 0;
 }
 
-#SignUp .SignUp .SignUp-InputBox-other {
-    align-items: center;
-    display: flex;
-    gap: 8px;
-    margin-bottom: 24px;
-}
-
-#SignUp .SignUp .SignUp-InputBox-other-text {
-    color: #fff;
-    font-family: "ravi";
-    font-weight: 500;
-}
-
-#SignUp .SignUp .SignUp-InputBox-other-line {
-    background-color: #fff;
-    flex-grow: 1;
-    height: 1px;
-}
-
-#SignUp .SignUp .inputBtn button {
+#SignUp .SignUp .codeBtn button {
     width: 100%;
     height: 45px;
     padding: 8px 0;
@@ -364,7 +345,7 @@ header #menu #mainNavbar nav ul li a:hover svg {
     -o-transition: all 0.3s ease-in-out;
 }
 
-#SignUp .SignUp .inputBtn button:hover {
+#SignUp .SignUp .codeBtn button:hover {
     color: #fff;
     background-color: #38b2ac;
     transform: scale(0.95);
@@ -372,6 +353,77 @@ header #menu #mainNavbar nav ul li a:hover svg {
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
     -o-transform: scale(0.95);
+}
+
+#SignUp .SignUp .submitBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#SignUp .SignUp .submitBtn button{
+    margin: 0 5px;
+}
+
+#SignUp .SignUp .codeBtn button#verifyCode{
+    color: #fff;
+    background-color: #38b2ac;
+    border: 2px solid transparent;
+}
+
+#SignUp .SignUp .codeBtn button#verifyCode:hover{
+    color: #38b2ac;
+    background-color: #fff;
+    border: 2px solid #38b2ac;
+}
+
+
+.code-inputs {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 20px 0; */
+    direction: ltr; 
+}
+
+.code-input {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+}
+
+.code-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+#SignUp .SignUp .SignUp-InputBox-other {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+#SignUp .SignUp .SignUp-InputBox-other-text {
+    color: #fff;
+    font-family: "ravi";
+    font-weight: 500;
+}
+
+#SignUp .SignUp .SignUp-InputBox-other-line {
+    background-color: #fff;
+    flex-grow: 1;
+    height: 1px;
 }
 
 #SignUp .SignUp p.signUp {

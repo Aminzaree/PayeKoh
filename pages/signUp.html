@@ -12,6 +12,19 @@
     <title>پایه کوه | عضویت</title>
 </head>
 
+<style>
+    .step {
+    transition: opacity 0.5s ease, display 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+</style>
+
 <body>
 
     <header>
@@ -65,29 +78,30 @@
                 <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4">
                     <div class="SignUp">
                         <h1><i class="fa-solid fa-user-plus"></i>عضویت</h1>
-                        <div class="inputBox">
-                            <label for="email">با ایمیل یا شماره موبایل‌تان وارد شوید:</label>
+
+                        <div id="step1" class="step inputBox">
+                            <label for="phone">شماره موبایل</label>
                             <i class="fa-solid fa-mobile-screen-button"></i>
-                            <input type="text" name="email" id="email" placeholder="ایمیل یا شماره موبایل">
+                            <input type="text" name="phone" id="phone" placeholder="ایمیل یا شماره موبایل">
+                            <div class="codeBtn">
+                                <button id="sendCode" type="button">ارسال کد تایید</button>
+                            </div> 
                         </div>
-                        <div class="inputBox">
-                            <label for="username">نام کاربری خود را وارد کنید</label>
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                            <input type="text" name="username" id="username" placeholder="نام کاربری شما">
+
+                        <div id="step2" class="step hidden inputBox">
+                            <label for="code">کد تاییدیه را وارد کنید:</label>
+                            <div class="code-inputs">
+                                <input type="text" id="code1" maxlength="1" class="code-input">
+                                <input type="text" id="code2" maxlength="1" class="code-input">
+                                <input type="text" id="code3" maxlength="1" class="code-input">
+                                <input type="text" id="code4" maxlength="1" class="code-input">
+                            </div>
+                            <div class="codeBtn submitBtn">
+                                <button id="verifyCode">تایید کد و عضویت</button>
+                                <button id="goBack">بازگشت</button>
+                            </div> 
                         </div>
-                        <div class="inputBox">
-                            <label for="password">رمز عبور</label>
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                            <input type="text" name="password" id="password" placeholder="رمز عبور">
-                        </div>
-                        <div class="inputBox">
-                            <label for="repeatPassword">تکرار رمز عبور</label>
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                            <input type="text" name="repeatPassword" id="repeatPassword" placeholder="تکرار رمز عبور">
-                        </div>
-                        <div class="inputBtn">
-                            <button onclick="signUp()" type="button">عضویت</button>
-                        </div>
+
                         <div class="SignUp-InputBox-other">
                             <div class="SignUp-InputBox-other-line"></div>
                             <div class="SignUp-InputBox-other-text">یا</div>
@@ -117,6 +131,7 @@
 
     <!-- <script src="../assets/js/script.js"></script> -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/signUp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>

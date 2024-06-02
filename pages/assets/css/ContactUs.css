@@ -511,6 +511,131 @@ header .progress .progress-bar {
     -o-border-radius: 20px;
 }
 
+
+#contactUs .contactUs .contactInfo{
+    position: relative;
+    font-family: "ravi";
+    padding: 30px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #00b7c6;
+    background-image: url(../img/Ellipse\ 7.png), url(../img/Ellipse\ 6.png), url(../img/Ellipse\ 5.png), url(../img/Ellipse\ 4.png), url(../img/Ellipse\ 3.png), url(../img/Ellipse\ 2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.particles-js-canvas-el{
+    position: absolute;
+    right: 0;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoHeader p{
+    font-size: 12px;
+    color: #e1e1e1;
+    padding-top: 10px;
+    line-height: 25px;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody{
+    width: 100%;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody ul{
+    width: 100%;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody ul li{
+    list-style: none;
+    margin: 5px 10px;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody ul li a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoBody ul li a svg {
+    margin-left: 5px;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter{
+    width: 100%;
+    padding-top: 15px;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li{
+    margin: 5px 5px;
+    list-style: none;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li a svg{
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    background-color: #00b7c6;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li:hover a{
+    color: #00b7c6;
+    background-color: #00b7c6;
+    border: 1px solid #fff;
+}
+
+#contactUs .contactUs .contactInfo .contactInfoFooter ul li:hover a svg{
+    background-color: #fff;
+}
+
+
 #contactUs .contactUs .contactInputBox{
     width: 100%;
     padding: 20px;
@@ -675,126 +800,3 @@ header .progress .progress-bar {
 }
 
 
-
-#contactUs .contactUs .contactInfo{
-    position: relative;
-    font-family: "ravi";
-    padding: 30px;
-    border-radius: 15px;
-    color: #fff;
-    background-color: #00b7c6;
-    background-image: url(../img/Ellipse\ 7.png), url(../img/Ellipse\ 6.png), url(../img/Ellipse\ 5.png), url(../img/Ellipse\ 4.png), url(../img/Ellipse\ 3.png), url(../img/Ellipse\ 2.png);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-}
-
-.particles-js-canvas-el{
-    position: absolute;
-    right: 0;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoHeader p{
-    font-size: 12px;
-    color: #e1e1e1;
-    padding-top: 10px;
-    line-height: 25px;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoBody{
-    width: 100%;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoBody ul{
-    width: 100%;
-    padding-top: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoBody ul li{
-    list-style: none;
-    margin: 5px 10px;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoBody ul li a{
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    padding: 5px 0;
-    cursor: pointer;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoBody ul li a svg {
-    margin-left: 5px;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoFooter{
-    width: 100%;
-    padding-top: 15px;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoFooter ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoFooter ul li{
-    margin: 5px 5px;
-    list-style: none;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoFooter ul li a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoFooter ul li a svg{
-    width: 15px;
-    height: 15px;
-    padding: 5px;
-    background-color: #00b7c6;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoFooter ul li:hover a{
-    color: #00b7c6;
-    background-color: #00b7c6;
-    border: 1px solid #fff;
-}
-
-#contactUs .contactUs .contactInfo .contactInfoFooter ul li:hover a svg{
-    background-color: #fff;
-}
