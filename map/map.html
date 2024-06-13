@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/img/favi.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/gridSystem.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <title>پایه کوه |  نقشه</title>
+</head>
+<body>
+    
+    <section id="mainMap">
+
+        <div id="map"></div>
+
+        <aside>
+            <div id="mainSidebar-nav">
+                <div class="sidebar-header">
+                    <div id="menu">
+                        <button><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="sidebar-main">
+                    <span>منو</span>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-home"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-person-hiking"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-people-group"></i></a></li>
+                        <li><a href="#"><i class="fa-regular fa-circle-question"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-link"></i></a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-footer">
+                    <div class="userProfile">
+                        <img src="assets/img/user.png" alt="پروفایل شما">
+                        <div class="userHeader">
+                            <!-- <span>سعید تقی‌پور</span> -->
+                            <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div id="mainSidebar-menu">
+            <div class="trailBox">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="trail-item">
+                            <div class="trail-item-header">
+                                <img src="assets/img/1349710.jpg" alt="عکس کوه">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="trail-item">
+                            slm
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+  
+
+</body>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+    
+        var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+        osm.addTo(map);
+    
+        L.marker([51.5, -0.09]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();
+    </script>
+</html>

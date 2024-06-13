@@ -133,3 +133,25 @@ document.addEventListener("click", function (event) {
     }
 })
 
+
+
+
+
+var is3DMap = false;
+
+function changeTo3DMap(e){
+
+  const mapFrame = document.getElementById("mapFrame");
+
+  if(is3DMap) {
+    mapFrame.src = "https://payekoh.ir/points/allpoints.html";
+    e.textContent = "3D"
+  } else{
+    mapFrame.src = "https://payekoh.ir/maps/3D/120921647.html"
+    e.textContent = "2D"
+  }
+
+  is3DMap = !is3DMap;
+
+  console.log(e)
+}

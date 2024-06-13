@@ -660,6 +660,36 @@ body {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     margin-bottom: 10px;
+    position: relative;
+}
+
+#mapSection #maps .viewMap #map iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#mapSection #maps .viewMap #map button{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: #00b7c6;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 #mapSection #maps .viewMap .lightBox {

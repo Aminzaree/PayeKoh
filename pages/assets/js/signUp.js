@@ -13,7 +13,7 @@ let verifyCodeEmpty = true;
 
 
 // Highlight sendCode Button after 11 character 
-phoneInput.addEventListener('input', function() {
+phoneInput.addEventListener('input', function () {
     var phoneNumber = this.value;
     if (phoneNumber.length === 11) {
         sendCodeBtn.classList.add('highlight-border');
@@ -144,7 +144,7 @@ function numberValidation() {
         }
     }
 }
-  
+
 
 // Verify code validation (Step 2)
 function verifyValidation() {
@@ -181,83 +181,57 @@ function verifyValidation() {
 }
 
 
-// Send Code button validation & Request 
+// Send Verify Code
 sendCodeBtn.addEventListener('click', function () {
 
     numberValidation();
+    let phone = $("#phone").val();
 
     if (emptyInput == true && numberCount == true) {
 
-        document.getElementById('step1').classList.add('hidden');
-        document.querySelector('.register').classList.add("hidden");
-        otherRegister.classList.add("hidden");
-        setTimeout(function () {
-            document.getElementById('step1').style.display = 'none';
-            document.querySelector('.register').style.display = 'none';
-            otherRegister.style.display = 'none';
-            document.getElementById('step2').style.display = 'block';
-            setTimeout(function () {
-                document.getElementById('step2').classList.remove('hidden');
-            }, 20);
-        }, 500);
+        // Start Send Axios Request
+        sessionStorage.setItem('userPhone', phone);
+        let apiUrl = `http://213.134.17.109/auth/${phone}/`;
+
+        axios.get(apiUrl, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(function (response) {
+                console.log("همچی درسته")
+                step1.classList.add('hidden');
+                registerBtn.classList.add("hidden");
+                otherRegister.classList.add("hidden");
+                
+                setTimeout(function () {
+                    step1.style.display = 'none';
+                    registerBtn.style.display = 'none';
+                    otherRegister.style.display = 'none';
+                    step2.style.display = 'block';
+                    setTimeout(function () {
+                        step2.classList.remove('hidden');
+                    }, 20);
+                }, 500);
+            })
+            .catch(function (error) {
+                if (error.response) {
+                    console.log("این پیغام بیاد یعنی خوردی به دردسر")
+                    console.log(error.response.data);
+                    console.log(error.response.status);
+                    console.log(error.response.headers);
+                } else if (error.request) {
+                    console.log(error.request);
+                } else {
+                    console.log('Error', error.message);
+                }
+                alert("عدم برقراری ارتباط با سرور");
+            });
     }
 });
 
 
-// document.getElementById('sendCodeBtn').addEventListener('click', function () {
-
-//     numberValidation();
-//     let phone = $("#phone").val();
-
-//     if (emptyInput == true && numberCount == true) {
-
-//         // Start Send Axios Request
-//         axios.post('http://213.134.17.109/auth/rest-auth/registration/', {
-//             phone: phone,
-//         }, {
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             }
-//         })
-//             .then(function (response) {
-//                 // در صورتی که پاسخ موفقیت‌آمیز باشد
-//                 step1.classList.add('hidden');
-//                 registerBtn.classList.add("hidden");
-//                 otherRegister.classList.add("hidden");
-
-//                 setTimeout(function () {
-
-//                     step1.style.display = 'none';
-//                     registerBtn.style.display = 'none';
-//                     otherRegister.style.display = 'none';
-//                     step2.style.display = 'block';
-//                     setTimeout(function () {
-//                         step2.classList.remove('hidden');
-//                     }, 20);
-//                 }, 500);
-
-//             })
-//             .catch(function (error) {
-//                 if (error.response) {
-//                     console.log(error.response.data);
-//                     console.log(error.response.status);
-//                     console.log(error.response.headers);
-//                 } else if (error.request) {
-//                     console.log(error.request);
-//                 } else {
-//                     console.log('Error', error.message);
-//                 }
-//                 alert("عدم برقراری ارتباط با سرور");
-//             });
-//             // .catch(function (error) {
-//             //     console.error('There was a problem with the axios operation:', error);
-//             //     // اگر خطایی رخ داد، کاربر در همان مرحله باقی بماند
-//             // });
-//     }
-// });
-
-
-
+// Go back button
 document.getElementById('goBack').addEventListener('click', function () {
     let codeInput = document.querySelectorAll(".code-input");
     step2.classList.add('hidden');
@@ -279,7 +253,6 @@ document.getElementById('goBack').addEventListener('click', function () {
 });
 
 
-
 const inputs = document.querySelectorAll('.code-input');
 inputs.forEach((input, index) => {
     input.addEventListener('input', () => {
@@ -296,14 +269,56 @@ inputs.forEach((input, index) => {
 });
 
 
-// Verify Code & register
+// Verify Btn & send request
 verifyCodeBtn.addEventListener('click', function () {
 
-    verifyValidation();
+    // Collect OTP values ​​from the inputs:
+    const inputs = document.querySelectorAll('.code-input');
+    const code = Array.from(inputs).map(input => input.value).join('');
 
-    if (verifyCodeEmpty == true) {
-        const code = Array.from(inputs).map(input => input.value).join('');
-        alert('کد وارد شده: ' + code);
+    if (code.length !== 4) {
+        alert('لطفاً تمام ارقام کد را وارد کنید.');
+        return;
     }
 
+    // Get phone number from session storage:
+    const phone = sessionStorage.getItem('userPhone');
+
+    if (!phone) {
+        alert('شماره تلفن یافت نشد، لطفاً دوباره وارد شوید.');
+        return;
+    }
+
+    // Create URL to send OTP code:
+    let apiUrl = `http://213.134.17.109/auth/${phone}/`;
+    let data = {
+        phone: phone,
+        otp: code
+    };
+
+    // Sending a POST request using axios:
+    axios.post(apiUrl, data, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function (response) {
+        // if the request was successful:
+        alert('کد OTP تایید شد!');
+        console.log("شماره موبایل رو گرفتیم و OTP هم تایید شد")
+        console.log(response.status);
+    })
+    .catch(function (error) {
+        if (error.response) {
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+        } else if (error.request) {
+            console.log(error.request);
+        } else {
+            console.log('Error', error.message);
+        }
+        alert("خطا در تایید کد OTP");
+        console.log("شماره موبایل رو گرفتیم ولی OTP رو نه !!")
+    });
 });
