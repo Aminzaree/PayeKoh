@@ -18,79 +18,6 @@ toggleMenu.addEventListener("click", function () {
 
 
 /*----------------------------------------------------------------*/
-/*----------------------------SignIn Ajax-------------------------*/
-/*----------------------------------------------------------------*/
-
-
-function signIn() {
-    let username = document.getElementById("email");
-    let password = document.getElementById("password");
-    let usernameResult = document.getElementById("usernameResult");
-    let passwordResult = document.getElementById("passwordResult");
-
-
-    if (username.value !== "" && password.value !== "") {
-
-        usernameResult.innerHTML = " "
-        passwordResult.innerHTML = " "
-
-        $.ajax({
-            url: "URL",
-            type: "POST",
-            data: {
-                email: "your email",
-                password: "your password"
-            },
-            success: function (data) {
-                localStorage.token = data.token;
-                alert("توکن در لوکال استوریج ذخیره شد");
-                console.log(data.token);
-            },
-            error: function (xhr, status, error) {
-                alert("اوضاع خرابه")
-            }
-        });
-
-    } else {
-
-        if (username.value === "") {
-            usernameResult.innerHTML = "لطفا آیدی یا شماره موبایل خود را وارد کنید."
-        } else {
-            usernameResult.innerHTML = " ";
-        }
-
-        if (password.value == "") {
-            passwordResult.innerHTML = "لطفا گذرواژه خود را وارد کنید."
-        } else {
-            passwordResult.innerHTML = " ";
-        }
-
-        if (username.value === "" || password.value == "") {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: "top-end",
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.onmouseenter = Swal.stopTimer;
-                    toast.onmouseleave = Swal.resumeTimer;
-                }
-            });
-            Toast.fire({
-                icon: "warning",
-                title: "اطلاعات وارد شده کامل نیست."
-            });
-        };
-
-    }
-
-
-
-}
-
-
-/*----------------------------------------------------------------*/
 /*-----------------------Show & Hide Password---------------------*/
 /*----------------------------------------------------------------*/
 
@@ -104,35 +31,6 @@ function showPassword() {
     } else {
         password.setAttribute("type", "password");
         showPasswordBtn.querySelector("svg").classList.replace("fa-eye-slash", "fa-eye");
-    }
-}
-
-
-/*----------------------------------------------------------------*/
-/*------------------------SignUp Validation-----------------------*/
-/*----------------------------------------------------------------*/
-
-
-function signUp() {
-    const numberRegex = /[0-9]/;
-    const phoneNumber = document.getElementById("phoneNumber");
-
-    if (phoneNumber.value.match(numberRegex) == null) {
-        const Toast = Swal.mixin({
-            toast: true,
-            position: "top-end",
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.onmouseenter = Swal.stopTimer;
-                toast.onmouseleave = Swal.resumeTimer;
-            }
-        });
-        Toast.fire({
-            icon: "warning",
-            title: "شماره وارد شده صحیح نیست."
-        });
     }
 }
 
@@ -157,3 +55,68 @@ function signUp() {
 //         behavior: "smooth"
 //     });
 // }
+
+
+/*----------------------------------------------------------------*/
+/*--------------------------Dark Mode Btn-------------------------*/
+/*----------------------------------------------------------------*/
+
+
+const setDarkMode = (active = false) => {
+    const wrapper = document.querySelector(":root");
+    if (active) {
+        wrapper.setAttribute("data-theme", "dark");
+        // localStorage.setItem("theme", "dark");
+    } else {
+        wrapper.setAttribute("data-theme", "light");
+        // localStorage.setItem("theme", "light");
+    }
+};
+
+const toggleDarkMode = () => {
+    const theme = document.querySelector(":root").getAttribute("data-theme");
+    // If the current theme is "light", we want to activate dark
+    setDarkMode(theme === "light");
+};
+
+const initDarkMode = () => {
+    const query = window.matchMedia("(prefers-color-scheme: dark)");
+    // const themePreference = localStorage.getItem("theme");
+
+    let active = query.matches;
+    // if (themePreference === "dark") {
+    //   active = true;
+    // }
+    // if (themePreference === "light") {
+    //   active = false;
+    // }
+
+    setDarkMode(active);
+
+    query.addListener(e => setDarkMode(e.matches));
+
+    const toggleButton = document.querySelector(".js__dark-mode-toggle");
+    toggleButton.addEventListener("click", toggleDarkMode);
+};
+
+initDarkMode();
+
+const darkModeBtn = document.getElementById("darkMode");
+
+darkModeBtn.addEventListener("click", toggleDarkModeButton);
+
+
+function toggleDarkModeButton() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+
+    const isDarkModeActive = body.classList.contains("dark-mode");
+    localStorage.setItem("darkMode", isDarkModeActive);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    const isDarkModeActive = localStorage.getItem("darkMode") === "true";
+    if (isDarkModeActive) {
+        document.body.classList.add("dark-mode");
+    }
+});

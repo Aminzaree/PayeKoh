@@ -166,7 +166,7 @@ body.dark-mode {
 /*----------------------------Dark Mode---------------------------*/
 /*----------------------------------------------------------------*/
 
-#darkMode {
+.darkMode {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,7 +193,7 @@ body.dark-mode {
     -webkit-animation: jello-horizontal 7s;
 }
 
-#darkMode svg {
+.darkMode svg {
     font-size: 30px;
     color: #fff;
 }
