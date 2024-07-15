@@ -218,10 +218,6 @@
          margin-top: 10px;
     }
 
-    #mapSection #maps .viewMap .viewMapActions{
-        display: block;
-    }
-
     #mapSection #maps .viewMap .viewMapActions .viewMapActions_right, .counter, .viewMapActions_left{
         margin: 10px 0;
         display: flex;
@@ -236,6 +232,18 @@
     #SignUp .SignUp .codeBtn button{
         font-size: 16px;
         margin-bottom: 10px;
+    }
+
+    #mapSection #maps .viewMap .viewMapActions .mapItemText{
+        display: none;
+    }
+
+    #mapSection #maps .viewMap .viewMapActions button svg{
+        margin: 0;
+    }
+
+    #mapSection #maps .viewMap .viewMapActions{
+        justify-content: flex-end;
     }
 }
 

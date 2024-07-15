@@ -82,23 +82,23 @@ html {
     scroll-behavior: smooth;
     direction: rtl;
     scrollbar-width: thin;
-    scrollbar-color: rgb(42, 245, 152) #c1c1c1; 
+    scrollbar-color: rgb(42, 245, 152) #c1c1c1;
 }
 
 ::-webkit-scrollbar {
-  width: 12px; 
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #c1c1c1; 
+    background: #c1c1c1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(42, 245, 152); 
+    background: rgb(42, 245, 152);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+    background: #555;
 }
 
 body {
@@ -112,7 +112,7 @@ body {
     -o-transition: background 0.3s ease-in-out;
 }
 
-body.dark-mode{
+body.dark-mode {
     background-color: rgba(28, 28, 28, 1);
 }
 
@@ -245,7 +245,7 @@ body.dark-mode{
     -webkit-animation: heartbeat 2s infinite;
 }
 
-#news.active button{
+#news.active button {
     animation: none;
     -webkit-animation: none;
 }
@@ -540,7 +540,7 @@ footer .copyRight {
 
 
 /*----------------------------------------------------------------*/
-/*------------------------------Animations--------------------------*/
+/*---------------------------Animations---------------------------*/
 /*----------------------------------------------------------------*/
 
 
@@ -550,7 +550,7 @@ footer .copyRight {
  * ----------------------------------------
  */
 
- @-webkit-keyframes heartbeat {
+@-webkit-keyframes heartbeat {
     from {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -705,4 +705,160 @@ footer .copyRight {
         -ms-transform: scale3d(1, 1, 1);
         -o-transform: scale3d(1, 1, 1);
     }
+}
+
+#modalDialog {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+    z-index: 2000;
+}
+
+#modalDialog.openModal {
+    display: block;
+    opacity: 1;
+}
+
+#myModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#myModal.showModal {
+    opacity: 1;
+}
+
+#myModal .modal-content {
+    background-color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#myModal.showModal .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#myModal .modal-content .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px 10px 0 0;
+}
+
+#myModal .modal-content .modal-header svg {
+    cursor: pointer;
+    font-size: 16px;
+    color: #a3a3a3;
+    transition: all 0.3s ease-in-out;
+}
+
+#myModal .modal-content .modal-header svg:hover {
+    transform: rotate(360deg);
+}
+
+#myModal .modal-content .modal-body {
+    padding: 20px 20px;
+}
+
+#myModal .modal-content .modal-footer {
+    padding: 15px 20px;
+    background-color: #f7f7f7;
+    border-radius: 0 0 10px 10px;
+}
+
+#myModal .modal-content .modal-footer button {
+    font-family: ravi;
+    font-size: 14px;
+    padding: 5px 14px;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#myModal .modal-content .modal-footer button.sendBtn {
+    color: #fff;
+    background-color: #00b6ff;
+    border: 2px solid #00b6ff;
+}
+
+#myModal .modal-content .modal-footer button.sendBtn:hover {
+    color: #00b6ff;
+    background-color: #fff;
+    border: 2px solid #00b6ff;
+}
+
+#myModal .modal-content .modal-footer button.closeBtn {
+    color: #fff;
+    background-color: red;
+    border: 2px solid red;
+}
+
+#myModal .modal-content .modal-footer button.closeBtn:hover {
+    color: red;
+    background-color: #fff;
+    border: 2px solid red;
+}
+
+
+.field {
+    margin: 12px 0 -5px 0;
+    height: 45px;
+    border-radius: 4px;
+    padding: 0 5px;
+    border: 1px solid #757171;
+}
+
+.field.active {
+    border-color: #7d2ae8;
+}
+
+.field i {
+    width: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.field.active i {
+    color: #7d2ae8;
+}
+
+.field input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.field button {
+    color: #fff;
+    padding: 5px 18px;
+    background: #7d2ae8;
+}
+
+.field button:hover {
+    background: #8d39fa;
 }

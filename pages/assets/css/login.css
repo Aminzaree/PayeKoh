@@ -4,12 +4,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-image: url(../img/login-bg.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    justify-content: center;
+    background-color: rgba(28, 28, 28, 1)
 }
 
 /*----------------------------------------------------------------*/
@@ -148,20 +144,20 @@ header #menu #mainNavbar nav ul li a:hover svg{
 }
 
 #login .login {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(42, 42, 42, 1);
     padding: 30px 30px;
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
-    border: 3px solid rgba(255, 255, 255, 1);
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
 }
 
 #login .login h1 {
-    color: #0088cc;
+    color: #38b2ac;
     font-family: "ravi";
     font-weight: 800;
     text-align: center;
@@ -208,12 +204,12 @@ header #menu #mainNavbar nav ul li a:hover svg{
     margin-bottom: 15px;
     outline: none;
     background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 1);
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -262,18 +258,18 @@ header #menu #mainNavbar nav ul li a:hover svg{
     width: 100%;
     height: 45px;
     padding: 8px 0;
-    color: #000;
-    background-color: rgba(255, 255, 255, 1);
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
     font-family: "ravi";
     font-weight: 600;
     font-size: 18px;
     line-height: 15px;
     border: none;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -329,7 +325,7 @@ header #menu #mainNavbar nav ul li a:hover svg{
 
 .inputHelp .forgotPassword a{
     text-decoration: none;
-    color: #fff;
+    color: #38b2ac;
     font-family: "ravi";
     font-size: 14px;
     font-weight: 400;

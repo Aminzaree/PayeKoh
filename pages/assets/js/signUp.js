@@ -1,10 +1,12 @@
 let phoneInput = document.getElementById("phone");
 let sendCodeBtn = document.getElementById("sendCode");
 let verifyCodeBtn = document.getElementById("verifyCode")
+let register = document.getElementById("register");
 let step1 = document.getElementById("step1");
 let step2 = document.getElementById("step2");
+let step3 = document.getElementById("step3");
 let codeInput = document.querySelectorAll(".code-input");
-let registerBtn = document.querySelector('.register');
+let registerMethod = document.querySelector('.registerMethod');
 let otherRegister = document.querySelector('.SignUp-InputBox-other');
 let emptyInput = true;
 let numberValidationRegex = true;
@@ -181,7 +183,7 @@ function verifyValidation() {
 }
 
 
-// Send Verify Code
+// Send Code button
 sendCodeBtn.addEventListener('click', function () {
 
     numberValidation();
@@ -191,7 +193,7 @@ sendCodeBtn.addEventListener('click', function () {
 
         // Start Send Axios Request
         sessionStorage.setItem('userPhone', phone);
-        let apiUrl = `http://213.134.17.109/auth/${phone}/`;
+        let apiUrl = `http://213.134.17.109/auth/${phone}`;
 
         axios.get(apiUrl, {
             headers: {
@@ -201,12 +203,12 @@ sendCodeBtn.addEventListener('click', function () {
             .then(function (response) {
                 console.log("همچی درسته")
                 step1.classList.add('hidden');
-                registerBtn.classList.add("hidden");
+                registerMethod.classList.add("hidden");
                 otherRegister.classList.add("hidden");
-                
+
                 setTimeout(function () {
                     step1.style.display = 'none';
-                    registerBtn.style.display = 'none';
+                    registerMethod.style.display = 'none';
                     otherRegister.style.display = 'none';
                     step2.style.display = 'block';
                     setTimeout(function () {
@@ -231,18 +233,18 @@ sendCodeBtn.addEventListener('click', function () {
 });
 
 
-// Go back button
+// Go back button (step 2)
 document.getElementById('goBack').addEventListener('click', function () {
     let codeInput = document.querySelectorAll(".code-input");
     step2.classList.add('hidden');
     setTimeout(function () {
         step2.style.display = 'none';
         step1.style.display = 'block';
-        registerBtn.style.display = 'block';
+        registerMethod.style.display = 'block';
         otherRegister.style.display = 'flex';
         setTimeout(function () {
             step1.classList.remove('hidden');
-            registerBtn.classList.remove("hidden");
+            registerMethod.classList.remove("hidden");
             otherRegister.classList.remove("hidden");
 
         }, 20);
@@ -250,22 +252,6 @@ document.getElementById('goBack').addEventListener('click', function () {
     codeInput.forEach(function (input) {
         input.value = "";
     })
-});
-
-
-const inputs = document.querySelectorAll('.code-input');
-inputs.forEach((input, index) => {
-    input.addEventListener('input', () => {
-        if (input.value.length === 1 && index < inputs.length - 1) {
-            inputs[index + 1].focus();
-        }
-    });
-
-    input.addEventListener('keydown', (e) => {
-        if (e.key === 'Backspace' && input.value.length === 0 && index > 0) {
-            inputs[index - 1].focus();
-        }
-    });
 });
 
 
@@ -302,23 +288,101 @@ verifyCodeBtn.addEventListener('click', function () {
             'Content-Type': 'application/json'
         }
     })
-    .then(function (response) {
-        // if the request was successful:
-        alert('کد OTP تایید شد!');
-        console.log("شماره موبایل رو گرفتیم و OTP هم تایید شد")
-        console.log(response.status);
+        .then(function (response) {
+            // if the request was successful:
+            alert('کد OTP تایید شد!');
+            console.log("شماره موبایل رو گرفتیم و OTP هم تایید شد")
+            console.log(response.status);
+
+            step2.classList.add('hidden');
+
+            setTimeout(function () {
+                step2.style.display = 'none';
+                step3.style.display = 'block';
+                setTimeout(function () {
+                    step3.classList.remove('hidden');
+                }, 20);
+            }, 500);
+        })
+        .catch(function (error) {
+            if (error.response) {
+                console.log(error.response.data);
+                console.log(error.response.status);
+                console.log(error.response.headers);
+            } else if (error.request) {
+                console.log(error.request);
+            } else {
+                console.log('Error', error.message);
+            }
+            alert("خطا در تایید کد OTP");
+            console.log("شماره موبایل رو گرفتیم ولی OTP رو نه !!")
+        });
+});
+
+
+// Go back button (step 3)
+document.getElementById('goBackbtn').addEventListener('click', function () {
+    // let codeInput = document.querySelectorAll(".code-input");
+    step3.classList.add('hidden');
+    setTimeout(function () {
+        step3.style.display = 'none';
+        step2.style.display = 'block';
+        setTimeout(function () {
+            step2.classList.remove('hidden');
+        }, 20);
+    }, 500);
+
+});
+
+
+const inputs = document.querySelectorAll('.code-input');
+inputs.forEach((input, index) => {
+    input.addEventListener('input', () => {
+        if (input.value.length === 1 && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+        }
+    });
+
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && input.value.length === 0 && index > 0) {
+            inputs[index - 1].focus();
+        }
+    });
+});
+
+register.addEventListener("click", function(){
+
+    const Email = String(document.getElementById("email").value);
+    const Password1 = String(document.getElementById("password1").value);
+    const Password2 = String(document.getElementById("password2").value);
+    const Username = String(document.getElementById("fullname").value);
+
+    axios.post('http://213.134.17.109/auth/rest-auth/registration/', {
+        username: Username,
+        email: Email,
+        password1: Password1,
+        password2: Password2
+    }, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
     })
-    .catch(function (error) {
-        if (error.response) {
+    .then(function(response) {
+        alert("عضویت شما با موفقیت انجام شد.")
+        console.log("عضویت شما با موفقیت انجام شد.")
+    })
+    .catch(function (error){
+        if(error.response){
             console.log(error.response.data);
             console.log(error.response.status);
             console.log(error.response.headers);
         } else if (error.request) {
-            console.log(error.request);
+            console.log(error.request)
         } else {
             console.log('Error', error.message);
         }
-        alert("خطا در تایید کد OTP");
-        console.log("شماره موبایل رو گرفتیم ولی OTP رو نه !!")
-    });
-});
+        alert("عدم برقراری ارتباط با سرور")
+    })
+
+})
+

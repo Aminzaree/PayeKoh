@@ -558,12 +558,26 @@ body {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 #mapSection #maps .viewMap .viewMapActions button svg {
     font-size: 14px;
     margin-left: 5px;
-    color: #38A3A5;
+}
+
+#mapSection #maps .viewMap .viewMapActions button:hover{
+    background-color: #38A3A5;
+    color: #fff;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 /**

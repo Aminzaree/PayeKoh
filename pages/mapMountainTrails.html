@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
     <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.min.css " rel="stylesheet">
     <title>پایه کوه | نقشه مسیرهای کوهنوردی</title>
 </head>
+
 <body>
 
     <header>
@@ -53,7 +55,7 @@
                     <i class="fa-solid fa-search"></i> -->
                 </div>
                 <div class="left-header">
-                    
+
                     <div class="userBtn">
                         <a href="signUp.html"><i class="fa-regular fa-user"></i>ورود / ثبت‌نام</a>
                     </div>
@@ -70,11 +72,16 @@
                 <div id="mainNavbar">
                     <nav>
                         <ul>
-                            <li class="active"><a href="../index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a></li>
-                            <li title="برنامه‌های فعال"><a href="javascript:void(0)"><i class="fa-solid fa-person-hiking"></i>مسیرها</a></li>
-                            <li title="تیم ما"><a href="javascript:void(0)"><i class="fa-solid fa-people-group"></i>تیم ما</a></li>
-                            <li title="درباره ما"><a href="javascript:void(0)"><i class="fa-regular fa-circle-question"></i>درباره ما</a></li>
-                            <li title="تماس با ما"><a href="ContactUs.html"><i class="fa-solid fa-link"></i>تماس با ما</a></li>
+                            <li class="active"><a href="../index.html" title="خانه"><i
+                                        class="fa-solid fa-home"></i>خانه</a></li>
+                            <li title="برنامه‌های فعال"><a href="javascript:void(0)"><i
+                                        class="fa-solid fa-person-hiking"></i>مسیرها</a></li>
+                            <li title="تیم ما"><a href="javascript:void(0)"><i class="fa-solid fa-people-group"></i>تیم
+                                    ما</a></li>
+                            <li title="درباره ما"><a href="javascript:void(0)"><i
+                                        class="fa-regular fa-circle-question"></i>درباره ما</a></li>
+                            <li title="تماس با ما"><a href="ContactUs.html"><i class="fa-solid fa-link"></i>تماس با
+                                    ما</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -118,7 +125,8 @@
                                 <div class="col-12">
                                     <div class="pageHeader-nav">
                                         <ul>
-                                            <li><a href="../index.html" title="خانه"><i class="fa-solid fa-home"></i>خانه</a></li>
+                                            <li><a href="../index.html" title="خانه"><i
+                                                        class="fa-solid fa-home"></i>خانه</a></li>
                                             <li><a href="#" title="خانه">مسیرها</a></li>
                                         </ul>
                                     </div>
@@ -156,29 +164,60 @@
                                     <div class="viewMap">
                                         <div class="viewMapActions">
                                             <div class="viewMapActions_right">
-                                                <button type="button"><i class="fa-regular fa-heart"></i>پسندیدم</button>
-                                                <button type="button"><i class="fa-regular fa-comment"></i>ثبت نظر</button>
-                                                <button type="button"><i class="fa-regular fa-star"></i>امتیاز</button>
+                                                <button type="button"><i class="fa-regular fa-heart"></i><span
+                                                        class="mapItemText">پسندیدم</span></button>
+                                                <button onclick="commentModal()" type="button"><i
+                                                        class="fa-regular fa-comment"></i><span class="mapItemText">ثبت
+                                                        نظر</span></button>
+                                                <button type="button"><i class="fa-regular fa-star"></i><span
+                                                        class="mapItemText">امتیاز</span></button>
                                             </div>
                                             <div class="viewMapActions_center">
-                                                <button type="button"><i class="fa-solid fa-route"></i>اطلاعات مسیر</button>
-                                                
+                                                <button type="button"><i class="fa-solid fa-route"></i><span
+                                                        class="mapItemText">اطلاعات مسیر</span></button>
                                             </div>
                                             <div class="viewMapActions_left">
-                                                <button type="button"><i class="fa-regular fa-bookmark"></i>ذخیره</button>
-                                                <button type="button"><i class="fa-solid fa-share-nodes"></i>اشتراک</button>
+                                                <button onclick="saveMap()" type="button"><i
+                                                        class="fa-regular fa-bookmark"></i><span
+                                                        class="mapItemText">ذخیره</span></button>
+                                                <button onclick="shareSocial()" type="button"><i
+                                                        class="fa-solid fa-share-nodes"></i><span
+                                                        class="mapItemText">اشتراک</span></button>
                                             </div>
                                         </div>
 
+                                        <!-- Modal: Send Comment -->
+                                        <div id="modalDialog">
+                                            <div id="myModal" class="modal">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h3>هدر مدال</h3>
+                                                        <span onclick="footerCloseBtn()"><i
+                                                                class="fa-solid fa-circle-xmark"></i></span>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>این قسمت بدنه مودال است. می‌توانید محتوای خود را در اینجا
+                                                            قرار دهید.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button id="footerSendBtn" class="sendBtn">ارسال نظر</button>
+                                                        <button onclick="footerCloseBtn()"
+                                                            class="closeBtn">بستن</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                
                                         <!-- Leaflet Map -->
                                         <!-- <div id="map">
                                             
                                         </div> -->
 
-                                       <div id="map">
-                                        <iframe id="mapFrame" src="https://payekoh.ir/points/allpoints.html" frameborder="0"></iframe>
-                                        <button onclick="changeTo3DMap(this)">3D</button>
-                                       </div>
+                                        <div id="map">
+                                            <iframe id="mapFrame" src="https://payekoh.ir/points/allpoints.html"
+                                                frameborder="0"></iframe>
+                                            <button onclick="changeTo3DMap(this)">3D</button>
+                                        </div>
 
 
                                         <!-- <div class="comments">
@@ -191,19 +230,23 @@
                                                 <img class="img" src="assets/img/login-bg.png" alt="Child in mountains">
                                             </a>
                                             <a data-fslightbox="gallery" href="assets/img/mountain-background-blur.jpg">
-                                                <img class="img" src="assets/img/mountain-background-blur.jpg" alt="Child in mountains">
+                                                <img class="img" src="assets/img/mountain-background-blur.jpg"
+                                                    alt="Child in mountains">
                                             </a>
                                             <a data-fslightbox="gallery" href="assets/img/mountainCover-Green.jpg">
-                                                <img class="img" src="assets/img/mountainCover-Green.jpg" alt="Child in mountains">
+                                                <img class="img" src="assets/img/mountainCover-Green.jpg"
+                                                    alt="Child in mountains">
                                             </a>
                                             <a data-fslightbox="gallery" href="assets/img/mountain-background-blur.jpg">
-                                                <img class="img" src="assets/img/mountain-background-blur.jpg" alt="Child in mountains">
+                                                <img class="img" src="assets/img/mountain-background-blur.jpg"
+                                                    alt="Child in mountains">
                                             </a>
                                             <a data-fslightbox="gallery" href="assets/img/login-bg.png">
                                                 <img class="img" src="assets/img/login-bg.png" alt="Child in mountains">
                                             </a>
                                             <a data-fslightbox="gallery" href="assets/img/mountainCover-Green.jpg">
-                                                <img class="img" src="assets/img/mountainCover-Green.jpg" alt="Child in mountains">
+                                                <img class="img" src="assets/img/mountainCover-Green.jpg"
+                                                    alt="Child in mountains">
                                             </a>
                                         </div>
                                     </div>
@@ -212,8 +255,10 @@
                             <div class="col-12 col-lg-4">
                                 <div id="mapDetails">
                                     <div id="downloadMap" class="mapDetailsItem">
-                                        <button type="button"><i class="fa-solid fa-cloud-arrow-down"></i>دانلود نقشه</button>
-                                        <button type="button"><i class="fa-solid fa-location-crosshairs"></i>نمایش در مسیر یاب</button>
+                                        <button type="button"><i class="fa-solid fa-cloud-arrow-down"></i>دانلود
+                                            نقشه</button>
+                                        <button type="button"><i class="fa-solid fa-location-crosshairs"></i>نمایش در
+                                            مسیر یاب</button>
                                     </div>
                                     <div id="aboutMap" class="mapDetailsItem">
                                         <h2><i class="fa-solid fa-route"></i>شرح سفر</h2>
@@ -291,8 +336,18 @@
                                     <div id="rating" class="mapDetailsItem">
                                         <h2><i class="fa-regular fa-star"></i>امتیازات</h2>
                                         <ul>
-                                            <li><p>اطلاعات مسیر</p><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></li>
-                                            <li><p>زیبایی منظره</p><span><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></li>
+                                            <li>
+                                                <p>اطلاعات مسیر</p><span><i class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star"></i></span>
+                                            </li>
+                                            <li>
+                                                <p>زیبایی منظره</p><span><i class="fa-regular fa-star"></i><i
+                                                        class="fa-regular fa-star"></i><i
+                                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star"></i></span>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -431,12 +486,31 @@
             </div>
         </section>
 
+
+        <!-- <section style="padding: 200px 0;">
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>هدر مدال</h3>
+                        <span><i class="fa-solid fa-circle-xmark"></i></span>
+                    </div>
+                    <div class="modal-body">
+                        <p>این قسمت بدنه مودال است. می‌توانید محتوای خود را در اینجا قرار دهید.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="footerSendBtn" class="sendBtn">ارسال نظر</button>
+                        <button id="footerCloseBtn" class="closeBtn">بستن</button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
     </main>
 
     <!-- Start Footer 😀-->
     <footer>
         <div class="container">
-             <div class="topFooter">
+            <div class="topFooter">
                 <div class="row">
                     <div class="col-12 col-lg-6 sendEmail">
                         <p>هوشمندانه صعود کنید</p>
@@ -449,7 +523,8 @@
                         <div class="footerAbout">
                             <img src="assets/img/final-png2.png" alt="">
                             <img src="assets/img/paye-koh-text-white.png" alt="">
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است </p>
                             <ul>
                                 <li><a href="javascript:void(0)"><i class="fa-solid fa-paper-plane"></i></a></li>
                                 <li><a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a></li>
@@ -465,9 +540,12 @@
                                 <div class="contactUs">
                                     <h2>تماس با تیم پایه کوه</h2>
                                     <ul>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم ایپسوم</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن ساختگی</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم ایپسوم متن ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم
+                                                ایپسوم</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن
+                                                ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم
+                                                ایپسوم متن ساختگی</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -475,12 +553,18 @@
                                 <div class="quickAccess">
                                     <h2>دسترسی سریع</h2>
                                     <ul>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-house"></i>خانه</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-coins"></i>خرید اشتراک</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-user"></i>برنامه‌های فعال</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-comment"></i>سوالات متداول</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-circle-info"></i>درباره ما</a></li>
-                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i class="fa-solid fa-phone"></i>تماس با ما</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-house"></i>خانه</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-coins"></i>خرید اشتراک</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-user"></i>برنامه‌های فعال</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-comment"></i>سوالات متداول</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-circle-info"></i>درباره ما</a></li>
+                                        <li><a href="http://t.me/payekohbot?start=utm_site"><i
+                                                    class="fa-solid fa-phone"></i>تماس با ما</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -488,9 +572,12 @@
                                 <div class="contactUs">
                                     <h2>تماس با تیم پایه کوه</h2>
                                     <ul>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم ایپسوم</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن ساختگی</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم ایپسوم متن ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم
+                                                ایپسوم</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن
+                                                ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم
+                                                ایپسوم متن ساختگی</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -498,9 +585,12 @@
                                 <div class="contactUs">
                                     <h2>تماس با تیم پایه کوه</h2>
                                     <ul>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم ایپسوم</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن ساختگی</a></li>
-                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم ایپسوم متن ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i>لورم
+                                                ایپسوم</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-solid fa-tty"></i>لورم ایپسوم متن
+                                                ساختگی</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fa-regular fa-envelope"></i>لورم
+                                                ایپسوم متن ساختگی</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -514,13 +604,13 @@
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-12">
-                    <p>	&#169; تمامی حقوق وب سایت متعلق به تیم توسعه و طراحی <span>پایه کوه</span> می‌باشد.</p>  
+                    <p> &#169; تمامی حقوق وب سایت متعلق به تیم توسعه و طراحی <span>پایه کوه</span> می‌باشد.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    
+
     <!-- <script src="../assets/js/script.js"></script> -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/particles.js"></script>
@@ -545,7 +635,7 @@
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();
     </script> -->
-    
+
     <!-- <script>
         $(document).ready(function(){
             $.ajax({
@@ -569,5 +659,7 @@
         })
     </script> -->
 
+
 </body>
+
 </html>

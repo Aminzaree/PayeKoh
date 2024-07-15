@@ -1,10 +1,10 @@
 function moreDetails() {
-    Swal.fire({
-        title: "اشتراک ویژه پایه کوه",
-        text: "برای دسترسی به این ویژگی می‌توانید اشتراک ما را از طریق لینک زیر تهیه کنید.",
-        confirmButtonText: "بستن",
-        footer: '<a class="rigester" href="signUp.html"><i class="fa-regular fa-user"></i>ورود / ثبت‌نام</a>'
-      });
+  Swal.fire({
+    title: "اشتراک ویژه پایه کوه",
+    text: "برای دسترسی به این ویژگی می‌توانید اشتراک ما را از طریق لینک زیر تهیه کنید.",
+    confirmButtonText: "بستن",
+    footer: '<a class="rigester" href="signUp.html"><i class="fa-regular fa-user"></i>ورود / ثبت‌نام</a>'
+  });
 }
 
 
@@ -12,19 +12,19 @@ let isTextVisible = true;
 
 function showMore() {
 
-    const text = document.getElementById("myText");
-    let myLongText = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است";
+  const text = document.getElementById("myText");
+  let myLongText = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است";
 
 
-    if (isTextVisible) {
-        text.innerHTML = "لورم ایپسوم متن ساختگی...";
-        text.classList.remove("active");
-        isTextVisible = false;
-    } else {
-        text.innerHTML = myLongText;
-        text.classList.add("active");
-        isTextVisible = true;
-    }
+  if (isTextVisible) {
+    text.innerHTML = "لورم ایپسوم متن ساختگی...";
+    text.classList.remove("active");
+    isTextVisible = false;
+  } else {
+    text.innerHTML = myLongText;
+    text.classList.add("active");
+    isTextVisible = true;
+  }
 
 }
 
@@ -35,11 +35,11 @@ function showMore() {
 
 const progressBar = document.querySelector(".progress-bar");
 
-window.addEventListener("scroll", function(){
-    const winScroll = this.window.pageYOffset;
-    const height = this.document.documentElement.scrollHeight - this.window.innerHeight;
-    const scrolled = (winScroll/height) * 100;
-    progressBar.style.width = `${scrolled}%`;
+window.addEventListener("scroll", function () {
+  const winScroll = this.window.pageYOffset;
+  const height = this.document.documentElement.scrollHeight - this.window.innerHeight;
+  const scrolled = (winScroll / height) * 100;
+  progressBar.style.width = `${scrolled}%`;
 })
 
 // Fuck You Dear JavaScript 😡🙂🧡
@@ -74,47 +74,47 @@ window.addEventListener("scroll", function(){
 // code will work fully.
 
 const setDarkMode = (active = false) => {
-    const wrapper = document.querySelector(":root");
-    if (active) {
-      wrapper.setAttribute("data-theme", "dark");
-      // localStorage.setItem("theme", "dark");
-    } else {
-      wrapper.setAttribute("data-theme", "light");
-      // localStorage.setItem("theme", "light");
-    }
-  };
-  
-  const toggleDarkMode = () => {
-    const theme = document.querySelector(":root").getAttribute("data-theme");
-    // If the current theme is "light", we want to activate dark
-    setDarkMode(theme === "light");
-  };
-  
-  const initDarkMode = () => {
-    const query = window.matchMedia("(prefers-color-scheme: dark)");
-    // const themePreference = localStorage.getItem("theme");
-  
-    let active = query.matches;
-    // if (themePreference === "dark") {
-    //   active = true;
-    // }
-    // if (themePreference === "light") {
-    //   active = false;
-    // }
-  
-    setDarkMode(active);
-  
-    query.addListener(e => setDarkMode(e.matches));
-  
-    const toggleButton = document.querySelector(".js__dark-mode-toggle");
-    toggleButton.addEventListener("click", toggleDarkMode);
-  };
-  
-  initDarkMode();
+  const wrapper = document.querySelector(":root");
+  if (active) {
+    wrapper.setAttribute("data-theme", "dark");
+    // localStorage.setItem("theme", "dark");
+  } else {
+    wrapper.setAttribute("data-theme", "light");
+    // localStorage.setItem("theme", "light");
+  }
+};
+
+const toggleDarkMode = () => {
+  const theme = document.querySelector(":root").getAttribute("data-theme");
+  // If the current theme is "light", we want to activate dark
+  setDarkMode(theme === "light");
+};
+
+const initDarkMode = () => {
+  const query = window.matchMedia("(prefers-color-scheme: dark)");
+  // const themePreference = localStorage.getItem("theme");
+
+  let active = query.matches;
+  // if (themePreference === "dark") {
+  //   active = true;
+  // }
+  // if (themePreference === "light") {
+  //   active = false;
+  // }
+
+  setDarkMode(active);
+
+  query.addListener(e => setDarkMode(e.matches));
+
+  const toggleButton = document.querySelector(".js__dark-mode-toggle");
+  toggleButton.addEventListener("click", toggleDarkMode);
+};
+
+initDarkMode();
 
 
 
-  /*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
 /*----------------------------Quick Menu--------------------------*/
 /*----------------------------------------------------------------*/
 
@@ -123,30 +123,85 @@ const quickMenu = document.getElementById("responsiveMobileMenu");
 quickMenu.addEventListener("click", toggleQuickMneu);
 
 function toggleQuickMneu() {
-    quickMenu.classList.toggle("active");
+  quickMenu.classList.toggle("active");
 }
 
 document.addEventListener("click", function (event) {
-    let target = event.target;
-    if (!quickMenu.contains(target)) {
-        quickMenu.classList.remove("active");
-    }
+  let target = event.target;
+  if (!quickMenu.contains(target)) {
+    quickMenu.classList.remove("active");
+  }
 })
 
 
+/*----------------------------------------------------------------*/
+/*----------------------------Send Comment------------------------*/
+/*----------------------------------------------------------------*/
+
+
+let modalDialog = document.getElementById("modalDialog");
+let myModal = document.getElementById("myModal");
+
+function commentModal() {
+    modalDialog.style.display = "block";
+    setTimeout(() => {
+        modalDialog.classList.add("openModal");
+        setTimeout(() => {
+            myModal.classList.add("showModal");
+        }, 50);
+    }, 50);
+}
+
+function footerCloseBtn() {
+    myModal.classList.remove("showModal");
+    setTimeout(() => {
+        modalDialog.classList.remove("openModal");
+        setTimeout(() => {
+            modalDialog.style.display = "none";
+        }, 300);
+    }, 300);
+}
+
+window.onclick = function(event) {
+    if (event.target === myModal) {
+        footerCloseBtn();
+    }
+}
+
+
+function saveMap(){
+  Swal.fire({
+    title: "ذخیره نقشه (نام نقشه)",
+    text: "آیا از ذخیره کردن نقشه (نام نقشه) اطمینان دارید !؟",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "بله، ذخیره شود",
+    cancelButtonText: "فعلا نه!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        text: "نقشه با موفقیت ذخیره شد :)",
+        icon: "success",
+        confirmButtonText: "بستن"
+      });
+    }
+  });
+}
 
 
 
 var is3DMap = false;
 
-function changeTo3DMap(e){
+function changeTo3DMap(e) {
 
   const mapFrame = document.getElementById("mapFrame");
 
-  if(is3DMap) {
+  if (is3DMap) {
     mapFrame.src = "https://payekoh.ir/points/allpoints.html";
     e.textContent = "3D"
-  } else{
+  } else {
     mapFrame.src = "https://payekoh.ir/maps/3D/120921647.html"
     e.textContent = "2D"
   }
